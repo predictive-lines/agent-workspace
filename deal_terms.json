@@ -1,0 +1,192 @@
+{
+  "range": "'Deal Terms'!A1:Z1012",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "Deal Summary"
+    ],
+    [
+      "Purchase Price",
+      " $ 2,100,000.00 "
+    ],
+    [
+      "Weighted Average Adjusted EBITDA",
+      "$761,173.77"
+    ],
+    [
+      "Calculated EBITDA Multiple",
+      "2.8x"
+    ],
+    [
+      "Buyer Equity %",
+      "16.67%"
+    ],
+    [
+      "Total Seller Notes",
+      " $ 700,000.00 "
+    ],
+    [
+      "Senior Loan Amount",
+      " $ 1,325,000.00 "
+    ],
+    [
+      "Seller Compensation at Close",
+      " $ 1,400,000.00 "
+    ],
+    [
+      "Total Seller Compensation",
+      " $ 2,165,000.00 "
+    ],
+    [
+      "Worst Case Working Capital Need",
+      "$531,406.36 "
+    ],
+    [
+      "Available Working Capital",
+      "$450,000.00 "
+    ],
+    [
+      "Total Monthly Debt Service",
+      "$18,851.29 "
+    ],
+    [
+      "Health Check",
+      "Risky"
+    ],
+    [],
+    [],
+    [
+      "Deal Variables"
+    ],
+    [
+      "Purchase Terms"
+    ],
+    [
+      "Purchase Price",
+      " $ 2,100,000.00 "
+    ],
+    [
+      "Buyer Equity Amount",
+      " $ 350,000.00 "
+    ],
+    [
+      "Buyer Closing Costs",
+      " $ 15,000.00 "
+    ],
+    [
+      "Working Capital Bridge",
+      " $ 250,000.00 "
+    ],
+    [
+      "Lender Closing Costs",
+      " $ 10,000.00 "
+    ],
+    [
+      "Target Close Date",
+      "4/30/2026"
+    ],
+    [
+      "Deal Structure",
+      "Asset"
+    ],
+    [
+      "Accounts Receivable at Close",
+      " $ -   "
+    ],
+    [
+      "Pay off F250 before close?",
+      "Yes"
+    ],
+    [
+      "Accounts Payable at Close",
+      " $ -   "
+    ],
+    [
+      "Senior Loan Amount",
+      " $ 1,325,000.00 "
+    ],
+    [
+      "Senior Loan"
+    ],
+    [
+      "Amount",
+      " $ 1,325,000.00 "
+    ],
+    [
+      "Term (months)",
+      "120"
+    ],
+    [
+      "Interest Rate (annual)",
+      "0.0625"
+    ],
+    [
+      "Monthly Payment",
+      "$14,877.11 "
+    ],
+    [
+      "Seller Note"
+    ],
+    [
+      "Amount",
+      " $ 350,000.00 "
+    ],
+    [
+      "Term (months)",
+      "120"
+    ],
+    [
+      "Interest Rate (annual)",
+      "6.50%"
+    ],
+    [
+      "Monthly Payment",
+      "$3,974.18 "
+    ],
+    [
+      "Secondary Seller Note (Full Standby)"
+    ],
+    [
+      "Amount",
+      " $ 350,000.00 "
+    ],
+    [
+      "Term (months)",
+      "132"
+    ],
+    [
+      "Interest Rate (annual)",
+      "6.50%"
+    ],
+    [
+      "Standby Period (months)",
+      "120"
+    ],
+    [
+      "Monthly Payment (after standby)",
+      "$30,203.75 "
+    ],
+    [
+      "SBA Express LOC"
+    ],
+    [
+      "Amount",
+      " $ 200,000.00 "
+    ],
+    [
+      "Interest Rate (annual)",
+      "8.75%"
+    ],
+    [
+      "Seller Consulting Agreement"
+    ],
+    [
+      "Annual Amount",
+      " $ 65,000.00 "
+    ],
+    [
+      "Term (months)",
+      "12"
+    ]
+  ]
+}
