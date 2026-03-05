@@ -96,9 +96,9 @@
 
 ### Standalone Financial Statements (IS/BS/CF)
 - Separate sheets from the `cash bridge` — annual view, NOT monthly
-- **IS bounds: A1:I87** (columns B-I for fiscal years)
+- **IS bounds: A1:I89** (columns B-I for fiscal years)
 - **Must have ZERO dependencies on the `cash bridge` sheet**
-- Interest Expense (IS row 49) driven by Budget SUMPRODUCT
+- Interest Expense: **IS row 49 ZEROED** (was OpEx). Now lives at IS row 80 (Other I/E). Historical periods use Credits-Debits SUMIFS; post-close uses debt schedule sums.
 - Principal Paydown on CF Financing Activities driven by Budget
 - LOC (BS row 72) now references `Debt Service Schedule - SBA Express LOC` (sheet ID 1878469770) — independent of cash bridge
 - LOC schedule: 48 monthly rows, SUMPRODUCT from Budget using ISNUMBER(MATCH()) against IS account ranges, 25% flat tax approx, LOC waterfall with $200K cap from Deal Terms
@@ -108,8 +108,9 @@
 - **Total Seller Compensation (B9)**: $2,484K — includes SN2 accrued interest ($319K). Formula: `=B8+B35+'Debt Service Schedule - Seller Note 2'!G124+B49`
 - **SN2 Monthly Payment (B44)**: $57,755 — corrected to use accrued balance from schedule
 - **Seller Note 2**: PIK interest at 6.50%/12 during 120-month standby. Balance: $350K→$669K. Budget rows 148-151 for interest. IS includes expense, CF has non-cash add-back (row 9), BS shows growing balance.
+- **Budget rows 36-37 DISABLED (Mar 5 2026)**: Vehicle Loan Payment - Ford F250 ($1,841/mo) and New Truck Upfitting ($14,510/yr) — start dates set to `9/9/9999`. Ford loan paid off in asset sale; upfitting premature. Line items preserved for future vehicle purchases.
 - **Budget principal rows 140-147**: 8 entries (4 FYs × 2 loans) for SBA 7a and Seller Note principal
-- **IS structure (post GW amort insert)**: Row 64 = Depreciation, Row 65 = Goodwill Amortization (NEW), Row 73 = TOTAL OPEX, Row 75 = OPERATING INCOME, Row 77 = EBITDA, **Row 88 = NET INCOME**
+- **IS structure (post GW amort + interest move)**: Row 49 = Interest Expense (ZEROED), Row 64 = Depreciation, Row 65 = Goodwill Amortization, Row 73 = TOTAL OPEX, Row 75 = OPERATING INCOME, Row 77 = EBITDA (=OI+Depr+GW, no interest), Row 80 = Interest Expense (Other I/E), Row 87 = TOTAL OTHER I/E (SUM includes row 80 for all periods), **Row 89 = NET INCOME**
 - **CF structure (FINAL)**: Row 10 = GW Amort add-back, Row 13 = AR WC change, Row 14 = Retainage WC change, Row 15 = AP WC change, Row 29 = CASH FROM OPS, Row 35 = CASH FROM INVESTING, Row 53 = Debt Principal, Row 54 = Tax Distribution, Row 55 = CASH FROM FINANCING = SUM(F38:F54), **Row 57 = NET CHANGE IN CASH** = F29+F35+F55
 - **NO LOC row on CF** — BS Cash is a plug; LOC changes captured implicitly through BS liability. Adding LOC to CF = double-counting.
 - **Interest Expense restructured (Mar 4 2026)**: Moved from OpEx to Other I/E on IS (row 80), CB (row 80), and LOC (inline in F formula). Single source of truth = debt service schedules (column D). Budget Interest Expense entries (12 total) zeroed. EBITDA = OI+Depr+GW (no interest add-back). CY2027-2029 CB/CF/BS fully reconcile. First-period (May-Dec 2026) has $148K CB vs BS gap from initialization differences.
@@ -117,7 +118,7 @@
 - **LOC GW Amort Add-back (column H after COGS insert, added Mar 4 2026)**: Pure add-back using direct Deal Terms formula `(B19-BS!E32-BS!E16)/180` = $11,212/month. BS!E16 = Inventory ($8,576) — confirmed correct for asset sale (buyer only acquires Inventory + PP&E, not all current assets). NOT Budget-based.
 - **LOC WC Timing Adjustment (column L, added Mar 4 2026)**: AR/AP lag using `ar_days=90` (3-month) and `ap_days=30` (1-month). COGS column added at E (SUMPRODUCT matching IS!A10:A33). WC formula uses LET/INDEX lookback on Revenue (C) and COGS (E) columns. Matched CB row 175 values exactly ($300,763 for Oct 2026).
 - **CB GW Amort (rows 65 + 94, added Mar 4 2026)**: Row 65 = P&L expense (reduces Operating Income), Row 94 = CF add-back (non-cash reversal). Both use same Deal Terms formula as IS/LOC. Net cash effect = $0, but reduces taxable income → tax savings ~$131K over projection. TOTAL OPEX SUM auto-adjusted to include row 65. CASH FROM OPS SUM auto-adjusted to include row 94.
-- **CB row shifts (Mar 4 2026)**: After 2 row insertions and 4 row deletions. Key positions: Row 49=Interest Expense (OpEx, zeroed post-close), Row 65=GW Amort, Row 73=TOTAL OPEX, Row 75=OPERATING INCOME, Row 77=EBITDA (=OI+Depr+GW), Row 80=Interest Expense (Other I/E, from debt schedules), Row 86=TOTAL OTHER I/E, Row 88=NET INCOME, Row 113=CASH FROM OPS, Row 135=NET CHANGE IN CASH, Row 143-146=Principal (SBA/SN/SN2/Ford), Row 147=Total DS, Row 179=Cash at Close ($250K), Row 186=Running Cash Balance, Row 187=LOC Outstanding.
+- **CB row shifts (Mar 4-5 2026)**: After 2 row insertions and 4 row deletions. Key positions: Row 49=Interest Expense (OpEx, **ZEROED ALL PERIODS** — Justin manually cleared Mar 5), Row 65=GW Amort, Row 73=TOTAL OPEX, Row 75=OPERATING INCOME, Row 77=EBITDA (=OI+Depr+GW), Row 80=Interest Expense (Other I/E, from debt schedules), Row 86=TOTAL OTHER I/E, Row 88=NET INCOME, Row 113=CASH FROM OPS, Row 135=NET CHANGE IN CASH, Row 143-146=Principal (SBA/SN/SN2/Ford), Row 147=Total DS, Row 179=Cash at Close ($250K), Row 186=Running Cash Balance, Row 187=LOC Outstanding.
 - **LOC column layout (after all Mar 4 inserts)**: A=Period, B=Date, C=Revenue, D=Total Expenses, E=COGS, F=Net Income, G=Depr Add-back, H=GW Amort Add-back, I=SN2 Interest, J=Debt Principal, K=Tax Dist, L=WC Timing Adj, M=Net Cash Before LOC, N=Beg Cash, O=LOC Draw, P=LOC Interest, Q=Ending Cash, R=LOC Outstanding, S=LOC Available.
 - **BS Distributions (row 79)**: cumulative tax distributions from CF row 54. BS AccumDepr (row 31): decreases by IS Depreciation each period.
 - **Three-statement reconciliation**: CF NET CHANGE = BS ΔCash to the penny (FY2027-29). BS CHECK = $0. Fully linked.
@@ -128,7 +129,7 @@
 ### Key Spreadsheet
 - ID: `13KQXudrHd5F3p-NHrr_RTkSWuIAbhVuDp9GIDVNCetM`
 - `transaction details` sheet: ~34K rows of QB GL export
-- `cash bridge 2` sheet (ID 685035795): P&L + CF + debt service + tax + DSCR
+- `cash bridge` sheet (ID 685035795): P&L + CF + debt service + tax + DSCR
 - Key columns: D=Type, F=Date, J=Name, L=Memo, N=Account, T=Debit, V=Credit, Y=CoA, Z=Basis, AA=SDE, AB=Adj
 
 ### Skills Built
