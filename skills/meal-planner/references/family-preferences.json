@@ -1,0 +1,121 @@
+{
+  "family_members": {
+    "justin": {
+      "name": "Justin",
+      "role": "parent",
+      "restrictions": {
+        "hard_no": ["onions (all types: white, red, yellow, green, shallots, scallions, leeks)"],
+        "notes": "Garlic is OK. No other restrictions."
+      },
+      "likes": [],
+      "dislikes": [],
+      "notes": "Generally flexible eater aside from the onion restriction."
+    },
+    "jaclyn": {
+      "name": "Jaclyn",
+      "role": "parent",
+      "restrictions": {
+        "hard_no": ["avocado"],
+        "notes": "No avocados."
+      },
+      "likes": [
+        "soup",
+        "warm salads",
+        "chopped salads",
+        "roasted sweet potatoes",
+        "tacos",
+        "quesadillas",
+        "sandwiches",
+        "curries",
+        "sourdough",
+        "fish",
+        "stewed beef",
+        "curried beef"
+      ],
+      "dislikes": [
+        "reheated steak"
+      ],
+      "notes": "Would be happy with roasted sweet potatoes every week."
+    },
+    "cora": {
+      "name": "Cora",
+      "role": "child",
+      "age": 14,
+      "restrictions": {
+        "hard_no": [],
+        "notes": "No hard restrictions."
+      },
+      "likes": [
+        "bang bang shrimp",
+        "bang bang chicken",
+        "fish",
+        "asian-inspired foods",
+        "tacos",
+        "quesadillas",
+        "sandwiches",
+        "sausage dishes",
+        "sweet potatoes (sometimes)",
+        "potatoes",
+        "rice",
+        "pasta",
+        "pot pie"
+      ],
+      "dislikes": [],
+      "notes": "Adventurous with Asian flavors and seafood."
+    },
+    "eve": {
+      "name": "Eve",
+      "role": "child",
+      "age": 12,
+      "restrictions": {
+        "hard_no": [],
+        "notes": "No hard restrictions."
+      },
+      "likes": [
+        "pasta",
+        "smash burgers",
+        "tacos",
+        "sandwiches",
+        "sweets",
+        "fruit salad",
+        "pot pie",
+        "soup (occasionally)",
+        "steak",
+        "ham",
+        "anything fried"
+      ],
+      "dislikes": [
+        "fish (generally)",
+        "chicken (not much)"
+      ],
+      "notes": "Prefers red meat and fried foods. Not big on fish or chicken."
+    }
+  },
+  "household_rules": {
+    "meals_per_week": 2,
+    "meal_structure": "2 entrees + 3-4 shared sides + 1 weekly sweet per week (at least 1 salad)",
+    "portion_sizing": "Each entree must yield 6-8 servings (enough for 2 nights x 4 people, with some but not excessive leftovers). Protein-forward dishes (burgers, tacos, grilled/fried protein): 3 lbs min. Mixed dishes (sheet bakes, casseroles, stir-fry, pasta bakes) where protein is combined with veggies/starch: 2-2.5 lbs protein. When in doubt, target the midpoint — enough for comfortable seconds but not overproduction.",
+    "planning_day": "Saturday — plan for the upcoming Mon-Sun week",
+    "overlap_constraint": "Every person must find at least 1 of the 2 weekly meals appealing",
+    "complexity": "Most meals should be executable by a 12-14 year old; occasional 90-min Sunday cook is OK",
+    "pantry_handling": "Tag pantry staples in ingredient list (olive oil, butter, salt, pepper, common spices, rice, pasta, flour, sugar, etc.) but still include them",
+    "cheese_preference": "Always prefer block cheese over pre-shredded. Shred at home — better melting, no anti-caking agents. NEVER use American cheese singles. If a slice form factor is needed (e.g. burgers), use sliced cheddar. Otherwise use block cheddar.",
+    "garnish_policy": "Skip decorative garnishes like parsley, cilantro sprigs, etc. Only include an ingredient if it meaningfully contributes to flavor.",
+    "sides_rules": {
+      "total_per_week": "3-4 shared across both entrees",
+      "salad_required": true,
+      "salad_sizing": "Big batch if Justin is primary eater (lasts days); small if mostly Jaclyn+girls (finish in 2 days). Default: size up for Justin.",
+      "salad_variety": "Rotate lettuce types (romaine, mixed greens, arugula, butter lettuce, spinach, etc.) and maximize topping variety (must be Kroger-deliverable).",
+      "remaining_sides": "Healthy, high-fiber, whole-food. No highly processed. Color variety across vegetables.",
+      "starch_limit": "At most 1 starchy side per week, modest portions. Sweet potato preferred over white potato.",
+      "color_diversity": "Aim for greens, oranges, reds, purples across the week's sides."
+    },
+    "shopping_split": {
+      "costco": "Bulk proteins, dairy (butter, sour cream, cheese blocks), tortillas, rice, pantry staples with long shelf life. Prefer Costco for anything that freezes or keeps.",
+      "kroger": "Fresh produce (fruits, vegetables, herbs), spices, bread/baguettes, and anything perishable that can't be portioned and frozen."
+    }
+  },
+  "feedback_log_path": "skills/meal-planner/references/feedback-log.json",
+  "version": "1.2.0",
+  "last_updated": "2026-03-21"
+}
