@@ -1,0 +1,51 @@
+{
+  "favorites": [
+    {
+      "name": "Italian Sausage & Sweet Potato Bake",
+      "added": "2026-03-21",
+      "source": "feedback-auto",
+      "tags": ["sausage", "sweet-potato", "sheet-pan", "bake"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "recipe_summary": "Sheet pan bake with Italian sausage, cubed sweet potatoes, and seasonal vegetables roasted together.",
+      "last_planned": "2026-03-17",
+      "times_planned": 1,
+      "notes": ""
+    },
+    {
+      "name": "Blueberry Protein Baked Oatmeal",
+      "added": "2026-03-27",
+      "source": "explicit",
+      "tags": ["breakfast", "meal-prep", "high-protein", "high-fiber", "air-fryer-reheat"],
+      "appeal": ["jaclyn"],
+      "recipe_summary": "Baked oatmeal with vanilla protein powder and blueberries. 47g protein / 8g fiber per serving. Reheats in air fryer in 5 min. Top with Greek yogurt, honey, cinnamon.",
+      "last_planned": null,
+      "times_planned": 0,
+      "notes": "Full recipe in recipe-library.json. Not yet queued for meal planner."
+    },
+    {
+      "name": "Homemade Quesarito",
+      "added": "2026-03-27",
+      "source": "explicit",
+      "tags": ["dinner", "tex-mex", "copycat", "chipotle-inspired"],
+      "appeal": ["jaclyn"],
+      "recipe_summary": "Copycat Taco Bell Quesarito with homemade chipotle sauce, nacho cheese, seasoned rice, taco meat, and sour cream in a toasted double-tortilla wrap.",
+      "last_planned": null,
+      "times_planned": 0,
+      "notes": "Full recipe in recipe-library.json. Not yet queued for meal planner."
+    },
+    {
+      "name": "Smash Burgers",
+      "added": "2026-03-21",
+      "source": "feedback-auto",
+      "tags": ["burgers", "beef", "smash-burgers"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "recipe_summary": "Thin smashed beef patties on a hot griddle with melted cheddar, pickles, and brioche buns.",
+      "last_planned": "2026-03-17",
+      "times_planned": 1,
+      "notes": "Need 3 lbs ground beef minimum for 2 nights of meals."
+    }
+  ],
+  "version": "1.0.0",
+  "last_updated": "2026-03-27",
+  "notes": "Recipes marked as favorites via feedback or explicit request. Used to weight meal plan generation toward proven hits."
+}

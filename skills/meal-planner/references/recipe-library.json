@@ -1,0 +1,901 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-27",
+  "recipes": [
+    {
+      "id": "homemade-quesarito",
+      "name": "Homemade Quesarito",
+      "category": "dinner",
+      "tags": ["copycat", "tex-mex", "chipotle-inspired", "weeknight"],
+      "added": "2026-03-27",
+      "source": "family-instagram",
+      "in_rotation": false,
+      "servings": 1,
+      "nutrition_per_serving": {
+        "notes": "Not provided"
+      },
+      "components": {
+        "chipotle_sauce": {
+          "description": "Creamy chipotle sauce — the secret to the recipe",
+          "ingredients": [
+            "1 cup mayo",
+            "2 whole chipotle peppers in adobo",
+            "1/2 tsp adobo sauce (from the can)",
+            "1/2 tsp chili powder",
+            "1/2 tsp sugar",
+            "1/2 tsp salt",
+            "1/4 tsp garlic powder",
+            "1/4 tsp onion powder",
+            "1/4 tsp paprika (smoked preferred)"
+          ],
+          "instructions": "Blend until smooth. Use right away or chill to let flavors develop."
+        }
+      },
+      "ingredients": [
+        "1 burrito-size tortilla",
+        "1 taco-size tortilla",
+        "Nacho cheese (Fritos jalapeño cheddar recommended)",
+        "Seasoned rice (microwavable/precooked works great)",
+        "Taco meat (simmered in water + seasoning for softer texture)",
+        "Shredded cheddar",
+        "Sour cream",
+        "Chipotle sauce (see components)"
+      ],
+      "instructions": [
+        "Warm the large tortilla.",
+        "Spread nacho cheese and shredded cheddar on the large tortilla.",
+        "Place the smaller tortilla on top.",
+        "Add rice, taco meat, chipotle sauce, and sour cream.",
+        "Wrap it up tightly.",
+        "Toast in a dry skillet on both sides until lightly browned."
+      ],
+      "notes": "Copycat of the Taco Bell Quesarito. The chipotle sauce is the key differentiator — make a batch and keep it in the fridge. Fritos jalapeño cheddar nacho cheese is the closest match to the original per the recipe author."
+    },
+    {
+      "id": "blueberry-protein-baked-oatmeal",
+      "name": "Blueberry Protein Baked Oatmeal",
+      "category": "breakfast",
+      "tags": ["meal-prep", "high-protein", "high-fiber", "make-ahead", "air-fryer-reheat"],
+      "added": "2026-03-27",
+      "source": "family-instagram",
+      "in_rotation": false,
+      "servings": 6,
+      "nutrition_per_serving": {
+        "protein_g": 47,
+        "fiber_g": 8,
+        "notes": "estimated from recipe source"
+      },
+      "ingredients": [
+        "3 cups rolled oats",
+        "1 cup (4 scoops) vanilla protein powder (Equip Foods recommended)",
+        "2 eggs",
+        "2 cups milk of choice",
+        "1/4 cup maple syrup",
+        "2 tbsp melted butter",
+        "1 tsp vanilla extract",
+        "1 tsp cinnamon",
+        "1/2 tsp baking soda",
+        "1/2 tsp salt",
+        "2 cups blueberries"
+      ],
+      "instructions": [
+        "Preheat oven to 375°F.",
+        "Mix all ingredients together in a large bowl.",
+        "Pour into a greased baking dish.",
+        "Bake for 35–40 minutes until set and golden.",
+        "Cool completely, cover, and refrigerate."
+      ],
+      "reheating": {
+        "method": "Air fryer",
+        "temp": "350°F",
+        "time": "5 minutes"
+      },
+      "toppings": "1 cup Greek yogurt, 1 tsp honey, pinch of cinnamon",
+      "notes": "Tastes like dessert. High protein + fiber makes it a solid meal prep breakfast. Protein powder is key to the macro profile — use a quality vanilla whey or egg white powder (Equip Foods is the original recommendation)."
+    },
+    {
+      "id": "sausage-roasted-sweet-potato-sheet-pan",
+      "name": "Sausage & Roasted Sweet Potato Sheet Pan",
+      "category": "dinner",
+      "tags": ["sheet-pan", "sausage", "sweet-potato", "easy", "weeknight", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-16",
+      "in_rotation": true,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 35,
+      "appeal": ["jaclyn", "cora", "eve", "justin"],
+      "nutrition_per_serving": {
+        "serving_size_g": 350,
+        "calories": 420,
+        "protein_g": 18,
+        "carbs_g": 35,
+        "fat_g": 24,
+        "fiber_g": 5,
+        "notes": "estimated"
+      },
+      "ingredients": [
+        "1 lb Italian sausage (mild), casings removed",
+        "2 lbs sweet potatoes, peeled & cubed 3/4 inch",
+        "2 red bell peppers, diced",
+        "4 cloves garlic, minced",
+        "3 tbsp olive oil",
+        "1 tsp smoked paprika",
+        "1 tsp garlic powder",
+        "1/2 tsp Italian seasoning",
+        "Salt & pepper to taste"
+      ],
+      "instructions": [
+        "Preheat oven to 400°F.",
+        "Toss sweet potatoes and bell peppers with olive oil, paprika, garlic powder, Italian seasoning, salt and pepper.",
+        "Spread on a large sheet pan.",
+        "Break sausage into chunks and nestle among the vegetables.",
+        "Roast 30–35 min, tossing once halfway, until sweet potatoes are tender and sausage is cooked through.",
+        "Top with minced garlic in last 5 minutes of roasting."
+      ],
+      "notes": "Family hit — all 4 happy. Jaclyn loves sweet potatoes, kids love sausage. Easy weeknight meal."
+    },
+    {
+      "id": "classic-smash-burgers-seasoned-fries",
+      "name": "Classic Smash Burgers with Seasoned Fries",
+      "category": "dinner",
+      "tags": ["burgers", "beef", "smash-burgers", "easy", "weeknight", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-16",
+      "in_rotation": true,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 30,
+      "appeal": ["eve", "justin", "cora", "jaclyn"],
+      "nutrition_per_serving": {
+        "serving_size_g": 450,
+        "calories": 780,
+        "protein_g": 42,
+        "carbs_g": 58,
+        "fat_g": 40,
+        "fiber_g": 3,
+        "notes": "estimated — includes 2 patties + bun + fries"
+      },
+      "ingredients": [
+        "1.5 lbs ground beef 80/20",
+        "8 brioche burger buns",
+        "8 slices cheddar cheese (sliced block, not singles)",
+        "Dill pickle chips",
+        "Ketchup, mustard, mayo",
+        "Salt & pepper",
+        "1 bag (32 oz) frozen french fries"
+      ],
+      "instructions": [
+        "Heat a cast iron skillet or griddle over high heat until very hot.",
+        "Divide beef into 8 loose 3-oz balls.",
+        "Place beef ball on skillet and immediately smash flat with a spatula. Season with salt and pepper.",
+        "Cook 2 min until edges are brown and crusty. Flip, add cheese, cook 1 min.",
+        "Toast buns in the same pan.",
+        "Assemble with pickles, ketchup, mustard, mayo.",
+        "Cook fries per package instructions (oven or air fryer)."
+      ],
+      "notes": "Eve's favorite. Use sliced block cheddar — never singles. Smash hard and fast for the best crust. Need 3 lbs beef minimum for 2 nights of meals at 2 patties each."
+    },
+    {
+      "id": "sheet-pan-mediterranean-chicken-gnocchi",
+      "name": "Sheet Pan Mediterranean Chicken & Gnocchi",
+      "category": "dinner",
+      "tags": ["sheet-pan", "chicken", "mediterranean", "gnocchi", "easy", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-23",
+      "in_rotation": true,
+      "servings": 8,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 30,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 425,
+        "calories": 520,
+        "protein_g": 35,
+        "carbs_g": 48,
+        "fat_g": 20,
+        "fiber_g": 8,
+        "notes": "estimated"
+      },
+      "components": {
+        "marinade": {
+          "ingredients": [
+            "1/2 cup extra-virgin olive oil",
+            "Zest + juice of 2 lemons",
+            "2 garlic cloves, pressed",
+            "2 tsp dried oregano",
+            "1 tsp dried thyme",
+            "1 tsp smoked paprika",
+            "1 tbsp red wine vinegar",
+            "2 tsp kosher salt",
+            "1/2 tsp black pepper",
+            "1/2 tsp chili flakes",
+            "1 tsp garlic powder",
+            "2 tbsp honey"
+          ]
+        }
+      },
+      "ingredients": [
+        "2.5 lbs boneless skinless chicken thighs",
+        "900g gnocchi (2 packages)",
+        "2 cans chickpeas, drained",
+        "2 cans cannellini beans, drained",
+        "2 zucchini, chopped",
+        "2 yellow bell peppers, chopped",
+        "2 pints cherry tomatoes, halved",
+        "12 garlic cloves, smashed",
+        "4 oz goat cheese, crumbled",
+        "1 bunch fresh dill",
+        "1 bunch fresh mint",
+        "Pepperoncini peppers, sliced"
+      ],
+      "instructions": [
+        "Whisk marinade ingredients together.",
+        "Toss chicken in marinade. Let sit 15–30 min if time allows.",
+        "Preheat oven to 425°F.",
+        "Spread gnocchi, chickpeas, beans, and vegetables on 2 large sheet pans.",
+        "Nestle chicken pieces among vegetables.",
+        "Roast 25–30 min until chicken is cooked through and gnocchi is golden in spots.",
+        "Top with goat cheese, fresh dill, mint, and pepperoncini before serving."
+      ],
+      "reheating": "Oven 375°F for 10 min to re-crisp gnocchi. Add fresh herbs and goat cheese after reheating.",
+      "notes": "Removed onion powder from original — replaced with extra garlic powder. Jaclyn especially loves this one. Gnocchi gets beautifully chewy/crispy on the sheet pan."
+    },
+    {
+      "id": "crispy-chicken-greens-wraps",
+      "name": "Crispy Chicken & Greens Wraps",
+      "category": "dinner",
+      "tags": ["wraps", "chicken", "easy", "weeknight", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-23",
+      "in_rotation": true,
+      "servings": 8,
+      "difficulty": "easy",
+      "prep_time_min": 25,
+      "cook_time_min": 15,
+      "appeal": ["eve", "cora", "jaclyn", "justin"],
+      "nutrition_per_serving": {
+        "serving_size_g": 280,
+        "calories": 380,
+        "protein_g": 28,
+        "carbs_g": 19,
+        "fat_g": 18,
+        "fiber_g": 11,
+        "notes": "estimated — uses low-carb tortillas"
+      },
+      "ingredients": [
+        "2 lbs frozen chicken breast nuggets (check label for onion powder)",
+        "4 cups mixed greens (spring mix or romaine)",
+        "1 cup cherry tomatoes, halved",
+        "1 large cucumber, diced",
+        "1 cup shredded carrots",
+        "8 low-carb flour tortillas (10\", e.g. Mission Carb Balance)",
+        "1 block cheddar cheese, shredded at home (~1.5 cups)",
+        "Ranch dressing",
+        "Sriracha"
+      ],
+      "instructions": [
+        "Cook chicken nuggets per package instructions.",
+        "Warm tortillas on a dry skillet.",
+        "Layer greens, tomatoes, cucumber, carrots, and cheese on each tortilla.",
+        "Add chicken nuggets and drizzle with ranch + sriracha.",
+        "Roll up tightly and toast seam-side down in a dry skillet until golden and crisp on both sides."
+      ],
+      "freshness_notes": "Store prepped greens and sliced nuggets separately. Assemble and crisp wraps only when eating — do NOT pre-assemble.",
+      "notes": "Kids love the crispy toasted exterior. Justin: verify nuggets don't contain onion powder. Spicy ranch (ranch + sriracha) is the flavor key."
+    },
+    {
+      "id": "beef-broccoli-stir-fry",
+      "name": "Beef & Broccoli Stir-Fry over Rice",
+      "category": "dinner",
+      "tags": ["asian-inspired", "beef", "stir-fry", "rice", "easy", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-23",
+      "in_rotation": true,
+      "servings": 8,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 20,
+      "appeal": ["eve", "cora", "jaclyn", "justin"],
+      "nutrition_per_serving": {
+        "serving_size_g": 350,
+        "calories": 480,
+        "protein_g": 38,
+        "carbs_g": 48,
+        "fat_g": 14,
+        "fiber_g": 3,
+        "notes": "estimated — includes rice"
+      },
+      "ingredients": [
+        "3 lbs flank steak (or sirloin), sliced thin against the grain",
+        "2 lbs broccoli florets (about 3 large crowns)",
+        "8 cloves garlic, minced",
+        "1/3 cup soy sauce",
+        "3 tbsp oyster sauce",
+        "2 tbsp cornstarch",
+        "2 tbsp sesame oil",
+        "2 tbsp vegetable oil",
+        "1 tbsp rice vinegar",
+        "1 tbsp brown sugar",
+        "1 tbsp fresh ginger, grated",
+        "1/2 tsp red pepper flakes (optional)",
+        "4 cups jasmine rice, uncooked"
+      ],
+      "instructions": [
+        "Cook rice per package directions.",
+        "Whisk soy sauce, oyster sauce, cornstarch, rice vinegar, brown sugar, and 1/4 cup water into sauce.",
+        "Heat 1 tbsp vegetable oil in a wok over high heat. Sear steak in 2 batches, about 2 min per side. Remove and set aside.",
+        "Add remaining oil. Stir-fry broccoli 3–4 min until crisp-tender. Add garlic and ginger, cook 1 min.",
+        "Return beef to pan. Pour sauce over everything. Toss and cook 2 min until thickened.",
+        "Drizzle sesame oil over top. Serve over rice."
+      ],
+      "notes": "High-protein, family-wide hit. Slice steak thin for tender texture. Don't crowd the pan — sear in batches for crust."
+    },
+    {
+      "id": "baked-penne-italian-sausage",
+      "name": "Baked Penne with Italian Sausage & Roasted Red Peppers",
+      "category": "dinner",
+      "tags": ["pasta", "sausage", "baked", "easy", "weeknight", "meal-planned"],
+      "added": "2026-03-27",
+      "source": "meal-plan-2026-03-23",
+      "in_rotation": true,
+      "servings": 8,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 35,
+      "appeal": ["eve", "cora", "jaclyn", "justin"],
+      "nutrition_per_serving": {
+        "serving_size_g": 380,
+        "calories": 560,
+        "protein_g": 28,
+        "carbs_g": 52,
+        "fat_g": 26,
+        "fiber_g": 3,
+        "notes": "estimated"
+      },
+      "ingredients": [
+        "1.5 lbs penne pasta",
+        "2 lbs mild Italian sausage (bulk or casings removed)",
+        "1 jar (24 oz) marinara sauce (Rao's Sensitive or check label — no onion in first 3 ingredients)",
+        "1 jar (12 oz) roasted red peppers, drained & chopped",
+        "8 cloves garlic, minced",
+        "1 cup heavy cream",
+        "8 oz block mozzarella, shredded at home",
+        "4 oz block Parmesan, grated",
+        "2 tbsp olive oil",
+        "1 tsp Italian seasoning",
+        "1/2 tsp red pepper flakes (optional)",
+        "Salt & pepper to taste",
+        "6-8 fresh basil leaves"
+      ],
+      "instructions": [
+        "Preheat oven to 400°F. Cook penne to just under al dente (1 min less than package). Drain, reserve 1 cup pasta water.",
+        "In a large oven-safe skillet or Dutch oven, heat olive oil over medium-high. Brown sausage, breaking into crumbles, 6–8 min.",
+        "Add garlic, cook 1 min. Add marinara, roasted red peppers, Italian seasoning, and red pepper flakes. Simmer 5 min.",
+        "Stir in heavy cream. Add pasta and toss to coat. Add pasta water if needed to loosen.",
+        "Tear basil leaves and stir in. Top with shredded mozzarella and grated Parmesan.",
+        "Bake uncovered 15 min until cheese is melted and edges are bubbly. Let rest 5 min before serving."
+      ],
+      "notes": "Rao's Sensitive marinara recommended — no onion. Always shred cheese from block. Fresh basil stirred in (not garnish) adds real flavor. One-pan bake."
+    },
+    {
+      "id": "bang-bang-shrimp",
+      "name": "Bang Bang Shrimp",
+      "category": "dinner",
+      "tags": ["shrimp", "asian-inspired", "fried", "spicy", "paleo", "whole30", "high-protein", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 15,
+      "appeal": ["jaclyn", "cora", "justin"],
+      "nutrition_per_serving": {
+        "calories": 420,
+        "protein_g": 35,
+        "carbs_g": 18,
+        "fat_g": 24,
+        "notes": "estimated — varies by coating amount and shrimp size"
+      },
+      "components": {
+        "bang_bang_sauce": {
+          "ingredients": [
+            "1/2 cup mayo (avocado oil mayo for paleo)",
+            "2 tbsp sriracha (or compliant hot sauce)",
+            "1 tbsp coconut aminos",
+            "1 tbsp compliant ketchup (or 1 tsp tomato paste + pinch sugar)"
+          ],
+          "instructions": "Whisk together until smooth. Taste and adjust heat."
+        }
+      },
+      "ingredients": [
+        "1.5 lbs large shrimp, peeled and deveined",
+        "1/4 cup arrowroot flour",
+        "2 tbsp coconut flour",
+        "1/2 tsp garlic powder",
+        "1/2 tsp smoked paprika",
+        "Salt & pepper",
+        "2-3 tbsp avocado oil or coconut oil (for pan-frying)",
+        "Bang bang sauce (see components)"
+      ],
+      "instructions": [
+        "Pat shrimp dry. Season with salt, pepper, garlic powder, paprika.",
+        "Whisk arrowroot and coconut flour in a shallow bowl.",
+        "Dredge shrimp in flour mixture — shake off excess. No clumping.",
+        "Heat oil in a large skillet over medium-high heat.",
+        "Pan-fry shrimp 2-3 min per side until crispy and pink. Don't crowd.",
+        "Toss warm shrimp in bang bang sauce just before serving.",
+        "Serve over cauliflower rice or butter lettuce cups."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Paleo/Whole30 — uses arrowroot dredge instead of breadcrumbs. The sauce is the star: mayo + sriracha + coconut aminos. Eve may skip (shrimp) — primarily a Jaclyn/Justin/Cora meal. Serve immediately after saucing for best texture."
+    },
+    {
+      "id": "hibachi-salmon-yum-yum-sauce",
+      "name": "Hibachi Style Salmon with Yum Yum Sauce",
+      "category": "dinner",
+      "tags": ["salmon", "hibachi", "fish", "paleo", "high-protein", "cast-iron", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 10,
+      "appeal": ["jaclyn", "justin", "cora"],
+      "nutrition_per_serving": {
+        "serving_size_g": 250,
+        "calories": 388,
+        "protein_g": 36,
+        "carbs_g": 3,
+        "fat_g": 25,
+        "notes": "estimated — salmon only, excludes sides"
+      },
+      "components": {
+        "marinade": {
+          "ingredients": [
+            "3 tbsp coconut aminos (sub for soy sauce)",
+            "2 tbsp sesame oil",
+            "1 tbsp fish sauce (sub for Worcestershire — paleo)",
+            "1 tbsp distilled white vinegar (sub for rice wine vinegar — paleo)",
+            "1 tsp garlic powder",
+            "1 tsp ginger, grated",
+            "Salt & pepper"
+          ]
+        },
+        "yum_yum_sauce": {
+          "ingredients": [
+            "1/2 cup mayo (avocado oil mayo for paleo)",
+            "1 tbsp tomato paste",
+            "1 tsp garlic powder",
+            "1/2 tsp smoked paprika",
+            "1/2 tsp coconut aminos",
+            "1-2 tsp water (to thin)"
+          ],
+          "instructions": "Whisk together. Refrigerate 30+ min before serving — flavors develop as it sits."
+        }
+      },
+      "ingredients": [
+        "4 wild-caught salmon fillets (~6 oz each, ~1 inch thick)",
+        "Marinade (see components)",
+        "Yum Yum Sauce (see components)",
+        "1 tbsp avocado oil or ghee",
+        "Cauliflower rice or jasmine rice for serving",
+        "Grilled/sautéed zucchini and mushrooms for serving"
+      ],
+      "instructions": [
+        "Mix marinade. Add salmon and marinate 2+ hours (or overnight).",
+        "Make Yum Yum Sauce and refrigerate.",
+        "Heat a large cast iron skillet over HIGH heat. Add oil.",
+        "Sear salmon flesh-side down 3 min. Flip, pour remaining marinade over top. Cook 3 more min until cooked through.",
+        "Let rest 2 min. Serve with Yum Yum Sauce, rice, and vegetables."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Eve generally skips fish — primarily a Jaclyn/Justin/Cora meal. The Yum Yum Sauce keeps in the fridge up to a week. Atlantic salmon 1-inch thick works best — thinner fillets need shorter cook time. Cast iron is key for a good sear."
+    },
+    {
+      "id": "peruvian-steak-bowls",
+      "name": "Peruvian Steak Bowls (Lomo Saltado Style)",
+      "category": "dinner",
+      "tags": ["steak", "bowls", "peruvian", "lomo-saltado", "paleo", "high-protein", "stir-fry", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 20,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "calories": 480,
+        "protein_g": 38,
+        "carbs_g": 28,
+        "fat_g": 18,
+        "notes": "estimated — excludes rice/cauliflower rice"
+      },
+      "components": {
+        "aji_amarillo_sauce": {
+          "description": "Simplified paleo aji sauce — omit traditional onion",
+          "ingredients": [
+            "1/4 cup mayo (avocado oil mayo)",
+            "1 tbsp aji amarillo paste (or 1 tsp turmeric + pinch cayenne as sub)",
+            "1 tbsp lime juice",
+            "1 clove garlic, minced",
+            "Salt to taste"
+          ],
+          "instructions": "Whisk together. Serve as drizzle or dipping sauce."
+        }
+      },
+      "ingredients": [
+        "2 lbs flank or sirloin steak, sliced thin against the grain",
+        "3 tbsp coconut aminos (sub for soy sauce)",
+        "2 tbsp apple cider vinegar",
+        "1 tsp cumin",
+        "1 tsp garlic powder",
+        "Salt & pepper",
+        "2 tbsp avocado oil",
+        "2 tomatoes, cut into wedges",
+        "2 bell peppers (yellow or red), sliced",
+        "1 jalapeño, sliced (optional)",
+        "Fresh cilantro",
+        "Lime wedges",
+        "Cauliflower rice or jasmine rice for serving",
+        "Sweet potato fries (optional — roasted at 425°F)"
+      ],
+      "instructions": [
+        "Marinate steak in coconut aminos, vinegar, cumin, garlic powder, salt, pepper for 15-30 min.",
+        "Heat wok or large skillet over HIGH heat with avocado oil.",
+        "Sear steak in batches (don't crowd), 2-3 min per batch. Remove and set aside.",
+        "In same pan, stir-fry bell peppers and jalapeño 2 min.",
+        "Add tomato wedges and cook 1 min.",
+        "Return beef to pan, toss everything together with remaining marinade. Cook 1-2 min.",
+        "Serve over cauliflower rice or jasmine rice with sweet potato fries alongside.",
+        "Top with cilantro, lime juice, and aji sauce."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Lomo Saltado is traditionally made with red onion — omitted entirely for Justin. Replaces with extra bell peppers and tomatoes. High heat is essential — wok preferred. Pairs with the aji sauce (simplified paleo version). All 4 may enjoy since it's beef + rice bowl format."
+    },
+    {
+      "id": "southwest-beef-bowls",
+      "name": "Southwest Beef Bowls",
+      "category": "dinner",
+      "tags": ["beef", "bowls", "southwest", "tex-mex", "paleo", "high-protein", "meal-prep", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 25,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "calories": 490,
+        "protein_g": 42,
+        "carbs_g": 30,
+        "fat_g": 20,
+        "fiber_g": 6,
+        "notes": "estimated"
+      },
+      "ingredients": [
+        "1.5 lbs ground beef (80/20)",
+        "2 tbsp taco seasoning (check label — no onion powder; or make own)",
+        "1 tsp garlic powder",
+        "Salt & pepper",
+        "2 lbs sweet potatoes, cubed",
+        "1 lb green beans, trimmed",
+        "2 tbsp avocado oil",
+        "1/2 cup full-fat cottage cheese (topping — high protein boost)",
+        "Hot sauce",
+        "Fresh cilantro",
+        "Lime wedges"
+      ],
+      "taco_seasoning_diy": {
+        "description": "Onion-free DIY taco seasoning",
+        "mix": "2 tsp cumin + 1 tsp smoked paprika + 1 tsp chili powder + 1/2 tsp garlic powder + 1/2 tsp oregano + 1/4 tsp cayenne + 1 tsp salt"
+      },
+      "instructions": [
+        "Preheat oven to 425°F. Toss sweet potato cubes and green beans with avocado oil, salt, pepper. Roast 20-25 min until sweet potatoes are tender and edges caramelize.",
+        "While vegetables roast, brown ground beef in a skillet over medium-high heat. Season with taco seasoning + garlic powder. Cook 8-10 min until cooked through.",
+        "Assemble bowls: sweet potato base, roasted green beans, seasoned beef.",
+        "Top with cottage cheese, hot sauce, cilantro, lime juice."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. High-protein paleo bowl. Cottage cheese topping is the viral trick — adds creaminess + protein without dairy-heaviness. Use DIY taco seasoning to avoid onion powder in commercial blends. Great for meal prep — store components separately."
+    },
+    {
+      "id": "mario-brothers-salad",
+      "name": "The Mario Brothers Salad",
+      "category": "side",
+      "tags": ["salad", "family-recipe", "fruit", "goat-cheese", "pecans", "light", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 0,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "calories": 180,
+        "protein_g": 5,
+        "carbs_g": 14,
+        "fat_g": 12,
+        "fiber_g": 3,
+        "notes": "estimated"
+      },
+      "name_origin": "Named for the colors: red = Mario (strawberries), green = Luigi (the greens). A family classic.",
+      "ingredients": [
+        "5 oz mixed greens or baby spinach (the Luigi)",
+        "1 cup fresh strawberries, quartered or sliced (the Mario)",
+        "1/2 cup fresh blueberries",
+        "3 oz goat cheese, crumbled",
+        "1/2 cup pecans or walnuts, toasted (no sugar — skip candied)"
+      ],
+      "dressing_options": [
+        "Simple balsamic vinaigrette: 3 tbsp olive oil + 1.5 tbsp balsamic vinegar + 1 tsp Dijon + salt/pepper",
+        "Honey lemon: 3 tbsp olive oil + 2 tbsp lemon juice + 1 tsp honey + salt/pepper",
+        "Store-bought: Primal Kitchen balsamic or similar clean-label option"
+      ],
+      "instructions": [
+        "Toast pecans or walnuts in a dry skillet over medium heat 3-4 min until fragrant. Cool slightly.",
+        "Arrange greens on a platter or in a large bowl.",
+        "Top with strawberries, blueberries, goat cheese crumbles, and toasted nuts.",
+        "Drizzle with dressing just before serving. Toss gently."
+      ],
+      "notes": "Family-named salad — Mario (red/strawberries) + Luigi (green/greens). Justin's preference: regular toasted pecans or walnuts, no added sugar. Goat cheese and berries make this feel special without being complicated. Great alongside hibachi salmon, the gnocchi bolognese, or any lighter meal. Best dressed right before serving to keep greens crisp."
+    },
+    {
+      "id": "buffalo-white-chicken-chili",
+      "name": "Buffalo White Chicken Chili",
+      "category": "dinner",
+      "tags": ["chili", "chicken", "buffalo", "soup", "paleo", "whole30", "high-protein", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 6,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 30,
+      "appeal": ["jaclyn", "justin", "cora"],
+      "nutrition_per_serving": {
+        "calories": 431,
+        "protein_g": 34,
+        "carbs_g": 14,
+        "fat_g": 27,
+        "fiber_g": 3,
+        "notes": "estimated — from Wholesomelicious paleo version"
+      },
+      "components": {
+        "cashew_buffalo_queso": {
+          "description": "Dairy-free creamy base — the magic of this chili",
+          "ingredients": [
+            "1 cup raw cashews (soaked 2+ hours or quick-soaked in hot water 30 min)",
+            "1/2 cup chicken broth",
+            "3 tbsp buffalo hot sauce (Frank's or similar)",
+            "2 tbsp nutritional yeast (optional, adds cheesy flavor)"
+          ],
+          "instructions": "Blend until completely smooth and creamy. Set aside."
+        }
+      },
+      "ingredients": [
+        "4 strips bacon, chopped",
+        "1.5 lbs chicken breast, cubed (or 1 rotisserie chicken, shredded)",
+        "3 stalks celery, diced",
+        "2 carrots, diced",
+        "2 poblano peppers, diced",
+        "4 cloves garlic, minced",
+        "1 tsp cumin",
+        "1 tsp smoked paprika",
+        "4 cups chicken broth",
+        "1 can (4 oz) diced green chilis",
+        "Cashew buffalo queso (see components)",
+        "Salt & pepper",
+        "Fresh cilantro for serving"
+      ],
+      "instructions": [
+        "In a large pot, crisp bacon over medium-high heat. Remove and set aside, leaving drippings.",
+        "Sear chicken cubes in bacon drippings until lightly browned. Remove and set aside (or skip if using rotisserie).",
+        "Add celery, carrots, and poblano to pot. Cook 5-6 min until softened.",
+        "Add garlic, cumin, paprika. Cook 1 min.",
+        "Pour in chicken broth. Bring to a simmer.",
+        "While simmering, blend cashew queso until smooth.",
+        "Stir cashew queso + green chilis into simmering chili.",
+        "Add chicken back. Simmer 10 min until thickened and flavors meld.",
+        "Top with crispy bacon and cilantro. Serve with paleo cornbread."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Onion fully omitted — replaced with extra celery, carrots, and poblano. The cashew buffalo queso is the magic ingredient — don't skip it. Not freezer-friendly (cashew queso texture breaks). Refrigerates 5 days. Pairs with paleo cornbread."
+    },
+    {
+      "id": "paleo-cornbread",
+      "name": "Paleo Cornbread",
+      "category": "side",
+      "tags": ["baking", "bread", "paleo", "grain-free", "dairy-free", "side", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 16,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 28,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "calories": 195,
+        "protein_g": 8,
+        "carbs_g": 8,
+        "fat_g": 16,
+        "fiber_g": 3,
+        "notes": "estimated — per 1/16th of 8x8 pan"
+      },
+      "ingredients": [
+        "4 eggs, room temperature",
+        "1/2 cup full-fat coconut milk, room temperature",
+        "1 tbsp fresh lemon juice",
+        "3 tbsp raw honey",
+        "2 tbsp maple sugar (or coconut sugar)",
+        "3 tbsp ghee, melted (or vegan butter)",
+        "2 cups blanched almond flour",
+        "1/4 cup arrowroot flour",
+        "2 tbsp coconut flour",
+        "1 tsp aluminum-free baking powder",
+        "1/4 tsp baking soda",
+        "1/2 tsp fine sea salt"
+      ],
+      "instructions": [
+        "Preheat oven to 325°F. Line an 8x8 inch pan with parchment paper.",
+        "In a large bowl, whisk together eggs, coconut milk, lemon juice, honey, maple sugar, and ghee.",
+        "In a separate bowl, combine almond flour, arrowroot, coconut flour, baking powder, baking soda, and salt.",
+        "Stir dry into wet until just combined — don't over-mix.",
+        "Transfer to prepared pan and smooth the top.",
+        "Bake 25-28 min until set, golden on top, and toothpick comes out clean.",
+        "Cool on rack. Cut into 16 squares. Serve with ghee or honey."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Paleo 'cornbread' — no actual corn. Pairs perfectly with Buffalo White Chicken Chili. All 4 family members will eat this. Grain-free, dairy-free. Recipe adapted from Paleo Running Momma."
+    },
+    {
+      "id": "creamy-spinach-artichoke-shrimp",
+      "name": "Creamy Spinach Artichoke Shrimp",
+      "category": "dinner",
+      "tags": ["shrimp", "spinach", "artichoke", "creamy", "paleo", "high-protein", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 15,
+      "appeal": ["jaclyn", "justin", "cora"],
+      "nutrition_per_serving": {
+        "calories": 340,
+        "protein_g": 32,
+        "carbs_g": 12,
+        "fat_g": 18,
+        "notes": "estimated — excludes quinoa/rice base"
+      },
+      "ingredients": [
+        "1.5 lbs large shrimp, peeled and deveined (tails removed)",
+        "4 cups baby spinach",
+        "1 can (14 oz) artichoke hearts, drained and roughly chopped",
+        "4 cloves garlic, minced",
+        "2/3 cup full-fat coconut milk",
+        "2 tbsp coconut oil or ghee",
+        "2 tsp crushed red pepper flakes",
+        "1/3 cup grated Parmesan (optional — omit for strict paleo)",
+        "Salt & pepper to taste",
+        "Cauliflower rice or quinoa for serving"
+      ],
+      "instructions": [
+        "Preheat oven to 400°F. Line a sheet pan with parchment.",
+        "Toss shrimp with 1 tbsp coconut oil, salt, pepper, and red pepper flakes. Spread on sheet pan.",
+        "Roast shrimp 6-8 min until pink and cooked through.",
+        "Meanwhile, in a skillet over medium heat, melt remaining coconut oil. Add garlic and cook 1 min.",
+        "Add artichoke hearts and cook 2 min.",
+        "Add coconut milk and bring to a simmer. Stir in spinach and cook until wilted, 2 min.",
+        "Add Parmesan if using. Season with salt and pepper.",
+        "Stir shrimp into creamy spinach-artichoke sauce. Serve over cauliflower rice or quinoa."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Eve generally skips shrimp — Jaclyn/Justin/Cora meal. Coconut milk makes it creamy without dairy. The sauce is the same flavor profile as spinach artichoke dip — but lighter and protein-packed. Can sub garlic shrimp if shrimp quality is off."
+    },
+    {
+      "id": "chicken-pad-thai",
+      "name": "Chicken Pad Thai",
+      "category": "dinner",
+      "tags": ["asian-inspired", "chicken", "noodles", "pad-thai", "paleo", "high-protein", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "medium",
+      "prep_time_min": 20,
+      "cook_time_min": 20,
+      "appeal": ["jaclyn", "justin", "cora"],
+      "nutrition_per_serving": {
+        "calories": 430,
+        "protein_g": 38,
+        "carbs_g": 30,
+        "fat_g": 16,
+        "notes": "estimated — using sweet potato noodles"
+      },
+      "components": {
+        "pad_thai_sauce": {
+          "ingredients": [
+            "3 tbsp almond butter (or peanut butter if not strict paleo)",
+            "3 tbsp coconut aminos",
+            "2 tbsp lime juice",
+            "1 tbsp apple cider vinegar",
+            "1 tsp fresh ginger, grated",
+            "1 tsp honey",
+            "2-3 tbsp dairy-free milk (to thin)"
+          ],
+          "instructions": "Blend or whisk until smooth. Adjust lime and sweetness to taste."
+        }
+      },
+      "ingredients": [
+        "1.5 lbs chicken breast or thigh, thinly sliced",
+        "2 medium sweet potatoes, spiralized into noodles (or butternut squash noodles)",
+        "2 large eggs",
+        "1 cup shredded carrots",
+        "1 red bell pepper, julienned",
+        "4 cloves garlic, minced",
+        "1 tbsp fresh ginger, grated",
+
+        "2 tbsp avocado oil",
+        "Pad Thai sauce (see components)",
+        "Crushed almonds or cashews (for topping)",
+        "Fresh cilantro",
+        "Lime wedges"
+      ],
+      "instructions": [
+        "Spiralize sweet potatoes into noodles. Spread on a baking sheet with chicken pieces. Drizzle with 1 tbsp oil, salt, pepper. Roast at 400°F for 20 min.",
+        "While roasting, make pad thai sauce and set aside.",
+        "In a large skillet over medium heat, add remaining oil. Scramble eggs, then push to one side.",
+        "Add carrots and bell pepper. Stir-fry 3-4 min.",
+        "Add garlic and ginger, cook 1 min.",
+        "Add roasted noodles and chicken to skillet. Pour sauce over everything. Toss to coat.",
+        "Serve topped with crushed almonds, cilantro, and lime wedges. No scallions — exclude or serve on side."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Scallions excluded per original note — aligns with Justin's no-onion rule. Uses sweet potato or butternut squash noodles instead of rice noodles for paleo compliance. Almond butter sauce instead of peanut for stricter paleo. All adults will enjoy; Cora may like it but confirm with kids."
+    },
+    {
+      "id": "bolognese-gnocchi",
+      "name": "Bolognese Gnocchi",
+      "category": "dinner",
+      "tags": ["pasta", "gnocchi", "beef", "bolognese", "paleo", "high-protein", "favorites-from-chef"],
+      "added": "2026-03-27",
+      "source": "favorites-from-chef",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 5,
+      "cook_time_min": 25,
+      "appeal": ["jaclyn", "justin", "cora", "eve"],
+      "nutrition_per_serving": {
+        "calories": 558,
+        "protein_g": 24,
+        "carbs_g": 37,
+        "fat_g": 33,
+        "fiber_g": 10,
+        "notes": "estimated — using cauliflower gnocchi"
+      },
+      "ingredients": [
+        "1 lb ground beef (or Italian sausage)",
+        "1 bag (12 oz) frozen cauliflower gnocchi (Trader Joe's) or 1 lb regular gnocchi",
+        "1 jar (24 oz) marinara sauce (Rao's Sensitive — no onion in first 3 ingredients)",
+        "2 cups fresh spinach",
+        "1/2 cup dairy-free creamer (Nutpods Original) or cashew cream or heavy cream if tolerated",
+        "1 tbsp olive oil",
+        "Salt & black pepper",
+        "Fresh basil (for stirring in)",
+        "Optional: nutritional yeast or grated Parmesan for topping"
+      ],
+      "instructions": [
+        "Brown ground beef in a large nonstick skillet over medium-high heat. Season with salt and pepper. Remove with slotted spoon and set aside.",
+        "In the same skillet, heat olive oil over medium heat. Add frozen gnocchi in a single layer. Cover and cook 3-4 min without stirring. Flip and cook another 3-4 min until golden.",
+        "Return beef to pan. Add marinara sauce. Stir to combine.",
+        "Add spinach and stir until wilted, 1-2 min.",
+        "Stir in creamer (or cashew cream). Simmer gently until slightly thickened.",
+        "Tear in fresh basil. Season to taste. Top with nutritional yeast or Parmesan if using."
+      ],
+      "notes": "Family favorite per 'Favorites From the Chef'. Classic bolognese typically uses onion — omitted entirely; Rao's Sensitive marinara has no onion. Cauliflower gnocchi from Trader Joe's keeps it paleo/grain-free. Can use regular potato gnocchi for non-paleo nights. 5-ingredient pantry meal. Eve and Cora will love it (pasta + meat sauce)."
+    }
+  ]
+}

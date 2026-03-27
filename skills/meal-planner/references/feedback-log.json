@@ -1,0 +1,32 @@
+{
+  "meals": [
+    {
+      "date": "2026-03-17",
+      "name": "Italian Sausage & Sweet Potato Bake",
+      "ratings": {
+        "justin": {"score": 1, "notes": "went over well"},
+        "jaclyn": {"score": 1, "notes": ""},
+        "cora": {"score": 1, "notes": ""},
+        "eve": {"score": 1, "notes": ""}
+      },
+      "would_make_again": true,
+      "tags": ["sausage", "sweet-potato", "sheet-pan", "bake"],
+      "notes": "Whole family liked it. Consider for favorites."
+    },
+    {
+      "date": "2026-03-17",
+      "name": "Smash Burgers",
+      "ratings": {
+        "justin": {"score": 1, "notes": "needs more volume — made 2 lbs, should have done 3 lbs"},
+        "jaclyn": {"score": 1, "notes": ""},
+        "cora": {"score": 1, "notes": ""},
+        "eve": {"score": 1, "notes": ""}
+      },
+      "would_make_again": true,
+      "tags": ["burgers", "beef", "smash-burgers"],
+      "notes": "Hit with everyone. Portion was too small at 1.5-2 lbs — need 3 lbs minimum for leftovers."
+    }
+  ],
+  "preference_updates": [],
+  "version": "1.0.0"
+}
