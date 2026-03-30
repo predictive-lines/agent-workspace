@@ -86,20 +86,47 @@
       ],
       "dislikes": [
         "fish (generally)",
-        "chicken (not much)"
+        "chicken (not much)",
+        "cooked bell peppers"
       ],
-      "notes": "Prefers red meat and fried foods. Not big on fish or chicken."
+      "notes": "Prefers red meat and fried foods. Not big on fish or chicken. Does NOT like cooked bell peppers."
     }
   },
   "household_rules": {
     "meals_per_week": 2,
     "meal_structure": "2 entrees + 3-4 shared sides + 1 weekly sweet per week (at least 1 salad)",
-    "portion_sizing": "Each entree must yield 6-8 servings (enough for 2 nights x 4 people, with some but not excessive leftovers). Protein-forward dishes (burgers, tacos, grilled/fried protein): 3 lbs min. Mixed dishes (sheet bakes, casseroles, stir-fry, pasta bakes) where protein is combined with veggies/starch: 2-2.5 lbs protein. When in doubt, target the midpoint — enough for comfortable seconds but not overproduction.",
+    "portion_sizing": "Each entree should yield 4-6 servings depending on who's home that week (see attendance_scaling). Let recipes dictate natural protein quantities — do NOT override with fixed minimums. Target enough for the planned number of diners with comfortable seconds, not excessive leftovers.",
+    "attendance_scaling": {
+      "everyone_home": {
+        "label": "Full house (Justin + Jaclyn + Cora + Eve)",
+        "servings": 6,
+        "salad": "big batch (Justin eats most of it — size to last several days)",
+        "sweet_potatoes": "normal",
+        "sides": "full portions"
+      },
+      "justin_traveling": {
+        "label": "Justin away (Jaclyn + Cora + Eve)",
+        "servings": 4,
+        "salad": "skip — nobody eats enough to justify it",
+        "sweet_potatoes": "normal",
+        "sides": "scaled down"
+      },
+      "jaclyn_traveling": {
+        "label": "Jaclyn away (Justin + Cora + Eve)",
+        "servings": 4,
+        "salad": "big batch (Justin still wants it)",
+        "sweet_potatoes": "light or skip — she's the main consumer",
+        "sides": "scaled down"
+      }
+    },
+    "default_attendance": "everyone_home",
     "planning_day": "Saturday — plan for the upcoming Mon-Sun week",
     "overlap_constraint": "Every person must find at least 1 of the 2 weekly meals appealing",
     "complexity": "Most meals should be executable by a 12-14 year old; occasional 90-min Sunday cook is OK",
     "pantry_handling": "Tag pantry staples in ingredient list (olive oil, butter, salt, pepper, common spices, rice, pasta, flour, sugar, etc.) but still include them",
     "cheese_preference": "Always prefer block cheese over pre-shredded. Shred at home — better melting, no anti-caking agents. NEVER use American cheese singles. If a slice form factor is needed (e.g. burgers), use sliced cheddar. Otherwise use block cheddar.",
+    "produce_preference": "Always prefer whole/fresh fruits and vegetables over canned or jarred alternatives. When searching Kroger, filter for fresh produce — skip canned sweet potatoes, jarred jalapeños, canned tomatoes (unless the recipe specifically calls for canned, e.g. chipotle in adobo).",
+    "flavor_dislikes": ["cilantro"],
     "garnish_policy": "Skip decorative garnishes like parsley, cilantro sprigs, etc. Only include an ingredient if it meaningfully contributes to flavor.",
     "sides_rules": {
       "total_per_week": "3-4 shared across both entrees",

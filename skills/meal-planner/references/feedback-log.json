@@ -17,16 +17,19 @@
       "date": "2026-03-17",
       "name": "Smash Burgers",
       "ratings": {
-        "justin": {"score": 1, "notes": "needs more volume — made 2 lbs, should have done 3 lbs"},
+        "justin": {"score": 1, "notes": "recipe called for 1.5 lbs, used 2 lbs — 2 lbs was just right"},
         "jaclyn": {"score": 1, "notes": ""},
         "cora": {"score": 1, "notes": ""},
         "eve": {"score": 1, "notes": ""}
       },
       "would_make_again": true,
       "tags": ["burgers", "beef", "smash-burgers"],
-      "notes": "Hit with everyone. Portion was too small at 1.5-2 lbs — need 3 lbs minimum for leftovers."
+      "notes": "Hit with everyone. 2 lbs ground beef was the right amount for 6 servings. Original recipe called for 1.5 lbs. No need to override protein mass — let recipe scale naturally."
     }
   ],
-  "preference_updates": [],
+  "preference_updates": [
+    {"date": "2026-03-28", "member": "household", "change": "added 'cilantro' to flavor_dislikes", "reason": "family doesn't like cilantro"},
+    {"date": "2026-03-30", "member": "eve", "change": "added 'cooked bell peppers' to dislikes", "reason": "does not like cooked bell peppers"}
+  ],
   "version": "1.0.0"
 }
