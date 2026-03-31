@@ -37,13 +37,19 @@ Load `references/family-preferences.json` for current preferences. Key constrain
 
 ## Portion Sizing
 
-Size each entree for **2 nights of dinners for 4 people** (6-8 servings). The family wants leftovers for a second night, but not excessive overproduction.
+Size each entree for **4-6 servings** depending on who's home that week. Let the recipe dictate natural protein quantities — do NOT override with fixed minimums.
 
-**Scaling depends on dish type:**
-- **Protein-forward dishes** (burgers, tacos, grilled/fried protein where meat is the star): **3 lbs minimum** protein. These need volume because the protein IS the meal.
-- **Mixed dishes** (sheet bakes, casseroles, stir-fry, pasta bakes where protein is combined with veggies/starch): **2–2.5 lbs** protein. The bulk comes from the other ingredients, so less meat is needed.
+**Attendance scaling (check with Justin each week or use default):**
+
+| Scenario | Who's Home | Servings | Salad | Sweet Potatoes | Sides |
+|---|---|---|---|---|---|
+| **Everyone home** (default) | Justin + Jaclyn + Cora + Eve | 6 | Big batch (Justin eats most) | Normal | Full |
+| **Justin traveling** | Jaclyn + Cora + Eve | 4 | Skip entirely | Normal | Scaled down |
+| **Jaclyn traveling** | Justin + Cora + Eve | 4 | Big batch (Justin still wants it) | Light or skip | Scaled down |
+
 - **Sides:** Scale to last across both entree nights where practical.
 - **When in doubt, target the midpoint** — enough for comfortable seconds but not a third night of the same dish.
+- **Protein:** Follow the recipe's natural proportions for the target serving count. Don't artificially inflate.
 
 ## Workflow: Queue a Meal
 
@@ -104,6 +110,25 @@ Meal Planning/
 ```
 
 Use headings, toggle blocks for recipes, and a bulleted list for the shopping list. Include a callout block at the top summarizing: who each meal targets, total estimated grocery cost range, and any notes.
+
+### Printable Views (required)
+
+Every weekly plan must include two **child pages** (not inline sections) linked from the main meal plan page. Child pages print cleanly from Notion.
+
+Add a "🖨️ Printable Pages" section at the bottom of the main page with links to both child pages.
+
+**Child Page 1: 🖨️ Recipe Cards**
+- Simplified, fridge-friendly cooking instructions for each meal, side, and sweet
+- Written for a 12-14 year old to follow independently
+- Include: ingredient list (plain language, no "(pantry staple)" tags), numbered steps in ALL CAPS action-verb format ("COOK THE MEAT", "SLICE THE STEAK")
+- Include practical tips inline (e.g., "do NOT put it all in at once or it will steam instead of sear")
+- Include reheat instructions for Night 2 of each meal
+
+**Child Page 2: 🖨️ Meal Assembly Guide**
+- How to assemble/plate each meal (the build, combine, and serve steps)
+- Which side pairs with which meal
+- Reheat instructions for Night 2 of each meal
+- Do NOT include: dinner schedules (people decide what night), prep-ahead tips
 
 ### Notion Auth
 
@@ -238,6 +263,7 @@ add_to_cart([
 - **Kroger (Brighton MI):** Fresh produce, herbs, spices, bread — perishables that can't be portioned/frozen
 - **Cheese rule:** Always prefer block over pre-shredded. Better melting, no anti-caking agents. **Never use American cheese singles** — use sliced cheddar if a slice is needed (burgers, etc.), block cheddar otherwise.
 - **No decorative garnishes:** Skip parsley sprigs, cilantro for garnish, etc. Only include an ingredient if it adds meaningful flavor to the dish.
+- **Fresh over canned/jarred:** Always prefer whole fresh fruits and vegetables. When searching Kroger, actively filter out canned/jarred matches (e.g., canned sweet potatoes, jarred jalapeños). Exception: ingredients that are inherently canned (chipotle in adobo, coconut milk, etc.).
 
 ### Delivery Timing
 Kroger delivery slots fill up fast. When generating a meal plan, load the Kroger cart **at least 1 day before the first meal is needed** — ideally when the plan is generated. Flag this to Justin when posting the plan.
@@ -267,9 +293,10 @@ The Chrome extension relay is used for checkout — it runs inside Justin's real
 ### Workflow: Assemble Cart
 1. Generate meal plan → shopping list
 2. For Kroger items: search each ingredient via API, pick best match (prefer fresh/whole over pre-packaged)
-3. Add all Kroger items to cart via `add_to_cart()`
-4. Notify Justin: "Kroger cart is loaded — review and checkout at kroger.com"
-5. For Costco: list items + aisle suggestions (no API available yet)
+3. **Present the proposed Kroger cart to Justin and wait for explicit approval before calling `add_to_cart()`**. The Kroger API is add-only (no delete/clear) and clearing the cart manually is tedious (one item at a time). Never load the cart without permission.
+4. Once approved: Add all Kroger items to cart via `add_to_cart()`
+5. Notify Justin: "Kroger cart is loaded — review and checkout at kroger.com"
+6. For Costco: list items + aisle suggestions (no API available yet)
 
 ## Shopping List Format
 

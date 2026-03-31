@@ -1,7 +1,7 @@
 # MEMORY.md — Long-Term Memory
 
 ## Justin Miller — Context
-- Acquired Excel Fire Protection (Marquette, MI) for $3.3M. Target close: April 2026.
+- Acquired Excel Fire Protection (Marquette, MI) for $3.3M. Target close: May 15, 2026.
 - Union fire sprinkler company (~$2M revenue), Local 669. Fiscal year starts October.
 - LLC with S-Corp election. Household has ~$200K W2 income (MFJ).
 - Annual debt service: $325K (SBA 7a $277K + Seller Note $26K + Ford F250 $22K).
@@ -97,6 +97,36 @@
 - Konner Lefebvre: Class 10 (Jan-Jun 2030, Budget row 29) → 4th local JM (Jul 2030+, Budget row 30)
 - Rows 31-38: Konner individual benefit rows (Class 10 + JM periods)
 - Aggregate benefit rows 89-92 ended 12/31/2029; new aggregates appended at 165-168 (3 JMs + Admin + Officer)
+
+## Headcount & Staff Growth Model (Mar 26, 2026)
+- **Completed:**
+  - BMI Staff Growth Plan (rows 122-129): Apprentice 1 (3/15/2026), JM Hire 3 (7/1/2028), Apprentice 3 (7/1/2028)
+  - PC Headcount Matrix (rows 134-145): Dynamic formulas count people per class per month based on start dates + 6-month class progression
+  - PC Aggregate Cost (rows 148-152): Monthly totals for Wages, Union Benefits, FICA SS/Medicare, WC
+  - Budget rows 200-294: 95 new rows for field staff
+    - Apprentice 1: 11 wage rows (Class 1-10 + JM) + 35 benefit rows (FICA/Medicare/WC per class, plus Union Benefits 2030+)
+    - JM Hire 3: 5 rows (wage + all benefits)
+    - Apprentice 3: 11 wage rows + 34 benefit rows
+  - All rows use formulas referencing PC rates (not hardcoded), so CBA changes auto-flow
+  - Toggle column (S) set to 1 for all new rows to enable SUMPRODUCT in IS
+- **Toggle column (S):** MUST be set to 1 for new Budget rows — IS cols G-I multiply by `$S$`. Empty = 0 → row is ignored.
+- **Double-count fix:** Aggregate rows (19-20, 72-73, 90, 110-113, 186-189) had `×3` coefficient including Konner as JM, but Konner had individual apprentice rows too. Fixed all to `×2` (Keith + Branden only).
+- **Final result:** Model **Healthy**, max shortfall $0, BS CHECK $0. NI: FY26 +$27K, CY27 +$42K (fixed double-count), CY28 -$102K, CY29 -$256K (new hires absorbed by 40% rev growth).
+
+## Headcount Model Architecture (Mar 26, 2026 — earlier notes)
+- **Problem:** Excel Fire needs flexible staffing model where adding a hire (to BMI) automatically scales wages/benefits through Budget → IS/BS/CFS
+- **Solution:** Headcount-driven model with coefficient multipliers per class level
+  - **BMI Staff Growth Plan (rows 122-127):** One row per person: Name, Role (JM/Apprentice), Start Date, Starting Class (apprentices only)
+  - **Payroll Calculations Headcount Matrix (rows 134-145):** For each month (F-CZ), counts people at each role/class using formulas
+    - JM count = COUNTIFS(role=JM, started) + SUMPRODUCT(role=Apprentice, started, class>10)
+    - Class N count = SUMPRODUCT(role=Apprentice, started, class=N) where class = 1+INT(months_since_start/6)
+  - **Payroll Calculations Aggregate Cost (rows 148-152):** Monthly totals for Wages, Benefits, FICA, Medicare, WC
+    - Each cell = SUM(headcount_JM × rate_JM + headcount_C1 × rate_C1 + ... + headcount_C10 × rate_C10)
+- **Budget restructure (pending):** Replace per-person rows with period-based rows × Qty coefficient
+  - E.g., `Apprentice Class 3` start 7/1/26 end 12/31/26 Qty=1; start 1/1/27 Qty=2 (new hire enters Class 3)
+  - Modify SUMPRODUCT in IS/CB/LOC to include `× Budget!$T` (Qty column)
+- **Verified:** May 2026 (2 JM + 1 C1 + 1 C2), Jul 2026 (Konner → C3), Jan 2027 (2 JM + 1 C2 + 1 C4) — all correct
+- **Next:** Budget row restructure + SUMPRODUCT updates (pending user decision on scope)
 
 ## CFS Debt Principal Fix (Mar 17, 2026)
 - **CFS row 53 cols J-M**: Fixed Budget column reference ($I$→$H$) — was looking in Notes instead of Account

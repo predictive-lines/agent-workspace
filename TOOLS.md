@@ -5,7 +5,7 @@
 - **Org:** predictive-lines
 - **Auth:** Fine-grained PAT stored in `~/.git-credentials`
 - **Repos (cloned to ~/repos/):**
-  - excel-fire-ai
+  - excel-fire-ai (GitHub: predictive-lines/ai-skills — local folder kept as excel-fire-ai)
   - llm-experimentation
   - openCPQ
   - qb-mcp-server
@@ -36,9 +36,16 @@
 
 ### Google Drive & Sheets
 
-- **Auth:** OAuth2 (Web app flow), tokens in `~/.config/google/tokens.json`, credentials in `~/.config/google/oauth_credentials.json`
-- **Scopes:** `drive.readonly`, `spreadsheets` (read/write)
-- **Refresh token:** stored — access token auto-refreshable via `POST https://oauth2.googleapis.com/token` with `grant_type=refresh_token`
+- **Auth:** OAuth2 (Web app flow)
+- **Account 1 — `justin.miller@predictivelines.com`:**
+  - Tokens: `~/.config/google/tokens.json`
+  - Credentials: `~/.config/google/oauth_credentials.json`
+  - Scopes: `drive.readonly`, `spreadsheets`, `gmail.readonly`, `gmail.send`, `calendar`
+- **Account 2 — `millerjl@oneoaks.net`:**
+  - Tokens: `~/.config/google/tokens-oneoaks.json`
+  - Credentials: `~/.config/google/oauth_credentials-oneoaks.json`
+  - Scopes: `drive.readonly`, `spreadsheets`
+- **Refresh token:** stored in each tokens file — access token auto-refreshable via `POST https://oauth2.googleapis.com/token` with `grant_type=refresh_token`
 - **Important:** Access token expires hourly; refresh before use
 
 ### QuickBooks Desktop (MCP)
@@ -50,6 +57,16 @@
 - **Helper script:** `python3 ~/repos/qb-query.py <tool_name> '<json_args>'`
 - **Tools:** test_connection, get_gl_detail, get_customer_list, get_customer_detail, get_customer_transactions, get_vendor_transactions, get_journal_entries, get_deposits, get_job_addresses
 - **Note:** SSE connection must stay open during calls; helper script handles this
+
+### Kroger API
+
+- **App:** miller-family-meal-planner (Production)
+- **Auth:** OAuth2 credentials in `~/.config/kroger/credentials.json`
+- **User tokens:** `~/.config/kroger/tokens.json` (after OAuth flow)
+- **Brighton store ID:** `01800638` (9968 E Grand River Ave)
+- **Scopes:** `cart.basic:write`, `product.compact`, `profile.compact`
+- **Script:** `skills/meal-planner/scripts/kroger_api.py`
+- **Note:** Use `--http1.1` with curl — Kroger API has HTTP/2 issues. The Python `requests` library works fine.
 
 ### Cameras
 

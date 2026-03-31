@@ -207,6 +207,25 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## 🧹 Closing a Thread
+
+When Justin says "close this out," "wrap this up," or similar — run the full cleanup:
+
+1. **Capture memory** — Write anything worth remembering to `memory/YYYY-MM-DD.md`. If it's gone, it's gone.
+2. **Commit to GitHub** — Check if any workspace skill files or repo files were modified during the thread. Sync workspace → repo copies if needed, then `git add / commit / push`. Don't leave uncommitted work behind.
+3. **Kill sub-agents** — `subagents list` → kill any still running from this thread.
+4. **Kill background processes** — `process list` → kill lingering shells, watchers, tail commands.
+5. **Clean temp files** — Remove any scratch/temp files created during the thread (workspace or `/tmp`).
+6. **Clear HEARTBEAT.md** — Remove any thread-specific items that were added.
+7. **Context reset** — Don't carry assumptions, stale variables, or thread-specific state forward.
+
+**Don't touch** (unless specifically changed during the thread):
+- MEMORY.md (only if something significant warrants a long-term update)
+- Git state (should already be committed/pushed during work)
+- TOOLS.md, SOUL.md, USER.md (persistent config)
+
+The goal: next thread starts completely fresh with a full prompt window.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

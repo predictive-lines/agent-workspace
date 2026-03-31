@@ -27,11 +27,11 @@
       "added": "2026-03-27",
       "source": "explicit",
       "tags": ["dinner", "tex-mex", "copycat", "chipotle-inspired"],
-      "appeal": ["jaclyn"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
       "recipe_summary": "Copycat Taco Bell Quesarito with homemade chipotle sauce, nacho cheese, seasoned rice, taco meat, and sour cream in a toasted double-tortilla wrap.",
-      "last_planned": null,
-      "times_planned": 0,
-      "notes": "Full recipe in recipe-library.json. Not yet queued for meal planner."
+      "last_planned": "2026-03-30",
+      "times_planned": 1,
+      "notes": "First meal plan inclusion. v2: scaled to 6 servings with 2 lbs ground beef (mixed dish — tortillas/cheese/rice carry volume)."
     },
     {
       "name": "Smash Burgers",
@@ -42,10 +42,10 @@
       "recipe_summary": "Thin smashed beef patties on a hot griddle with melted cheddar, pickles, and brioche buns.",
       "last_planned": "2026-03-17",
       "times_planned": 1,
-      "notes": "Need 3 lbs ground beef minimum for 2 nights of meals."
+      "notes": "2 lbs ground beef is right for 6 servings. Recipe naturally called for 1.5 lbs — scale up slightly but don't override."
     }
   ],
   "version": "1.0.0",
-  "last_updated": "2026-03-27",
+  "last_updated": "2026-03-28",
   "notes": "Recipes marked as favorites via feedback or explicit request. Used to weight meal plan generation toward proven hits."
 }
