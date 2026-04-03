@@ -78,4 +78,9 @@ _(none yet)_
 
 ### TTS
 
-_(none yet)_
+- **Provider:** Microsoft Edge TTS (free, no API key)
+- **Voice:** `en-US-JennyNeural` (female)
+- **Plugin:** `microsoft` must be enabled in `plugins.entries`
+- **Config:** `messages.tts` in `openclaw.json` — `auto: "always"`, `provider: "microsoft"`
+- **Note:** Gateway restart required after voice changes. `[[tts:voice=...]]` directives don't reliably override Microsoft provider — use config for voice changes.
+- **RULE:** TTS is ONLY used during driving mode. Do NOT generate audio files for normal replies. Driving mode must be explicitly activated by Justin.
