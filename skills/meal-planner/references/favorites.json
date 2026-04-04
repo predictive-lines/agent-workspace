@@ -44,8 +44,19 @@
       "times_planned": 1,
       "notes": "2 lbs ground beef is right for 6 servings. Recipe naturally called for 1.5 lbs — scale up slightly but don't override."
     }
+    ,{
+      "name": "One-Pot Creamy Penne with Italian Sausage",
+      "added": "2026-04-04",
+      "source": "feedback-auto",
+      "tags": ["pasta", "sausage", "one-pot", "creamy"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "recipe_summary": "Creamy one-pot penne with Italian sausage. Huge hit with all four family members.",
+      "last_planned": "2026-04-01",
+      "times_planned": 1,
+      "notes": "Auto-favorited after unanimous positive feedback."
+    }
   ],
   "version": "1.0.0",
-  "last_updated": "2026-03-28",
+  "last_updated": "2026-04-04",
   "notes": "Recipes marked as favorites via feedback or explicit request. Used to weight meal plan generation toward proven hits."
 }

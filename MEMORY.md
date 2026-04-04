@@ -49,6 +49,16 @@
 - **Skill:** `~/repos/excel-fire-ai/skills/household-finances/` — covers Budget columns, account_balances_per_period formula logic, auth pattern
 - **Key fix (Mar 15 2026):** account_balances_per_period formulas now gate on start date (`elapsed_start < 0 AND start > P$1` = suppress pre-load) and end date (`col_month >= end_month` = hard zero). Period formula also uses `elapsed < 0 AND start > P$1` for pre-start zero. End check uses `>=` and returns `0` not `prior`.
 
+## Financial Model Fixes (Apr 3, 2026) — Depreciation Overhaul
+- **Bug 3 — Stepped-up basis:** BS F30 (Vehicles) = 73,248.39 (FMV), BS F31 (Accum Depr) = `MAX(-F30, 0-IS!F64)` = -30,000. Asset sale = no inherited depreciation history.
+- **Bug 1 — BS Accum Depr accumulation:** BS G31:M31 all use `=MAX(-col30, prior31-'Income Statement'!col64)`. Was broken: J31-M31 just copied prior period.
+- **Bug 2 — PP&E floor at $0:** MAX guard prevents Accum Depr from exceeding gross asset value. Total PP&E: $73,248 → $43,248 → $13,248 → $0 → $0...
+- **IS depreciation cap:** Each IS F64:M64 SUMPRODUCT wrapped in `MIN(SUMPRODUCT, 'Balance Sheet'!prior_col32)`. Depreciation stops when PP&E = 0.
+- **Cash bridge depreciation cap:** Same fix on CB row 63 December cells (CQ/DT/EG/ET/FG/FT/GG/GT) — each `MIN(SUMPRODUCT, 'Balance Sheet'!prior_col32)`. CB row 92 (CF add-back) auto-references row 63.
+- **Row 32 (Total PP&E) J-M:** Changed from copy-prior to `=SUM(col30:col31)`.
+- **Sign convention (stepped-up basis):** Vehicles = +73,248 (positive), Accum Depr starts 0 → goes negative. MAX guard = `MAX(-Vehicles, prior - depreciation)`.
+- **IS/CB agreement verified:** Both show $30K/$30K/$13,248/$0/$0/$0/$0/$0. BS CHECK = $0 all periods.
+
 ## Financial Model Fixes (Mar 25, 2026)
 - **LOC schedule retainage sign**: M column was `+IF(YEAR>=2027, SUMPRODUCT(...))` — should be `-IF(...)`. Retainage holds reduce cash.
 - **LOC schedule depreciation multiplier**: G column was hardcoded `$O$` (FY2027 multiplier). Fixed to dynamic `IF(YEAR>=2029, Q, IF(YEAR>=2028, P, O))`.

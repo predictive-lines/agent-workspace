@@ -63,6 +63,8 @@ Add a specific recipe to `references/meal-queue.json` for an upcoming week's pla
 
 ## Workflow: Generate a Meal Plan
 
+**Step 0 (MANDATORY): Ask who's home this week.** Do NOT generate the plan until attendance is confirmed. Use the attendance_scaling table in preferences to set serving count, salad, and side sizing. Default assumption is everyone home, but ALWAYS confirm first.
+
 1. Read `references/family-preferences.json` for current preferences
 2. Read `references/feedback-log.json` for recent feedback (avoid recently disliked meals, favor hits)
 3. Read `references/favorites.json` for the favorites index — aim to include a favorite every 2-3 weeks to keep proven hits in rotation

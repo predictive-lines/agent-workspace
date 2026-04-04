@@ -25,6 +25,45 @@
       "would_make_again": true,
       "tags": ["burgers", "beef", "smash-burgers"],
       "notes": "Hit with everyone. 2 lbs ground beef was the right amount for 6 servings. Original recipe called for 1.5 lbs. No need to override protein mass — let recipe scale naturally."
+    },
+    {
+      "date": "2026-04-01",
+      "name": "One-Pot Creamy Penne with Italian Sausage",
+      "ratings": {
+        "justin": {"score": 1, "notes": "huge hit"},
+        "jaclyn": {"score": 1, "notes": "huge hit"},
+        "cora": {"score": 1, "notes": "huge hit"},
+        "eve": {"score": 1, "notes": "huge hit"}
+      },
+      "would_make_again": true,
+      "tags": ["pasta", "sausage", "one-pot", "creamy"],
+      "notes": "Huge hit all around. Auto-favorited."
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Fruit Salad",
+      "ratings": {
+        "justin": {"score": 0, "notes": "OK with it"},
+        "jaclyn": {"score": 0, "notes": "OK with it"},
+        "cora": {"score": 1, "notes": "hit with Cora"},
+        "eve": {"score": 0, "notes": "OK with it"}
+      },
+      "would_make_again": true,
+      "tags": ["fruit", "salad", "side", "sweet"],
+      "notes": "Cora loved it, rest of family was fine with it but not enthusiastic."
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Roasted Broccoli",
+      "ratings": {
+        "justin": {"score": 1, "notes": "happy to eat it"},
+        "jaclyn": {"score": 1, "notes": "happy to eat it"},
+        "cora": {"score": -1, "notes": "dud"},
+        "eve": {"score": -1, "notes": "dud"}
+      },
+      "would_make_again": true,
+      "tags": ["broccoli", "roasted", "side", "vegetable"],
+      "notes": "Kids didn't like it. Justin and Jaclyn each ate about one head worth. Still worth including as an adult side — size down to 1 head when kids won't eat it. For this week's plan, included 2 heads since it pairs well with puff pastry pockets — may want to adjust."
     }
   ],
   "preference_updates": [
