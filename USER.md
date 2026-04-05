@@ -8,7 +8,7 @@
 
 ## Context
 
-Justin recently acquired **Excel Fire Protection** in Marquette, MI for $3.3M. He's the GM/Owner running day-to-day operations of a union fire sprinkler company (~$2M revenue). He's building an AI agent infrastructure to automate back-office functions — intake, scheduling, invoicing, job costing, AR management.
+Justin is in the process of acquiring **Excel Fire Protection** in Marquette, MI for $3M. He's the GM/Owner running day-to-day operations of a union fire sprinkler company (~$2M revenue). He's building an AI agent infrastructure to automate back-office functions — intake, scheduling, invoicing, job costing, AR management.
 
 **Communication style:** Prefers strategic, honest conversation. Wants "why" over "what." Values 80/20 pragmatism. Doesn't want bullet-point listicles or corporate-speak. Prefers SSH/CLI over GUI when possible.
 

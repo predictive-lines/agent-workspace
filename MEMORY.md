@@ -1,9 +1,9 @@
 # MEMORY.md — Long-Term Memory
 
 ## Justin Miller — Context
-- Acquired Excel Fire Protection (Marquette, MI) for $3.3M. Target close: May 15, 2026.
+- Acquiring Excel Fire Protection (Marquette, MI) for $3M. Target close: May 15, 2026.
 - Union fire sprinkler company (~$2M revenue), Local 669. Fiscal year starts October.
-- LLC with S-Corp election. Household has ~$200K W2 income (MFJ).
+- Tax structure not yet finalized (S-Corp vs C-Corp). Household has ~$200K W2 income (MFJ).
 - Annual debt service: $325K (SBA 7a $277K + Seller Note $26K + Ford F250 $22K).
 - Wife/business partner: Jaclyn Miller (CEO/CFO).
 
