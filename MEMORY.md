@@ -150,3 +150,39 @@
 - **Cash Bridge row 2 dates FY2030-2032**: Were formatted as currency, fixed to M/d/yyyy.
 - **Seller Note schedules**: Both SN and SN2 now have IF(balance<=0, 0, formula) guards past row 64 (60-month payoff). No more #NUM! or negative balances.
 - **Budget debt rows now at 169-176** (SBA 7a + Seller Note principal FY2030-2033, freq=12/annual)
+
+## Sister Company — Fire Extinguisher Inspection & Service (Apr 8, 2026)
+- **Concept:** Separate LLC (non-union) for portable fire extinguisher inspection, recharge, and hydrostatic testing. Shared back office with Excel Fire. Potential to bundle fire alarm inspections.
+- **Market opportunity:** Zero providers in Marquette area. Previous provider (Lammi) was acquired by Summit Fire Protection (PE roll-up) and stopped offering local extinguisher service. Excel Fire gets ~1 call/day asking for the service with no one to refer to.
+- **Pricing strategy:** 10-15% above highest market rate — still cheaper than customers replacing extinguishers they can't get inspected. ~$678/visit at 15 units avg.
+- **Breakeven:** ~144 accounts/year (~2.9/week), ~58% conversion on Excel Fire inbound leads. Year 1 base case nets ~$13K; Year 2 ~$73K; Year 3 ~$123K.
+- **Startup cost:** ~$47K (used AWD Transit van ~$22K, recharge/hydro equipment ~$16K, inventory/tools/licensing ~$9K).
+- **Licensing:** MI has no state-specific fire extinguisher service license. ICC/NAFED Certified Portable Fire Extinguisher Technician exam (100 Q, open-book) is the industry credential. Fire alarm work requires separate MI FAST license (NICET II + 4,000 hrs).
+- **Structure:** Sister LLC to avoid Local 669 CBA jurisdictional issues. Separate EIN, payroll, insurance. Shared back office, CRM, phone system with Excel Fire for warm handoffs.
+- **Breakeven model:** `ai-team/fire-extinguisher-breakeven-model.xlsx` — 3 tabs (Assumptions, 3-Year Projection, Scenarios).
+- **Lead — Travis (last name TBD):** Former Lammi alarm tech, may have extinguisher experience. Both Keith and Kevin previously tried to recruit him; he reportedly switched careers to work at a fish hatchery (or similar). Worth reaching out — if he has MI FAST license from Lammi days, that's a huge head start on the alarm bundling side. Extinguisher ICC/NAFED cert would be quick to add. Get contact info from Excel Fire office staff.
+
+## IT & Operations Infrastructure (Apr 8, 2026)
+
+### Digital Records Management Policy (EFP-DRM-002)
+- **Published to Notion:** Human Readable Reports > "Digital Records Management Policy" (page id: 33c7e702-d98c-8120-a9a2-f6f41e27646d)
+- **Local file:** `ai-team/data-classification-and-retention-policy.md`
+- **Key decisions:** 4-tier data classification (Restricted→Bitwarden, Confidential, Internal, Public). Paperless-ngx as document management interface. S3 backend with lifecycle policies mapped to 7 retention tiers (1yr through life-of-system + permanent). Content scanning safeguards for misclassification. Offsite DR via S3 Cross-Region Replication (us-east-2 → us-west-2). Daily reports tagged `daily-report` + `job:XXXX-XXXX` + `retain-7yr` + `internal` via Raken auto-email → Paperless-ngx auto-tagging.
+
+### Site Infrastructure Standard — EFP Location Kit
+- **Published to Notion:** Human Readable Reports > "Site Infrastructure Standard — EFP Location Kit" (page id: 33c7e702-d98c-81c4-a9bb-f67e91334093)
+- **BOM:** ~$2,030/site. Ubiquiti Cloud Gateway Ultra (networking/WiFi/PoE/WireGuard VPN), UniFi camera, Schlage Encode Plus smart lock, LiftMaster 87504 + ratgdo garage door, Beelink SER7 Docker host, Aqara Zigbee sensors (SONOFF dongle), Emporia Vue power monitor, Ecowitt weather station, UPS.
+- **Docker stack:** Paperless-ngx, Vaultwarden, Home Assistant, PostgreSQL. WireGuard VPN native on Ubiquiti router (no Tailscale needed). Config repo: `efp-site-config/` with docker-compose.yml + per-site .env files.
+- **Expansion path:** Frigate NVR with Google Coral TPU for AI camera detection.
+
+### Job Lifecycle & Database Design Proposal (v3)
+- **Published to Notion:** Human Readable Reports > "Job Lifecycle & Database Design Proposal" (page id: 33c7e702-d98c-81f3-8b0c-c9c72d5c3715)
+- **Local file:** `ai-team/job-lifecycle-proposal.md` (790 lines, comprehensive)
+- **4 new databases proposed:**
+  1. **Installation Jobs** — 21-status physical work flow (Lead→Complete) + parallel 7-value Billing Status. 3 hard gates (contract+design before materials, permit before mobilization, signed CO before CO work). Risk flags for out-of-sequence work. % Complete framework (Default from status formula, Override manual, Effective picks best). Design subcontractor tracking. Service/Repair support with Service Priority field. Daily reporting via Raken → Paperless-ngx. 15 views including Pipeline, Gate Violations, Missing Daily Reports, % Complete Dashboard.
+  2. **Inspection Jobs** — 9 statuses (Scheduled→Closed + Deficiency Follow-Up). Inspect Point integration field. Deficiency tracking with severity and repair job link.
+  3. **Billing Log** — Per-invoice tracking (Progress, Final, Retainage, CO, Stored Materials). Lien release document links per draw. Retainage partial release tracking.
+  4. **Change Orders** — CO lifecycle (Identified→Billed). Strictest hard gate: signed CO required before ANY cost-incurring work. Days Since Submitted aging. Revenue Impact view.
+- **Migration plan:** 4 phases (create DBs → migrate active jobs → retire old DB → calibrate % Complete defaults after 10-15 jobs)
+- **Pending review:** 14 questions for Justin, Jaclyn, Keith & Kevin covering % complete calibration, gate design, billing practices, and business structure.
+- **PENDING:** Workflow diagram (mind map) + Word document write-up of the job lifecycle process — requested but not yet created.
