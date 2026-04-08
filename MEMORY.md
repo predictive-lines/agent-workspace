@@ -185,4 +185,4 @@
   4. **Change Orders** — CO lifecycle (Identified→Billed). Strictest hard gate: signed CO required before ANY cost-incurring work. Days Since Submitted aging. Revenue Impact view.
 - **Migration plan:** 4 phases (create DBs → migrate active jobs → retire old DB → calibrate % Complete defaults after 10-15 jobs)
 - **Pending review:** 14 questions for Justin, Jaclyn, Keith & Kevin covering % complete calibration, gate design, billing practices, and business structure.
-- **PENDING:** Workflow diagram (mind map) + Word document write-up of the job lifecycle process — requested but not yet created.
+- **Delivered:** Workflow diagram (PNG) + Word document write-up: `ai-team/job-lifecycle-workflow.docx` — cover page, embedded diagram, full write-up of all 4 databases, gates, % complete, daily reporting, migration plan, and 14 review questions.
