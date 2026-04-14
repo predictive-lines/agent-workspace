@@ -1,9 +1,35 @@
 # TOOLS.md - Local Notes
 
+### Quo (Phone / SMS / Call Transcripts)
+
+- **Connector:** Quo MCP (Cowork connector)
+- **Inbox numbers:**
+  - `+17348214271` — Justin personal / Predictive Lines
+  - `+19069363100` — Excel Fire Protection (Marquette)
+- **Tools:** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact
+- **Note:** Use both inboxes when compiling weekly status reports. Auth is via Cowork connector — if calls fail with "API key required," re-authenticate the Quo connector in Cowork settings.
+
+### Granola (Meeting Notes & Transcripts)
+
+- **Connector:** Granola MCP (Cowork connector)
+- **Tools:** list_meetings, get_meetings, get_meeting_transcript, query_granola_meetings, list_meeting_folders
+- **Use:** Pull meeting summaries and transcripts for weekly status reports and action item tracking.
+
+### Microsoft 365 — Custom Outlook MCP
+
+- **Connector:** Custom MCP (`ai-team/excel-fire-ai/mcp-servers/outlook/`), connected via `github-custom-mcp` Cowork connector
+- **Current scope:** Microsoft To Do (tasks), SharePoint Lists
+- **Tools (To Do):** todo_list_lists, todo_list_tasks, todo_create_task, todo_update_task, todo_complete_task, todo_delete_task, todo_create_list
+- **Tools (SharePoint Lists):** lists_get_site, lists_list_lists, lists_get_list, lists_get_items, lists_create_item, lists_update_item, lists_delete_item, lists_create_list
+- **Tools (SharePoint Drive):** drive_list_drives, drive_list_items, drive_search, drive_get_file_content, drive_get_file_metadata, drive_upload_file, drive_create_folder
+- **Tools (Outlook mail/calendar/events):** Also available but not primary use case yet
+- **Use:** To Do tasks and SharePoint Lists feed into weekly status reports. Part of Notion → M365 migration (see MEMORY.md).
+
 ### GitHub
 
 - **Org:** predictive-lines
-- **Auth:** Fine-grained PAT stored in `~/.git-credentials`
+- **Auth:** Fine-grained PAT stored in `~/.git-credentials` (local git) and `~/github-mcp-token` (MCP bridge)
+- **MCP bridge:** `~/mcp-bridge.sh` — restart after token rotation. Reads PAT from `~/github-mcp-token`.
 - **Repos (cloned to ~/repos/):**
   - excel-fire-ai (GitHub: predictive-lines/ai-skills — local folder kept as excel-fire-ai)
   - llm-experimentation
