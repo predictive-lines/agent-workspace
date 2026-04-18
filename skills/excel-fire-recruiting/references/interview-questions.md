@@ -320,6 +320,19 @@ Use as a scattered round-2 screen (5–7 picked from this section), not as a qui
   and "impairment" in your practice, and when do you call the customer vs. just write it
   up?
 
+### The flood story — a canonical sprinkler question
+
+- `[Trade]` **Tell me about the worst flood you've ever caused or been involved with on a
+  job.** What happened, what did you do in the first 30 minutes, and what did you change
+  afterward?
+  - *What you're listening for:* (1) ownership vs. blame-shifting — anyone who denies
+    they've ever flooded a building is either lying or too green to have earned the story;
+    (2) crisis instinct — isolation valve, FDC, alarm panel, customer call, insurance
+    call, in roughly that order; (3) what-I-learned — the procedural or habit change that
+    came out of it. A JM who can't narrate this question with specifics probably isn't.
+  - *Pairs well with:* the planned-impairment checklist question below (the flood is the
+    unplanned version of that checklist being ignored or missing).
+
 ### Safety & impairment
 
 - `[Trade]` Walk me through how you handle a planned impairment — tags, FDC, the fire
