@@ -134,12 +134,37 @@ Close with a one-line reminder that nothing was sent.
   Justin before drafting all of them (avoid burst-creating dozens of drafts).
 - Always leave the browser on the cycle detail page when finished.
 
+## Tailored interview question sets (optional)
+
+If the user asks for an interview question set for a specific HireScore candidate (or for the
+whole cycle), read `references/interview-questions.md` and pick 6–10 questions tailored to
+that candidate's Screen dialog data. Heuristics:
+
+- Pull at least one question from each of the 5 signal categories (work ethic, honesty, UP
+  growth mindset, openness to tech / Company Cam, willingness to relocate).
+- Use the candidate's `expertise_raw` self-ratings to pick role-specific questions: any
+  skill they rated ≤3/5 is worth probing, any skill they rated 5/5 is worth pressure-testing.
+- Use `experience_raw` to pick one experience-specific hook (e.g. if they were a foreman,
+  lean into the crew-leadership / training questions).
+- If the candidate's city/state is outside Michigan, include the relocate-block questions.
+  If they're already in the UP or Michigan, drop the "have you been to the UP" opener and
+  instead ask about long-tenure intent.
+- NEVER pick from the red-flag list. If a caller suggests a red-flag-style question,
+  redirect to the safe alternative listed in the same file.
+
+After generating the set, post it back to the user grouped by signal category so they can
+scan during the call.
+
 ## Files
 
 - `references/email-template.md` — the draft-email pattern (tone, structure, signature,
   placeholder rules).
 - `references/hirescore-dom-notes.md` — DOM anchors + `dialog.description` parsing hints,
   captured from cycle 7239. Read when selectors misbehave or HireScore ships a UI change.
+- `references/interview-questions.md` — HR-safe behavioral question bank for the JM Sprinkler
+  Fitter role, organized by the 5 signals Justin wants to read, plus a protected-category
+  red-flag list with EEOC-safe alternatives. Source tags on every question: `[Kevin]` for
+  seller-coach suggestions, `[EEOC]` for EEOC/SHRM-derived, `[Role]` for role-specific.
 - `scripts/parse_screen_dialog.py` — turn the Screen dialog's flattened text into a structured
   `{name, email, phone, city, state, education[], experience[], expertise{}, submitted_on,
   position}` dict. Importable as `parse(text)` or runnable as a CLI that reads stdin.
