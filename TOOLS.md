@@ -53,8 +53,9 @@ Justin runs MCP connectors in **two separate environments**. A connector install
   - OpenClaw: registered as `quo` under `mcp.servers`, server at `~/repos/armavita-quo-mcp/` (Node, stdio, AGPLv3). Auth via `QUO_API_KEY` loaded from `~/.config/quo/api_key` by `launch-openclaw.sh`.
   - Claude Desktop: also available via Cowork connector.
 - **Inbox numbers:**
-  - `+17348214271` — Justin personal / Predictive Lines
-  - `+19069363100` — Excel Fire Protection (Marquette)
+  - `+17348214271` — Predictive Lines (💼)
+  - `+19069363100` — Excel Fire Protection / Marquette (🔥)
+  - `+15172148100` — Personal Mid-Michigan (🏡, added 2026-04-17)
 - **Tools (OpenClaw `quo__*`):** Messages (`send_text`, `list_messages`, `get_message`), Conversations (`list_conversations`), Contacts (`create_contact`, `list_contacts`, `get_contact`, `update_contact`, `delete_contact`, `get_contact_custom_fields`), Calls (`list_calls`, `get_call`, `get_call_recordings`, `get_call_summary`, `get_call_transcription`, `get_voicemail`), Phone numbers, Users, Webhooks.
 - **Tools (Claude Desktop via Cowork):** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact.
 - **Note:** Use both inboxes when compiling weekly status reports. API key is a single Quo workspace key covering both numbers.
