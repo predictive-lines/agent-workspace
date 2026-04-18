@@ -22,6 +22,7 @@
 - **Budget frequency column (E):** Debt service rows use `E=12` (annual). Check existing row patterns before adding new ones.
 - **New messages for completion:** ALWAYS post completion summaries as a NEW message at bottom of thread. Never edit earlier messages for status updates.
 - **Slack commands need provider key:** For Slack native slash commands, use `"slack"` in `commands.allowFrom`, not just `"*"`.
+- **Browser control = `chromium-user` profile.** The legacy dedicated `openclaw` browser profile has broken interactive control on this host (read works, clicks/typing time out on CDP). Use the existing-session `chromium-user` profile (Chromium Snap user data dir at `/home/open-claw/snap/chromium/common/chromium`) with `target: "host"`, `profile: "chromium-user"`. Chromium must be running with remote debugging enabled, and Justin must approve the first attach prompt. Full usage notes live in TOOLS.md “Browser Control” section.
 
 ## Key Technical Lessons
 - **Named ranges:** All cross-sheet refs in the financial model MUST use named ranges. Use Sheets API `findReplace` with `includeFormulas: true` for bulk migration.

@@ -1,5 +1,31 @@
 # TOOLS.md - Local Notes
 
+### Browser Control (OpenClaw → Chromium existing-session)
+
+- **Working profile:** `chromium-user` (existing-session / chrome-mcp). This is the browser path that actually works for interactive control on this host.
+- **Broken profile:** the legacy dedicated `openclaw` profile — `open`/`read`/`snapshot` work but any `act`/`click`/`type` hangs with `browser.request` timeout / `browserType.connectOverCDP` timeout. Do **not** use it for interaction.
+- **Why:** OpenClaw migrated from the Chrome extension relay (`driver: "extension"`, removed `browser.relayBindHost`) to `driver: "existing-session"` via Chrome MCP attach. Requires Chrome/Chromium major >= 144 (`CHROME_MCP_MIN_MAJOR = 144`).
+- **Browser on this host:** Chromium (Snap) on Ubuntu.
+  - Actual user data dir: `/home/open-claw/snap/chromium/common/chromium`
+  - Default `user` profile assumes Google Chrome at `/home/open-claw/.config/google-chrome/` and will fail with `Could not find DevToolsActivePort` — that's expected, use `chromium-user` instead.
+- **Config (already in `~/.openclaw/openclaw.json` under `browser.profiles`):**
+  ```json
+  "chromium-user": {
+    "driver": "existing-session",
+    "userDataDir": "/home/open-claw/snap/chromium/common/chromium",
+    "color": "#00AA00"
+  }
+  ```
+- **Requirements before attach works:**
+  1. Chromium is running (keep the window open).
+  2. Remote debugging enabled in `chrome://inspect/#remote-debugging` (or `chromium://…`).
+  3. First attach prompts Justin to approve the connection in Chromium — he must click accept.
+  4. Gateway must be restarted after editing profile config: `openclaw gateway restart`.
+- **Usage pattern from this side:** pass `profile: "chromium-user"` and `target: "host"` on `browser` tool calls. Snapshot with `refs: "aria"` + `snapshotFormat: "aria"` for stable refs across calls. Always keep the same `targetId` from the `open` response for subsequent `act` calls.
+- **Sanity check sequence** (known to work): `browser.open https://example.com` → `browser.snapshot` → `browser.act kind=click ref=<Learn more>` — this full round-trip proves interactive control is live.
+- **Profile mutation gotcha:** `openclaw browser create-profile` fails with `browser.request cannot mutate persistent browser profiles`. Edit `~/.openclaw/openclaw.json` directly and restart the gateway instead.
+- **CLI flag gotcha:** `--browser-profile` goes **before** the subcommand: `openclaw browser --browser-profile chromium-user open https://…`.
+
 ### Quo (Phone / SMS / Call Transcripts)
 
 - **Connector:** Quo MCP (Cowork connector)
