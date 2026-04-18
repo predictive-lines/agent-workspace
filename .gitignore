@@ -1,0 +1,31 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment
+.env
+.env.local
+.venv
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Credentials
+*credentials*.json
+*-token
+*-token.json
+
+# Scratch / local-only notes
+claude-code-prompt-drive-tools.md
+claude-code-prompt-mcp-upgrade.md
+rehydration-sharepoint-job-tracking.md
