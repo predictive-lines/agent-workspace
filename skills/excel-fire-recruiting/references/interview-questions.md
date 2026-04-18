@@ -14,33 +14,54 @@ All questions are *behavioral* ("tell me about a time…") or *role-specific hyp
 behavior and stay on the safe side of Title VII, ADA, ADEA, PDA, and Michigan ELCRA. Opinion
 or personal-history questions are where interviews get into trouble.
 
+## Sourcing tags
+
+- `[Kevin]` — directly suggested by Kevin Masich (EFP seller / current license holder) on Quo
+  calls `AC82bffcec…` (2026-04-16, 12 min), `ACe1ca174b…` (2026-04-17, 3 min),
+  `AC8f966c48…` (2026-04-18, 76 sec), `AC5c3bc558…` (2026-04-18, 35 sec). His framing is
+  preserved; when his wording touched a protected category, the question is rewritten with
+  an EEOC-safe alternative and the original is flagged in the red-flag section below.
+- `[EEOC]` — built from EEOC / SHRM behavioral-interview frameworks.
+- `[Role]` — grounded in the Journeyman Sprinkler Fitter scope (Local 669 signatory shop,
+  NFPA 13/20/25, wet/dry/pre-action, inspection + service + install).
+
 ## How to use this document
 
-- **Sourcing for each question:** every `[Kevin]` tag marks a suggestion that came directly
-  from Kevin (the EFP seller / current license holder) in a call or meeting. Every `[EEOC]`
-  tag marks a question I built from EEOC / SHRM behavioral-interview frameworks. Every
-  `[Role]` tag is grounded in the Journeyman Sprinkler Fitter scope (union 669, NFPA 13/20/25,
-  wet/dry/pre-action systems, inspection + service + install).
 - **Per-candidate tailoring:** the excel-fire-recruiting skill can use the HireScore Screen
   dialog's `education_raw` / `experience_raw` / `expertise_raw` fields to pick 6–10
   questions that target the candidate's weakest expertise self-ratings and biggest claimed
   strengths. Don't ask all 30+ questions; pick the right ones.
-- **Red-flag list:** at the bottom. If Kevin (or anyone) suggests one of those, use the
-  EEOC-safe alternative instead. Every red flag has one.
-
-> **Pending integration:** Kevin's suggested questions are marked `[Kevin — pending paste]`
-> until Justin pastes the Granola transcript(s). Replace those placeholders with the exact
-> phrasing Kevin used, so the question bank reflects his framing and you can cite him
-> directly in an interview debrief.
+- **Kevin's preferred interview structure (per 2026-04-16 + 04-17 calls):** Justin does the
+  first call solo ("I would probably touch base with them first by yourself" — Kevin
+  pulled Keith out of round 1 because Keith's previous three interviews produced
+  "shitheads"). Round 2 is Zoom with Kevin and Keith both on, specifically so Kevin can
+  eyeball the candidate.
+- **Red-flag list:** at the bottom. Any question that touches a protected category has an
+  EEOC-safe replacement that gets the same signal.
 
 ---
 
 ## 1. Work ethic
 
 Signal: shows up on time, handles hard days without flaking, takes ownership when things go
-sideways, treats the job like a craft not a clock-punch.
+sideways, treats the job like a craft not a clock-punch. Kevin's emphasis here is on
+*tenure* — how long have they stuck somewhere — and *workmanship* per their current
+employer.
 
-### Open-ended behavioral
+### Kevin's questions (direct)
+
+- `[Kevin]` **How long have you been a journeyman?** *(call AC e1ca174b, 04-17, 0:57)*
+- `[Kevin]` **How long have you worked for your current employer?** *(same call, 1:04)*
+- `[Kevin]` **What types of projects have you been a foreman on?** *(same call, 1:13)*
+- `[Kevin]` **If I called your current employer (I'm not going to — I'll tell them that) —
+  what would they say about your workmanship and about you in general?** *(same call,
+  1:30)* — Kevin's tell: the answer reveals whether the candidate has a clean story they
+  can stand behind. Evasion here is the signal.
+- `[Kevin]` **What do you feel has been your greatest accomplishment as an apprentice?**
+  *(call AC 8f966c48, 04-18, 0:21)* — even though they're a JM now, the framing gets at
+  what they're proud of from when they were learning the trade.
+
+### Supplementary behavioral
 
 - `[EEOC]` Walk me through a typical week at your last sprinkler job — start of the week
   to end. What time did you roll out, what did the day look like, when did you wrap?
@@ -48,24 +69,45 @@ sideways, treats the job like a craft not a clock-punch.
   it, and what did you personally do about it?
 - `[EEOC]` Describe the toughest physical day you've had on a jobsite in the last year. What
   made it tough and how did you finish it?
-- `[EEOC]` When your crew has to stay late to finish a tie-in or a test, what's your usual
-  role — head down finishing, or watching the clock? How have you handled that when the
-  rest of the crew's tired?
 - `[Role]` On a retrofit where you're working occupied space, how do you balance
   "keep-the-customer-happy" pace with doing it right? Walk me through a specific one.
-
-### Kevin's suggestions
-
-- `[Kevin — pending paste]` — paste from Granola
 
 ---
 
 ## 2. Honesty / integrity
 
 Signal: admits what they don't know, doesn't pencil-whip an inspection, calls out their own
-mistakes before the customer or foreman finds them.
+mistakes before the customer or foreman finds them. Kevin's frame here is about
+*reliability* — the Chris Musselman story (call 04-16) is the cautionary tale: a "great
+employee" who left on a Friday and didn't come back Monday, no two-week notice.
 
-### Open-ended behavioral
+### Kevin's questions (direct)
+
+- `[Kevin]` The employer-reference self-assessment in §1 ("what would they say about you")
+  doubles as an honesty signal. Same question, different read: here you're listening for
+  whether they own past friction, or whether every past boss is the villain.
+
+### Kevin's questions (reframed for EEOC compliance)
+
+Kevin suggested asking "do you have any health issues?" and "have you ever had a drinking
+or drug problem?" on call AC 8f966c48 (04-18, 0:09). Both are ADA violations pre-offer.
+The *signal* Kevin is after is: **is this person reliable? Will they show up? Will I be
+blindsided later?** These behavioral questions get the same signal legally:
+
+- `[Kevin → EEOC-safe]` **Walk me through your attendance record over the last couple
+  years — have there been stretches where you missed significant time? What was going on
+  and how did you handle it with your employer?** — gets at reliability/tenure without
+  asking about health.
+- `[Kevin → EEOC-safe]` **This job requires climbing ladders up to 40 feet, lifting 50+
+  pounds regularly, working in attics and crawl spaces, and being on your feet 10+ hours
+  a day. Can you perform those duties, with or without reasonable accommodation?** — the
+  legally-bulletproof way to surface any capability concern.
+- `[Kevin → EEOC-safe]` **Excel Fire is a drug-free workplace — we do pre-employment,
+  post-incident, and reasonable-suspicion testing. Any concerns with that?** — states the
+  policy, lets them self-select out, but doesn't ask about past history. Post-offer, the
+  actual drug test does the screening.
+
+### Supplementary behavioral
 
 - `[EEOC]` Tell me about a time you made a mistake on a jobsite that no one else caught.
   What did you do?
@@ -78,22 +120,29 @@ mistakes before the customer or foreman finds them.
 - `[Role]` Walk me through the last time you had to tell a customer something they didn't
   want to hear — a failed test, an unexpected cost, a schedule hit. How did that
   conversation go?
-- `[EEOC]` Tell me about a coworker who cut corners on a job. How did you handle it, if at
-  all?
-
-### Kevin's suggestions
-
-- `[Kevin — pending paste]` — paste from Granola
+- `[EEOC]` *Chris Musselman scenario (Kevin's framing):* tell me about a time you left a
+  job. How much notice did you give, how did you handle the transition, and what did your
+  relationship with that employer look like after?
 
 ---
 
 ## 3. UP-of-Michigan-growth mindset
 
 Signal: someone who wants to *build something* in Marquette, not just collect a check for a
-season before rotating south. Growth mindset = they've taken on new scopes voluntarily,
-they've trained up juniors, they think in multi-year arcs.
+season before rotating south. Kevin has explicitly said (call 04-16, 1:29) that he wants to
+see candidates "interested in moving to Marquette, their families" — translate that to
+**growth mindset about putting roots down in the UP**, not about demographic family
+structure.
 
-### Open-ended behavioral
+### Kevin's questions (direct)
+
+- `[Kevin]` **Why would you want to move yourself and your family to the Upper Peninsula
+  or to Marquette?** *(call AC 5c3bc558, 04-18, 0:03)* — Kevin's framing. ✅ This is safe
+  to ask as-worded: it's an open-ended "why this opportunity" question. Candidate
+  volunteers what they volunteer; you don't probe family specifics. Listen for: do they
+  understand what Marquette is? Is this a thought-through move or a fantasy?
+
+### Supplementary behavioral
 
 - `[EEOC]` What's a skill or scope you've taken on in the last two or three years that
   wasn't strictly required of you? Why did you go after it?
@@ -109,17 +158,14 @@ they've trained up juniors, they think in multi-year arcs.
   want to know about an opportunity like that, and what would make you raise your hand for
   it?
 
-### Kevin's suggestions
-
-- `[Kevin — pending paste]` — paste from Granola
-
 ---
 
 ## 4. Openness to tech (Company Cam especially)
 
 Signal: adopts new jobsite tools without whining. Specifically, comfort with Company Cam for
 photo-based daily reports — Excel Fire is moving to a virtual daily jobsite report model and
-a fitter who resists Company Cam becomes a bottleneck.
+a fitter who resists Company Cam becomes a bottleneck. Kevin hasn't surfaced specific tech
+questions on the Quo calls reviewed; this section is Justin's priority.
 
 ### Open-ended behavioral
 
@@ -137,22 +183,22 @@ a fitter who resists Company Cam becomes a bottleneck.
 - `[Role]` If you were asked to train a 20-year fitter — who is faster than you at the
   actual pipefitting — on Company Cam, how would you approach it?
 
-### Kevin's suggestions
-
-- `[Kevin — pending paste]` — paste from Granola
-
 ---
 
 ## 5. Willingness to relocate (Marquette / UP)
 
 Signal: the candidate has thought through what a Marquette-based JM Sprinkler Fitter job
 actually means — winters, distance from downstate cities, a small community, Local 669 UP
-territory — and is still in. The legal line here is the bright one: you can ask about
-*willingness*, *ability to meet the job's travel / location requirements*, and *awareness of
-local conditions*. You cannot ask about family, kids, marital status, national origin,
-religion, or anything else that infers protected class.
+territory — and is still in. The legal line: you can ask about *willingness*, *ability to
+meet the job's travel / location requirements*, and *awareness of local conditions*. You
+cannot ask about family, kids, marital status, national origin, religion, or anything else
+that infers protected class.
 
-### Open-ended behavioral
+### Kevin's questions (direct)
+
+- `[Kevin]` The "why move to the UP" question in §3 doubles as the core relocation signal.
+
+### Supplementary behavioral
 
 - `[EEOC]` The role is based in Marquette. Have you been to the UP before, and what's your
   read on living and working here year-round? Anything you'd want to learn about it
@@ -168,16 +214,29 @@ religion, or anything else that infers protected class.
 - `[EEOC]` What questions do you have for us about Marquette, the local labor landscape,
   or what day-to-day life looks like for our crew?
 
-### Kevin's suggestions
+---
 
-- `[Kevin — pending paste]` — paste from Granola
+## Round-2 Zoom (Kevin's addition, call 04-18 0:44)
+
+> "I'd like to have you Zoom it. I'd like to have you take a look at him, make sure he
+> doesn't look like these dummies that came up here last time."
+
+Kevin explicitly wants **video** for round 2 so he and Keith can both eyeball the
+candidate. Round-2 format:
+
+- Zoom, 45–60 min.
+- Present: Justin, Kevin, Keith, candidate.
+- Technical screen (see below) plus the questions the candidate dodged or blurred in round 1.
+- Company Cam / tech-adoption deep-dive.
+- Relocation specifics (timeline, housing, spouse buy-in — candidate-volunteered only).
+- Two-way: candidate asks Kevin and Keith whatever they want about the shop's culture.
 
 ---
 
-## Role-specific technical screen (optional — last 10 min of call)
+## Role-specific technical screen (last 10 min of phone round 1, or round-2 Zoom)
 
-Not the main signal Justin wants to read on first call, but useful to calibrate against
-what a candidate *said* on HireScore vs. what they actually know.
+Useful to calibrate against what a candidate *said* on HireScore vs. what they actually
+know.
 
 - `[Role]` Walk me through how you'd trip-test a dry valve, step by step.
 - `[Role]` You show up to an annual on a pre-action system and the solenoid won't reset.
@@ -195,6 +254,41 @@ what a candidate *said* on HireScore vs. what they actually know.
 If Kevin (or anyone else) suggests any of these, redirect to the behavioral alternative.
 The frame: we're hiring for *ability to do the job in Marquette*, not for demographic fit.
 
+### ⚠️ Kevin-specific landmines (flagged from the 04-17 and 04-18 calls)
+
+Kevin is an older-generation tradesman running a family-style shop — his instincts are
+honest and relationship-driven, but three of his specific questions cross EEOC/ADA/ELCRA
+lines. Each has an EEOC-safe alternative above that gets the same signal.
+
+1. **"Are you married?"** *(Kevin, call AC e1ca174b, 04-17, 1:53)*
+   - **Why it's a problem:** Michigan ELCRA explicitly protects marital status. Title VII
+     + PDA also create risk on the family-status inference.
+   - **What Kevin is actually trying to learn:** stability, long-term intent,
+     willingness to relocate family.
+   - **EEOC-safe replacement** *(already in §3 / §5 above):* "Why would you want to move
+     yourself and your family to the UP?" — open-ended, candidate self-discloses whatever
+     they want. You never ask whether a family exists.
+
+2. **"Do you have any health issues?"** *(Kevin, call AC 8f966c48, 04-18, 0:11)*
+   - **Why it's a problem:** flat ADA pre-offer violation. No exceptions.
+   - **What Kevin is actually trying to learn:** can this person physically do the
+     work, and are there hidden reliability concerns.
+   - **EEOC-safe replacement** *(already in §2 above):* describe the essential functions
+     of the job (ladders, lifting, attics, 10-hr days) and ask "can you perform these
+     duties with or without reasonable accommodation?" Post-offer, a job-specific physical
+     does the rest.
+
+3. **"Have you ever had a drinking or drug problem?"** *(Kevin, call AC 8f966c48, 04-18,
+   0:15)*
+   - **Why it's a problem:** past addiction is a protected disability under ADA. Current
+     illegal use is *not* protected, but you still can't ask — you drug-test.
+   - **What Kevin is actually trying to learn:** is this person a risk to show up
+     impaired or go off the rails.
+   - **EEOC-safe replacement** *(already in §2 above):* state Excel Fire's drug-free
+     workplace policy and drug-testing program (pre-employment, post-incident,
+     reasonable-suspicion) and ask if they have any concerns with that. The test does
+     the screening; the question doesn't have to.
+
 ### Age / generation
 
 - **Don't ask:** "How old are you?" / "When did you graduate high school?" / "How many
@@ -206,11 +300,9 @@ The frame: we're hiring for *ability to do the job in Marquette*, not for demogr
 
 ### Marital / family status
 
-- **Don't ask:** "Are you married?" / "Do you have kids?" / "Are you planning to have
-  kids?" / "Can you work late with your family situation?" / "Who watches your kids if
-  you're on call?"
-- **Why:** Title VII covers sex/pregnancy; ELCRA explicitly protects marital status.
-  These questions disproportionately screen out women and fathers.
+- See Kevin-specific landmine #1 above. Also:
+- **Don't ask:** "Do you have kids?" / "Are you planning to have kids?" / "Can you work
+  late with your family situation?" / "Who watches your kids if you're on call?"
 - **Safe alternative:** *"This job includes on-call rotation roughly every 6 weeks and
   occasional overnight travel to the western UP. Is that compatible with your situation?"*
   — states the requirement, lets them self-assess without disclosing family info.
@@ -238,17 +330,7 @@ The frame: we're hiring for *ability to do the job in Marquette*, not for demogr
 
 ### Disability / health
 
-- **Don't ask:** "Do you have any disabilities?" / "Have you ever filed a workers' comp
-  claim?" / "How's your back?" / "Are you on any medications?" / "Do you have any
-  restrictions?"
-- **Why:** ADA flatly prohibits pre-offer disability / medical questions. Workers' comp
-  claim history is also out.
-- **Safe alternative:** *"This job requires climbing ladders up to 40 feet, lifting 50+
-  pounds regularly, working in attics and crawl spaces, and pulling overhead pipe for
-  several hours at a stretch. Can you perform those duties, with or without reasonable
-  accommodation?"* — describe the essential functions, ask if they can do them. Period.
-  Save medical/fitness-for-duty for the post-offer stage with a proper job-specific
-  physical.
+- See Kevin-specific landmine #2 above for the health-issues variant.
 
 ### Pregnancy
 
@@ -309,7 +391,7 @@ After each interview, write up:
 - **Scores (1–5) for each of the 5 signals** — work ethic, honesty, UP-growth, tech, relocate
 - **Top-of-mind: 2–3 things this candidate said that stuck**
 - **Concerns / follow-ups for round 2 (if any)**
-- **Recommendation: move to round 2 / pass / reference check first**
+- **Recommendation: move to round 2 (Zoom with Kevin + Keith) / pass / reference check first**
 
 Don't record notes that reference protected categories — even accurate observations
 ("seemed older than 50") are liability if the candidate isn't hired.
