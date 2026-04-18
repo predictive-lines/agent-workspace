@@ -7,6 +7,11 @@
 - Annual debt service: $325K (SBA 7a $277K + Seller Note $26K + Ford F250 $22K).
 - Wife/business partner: Jaclyn Miller (CEO/CFO).
 
+## Key Folder Locations (request via `request_cowork_directory` if not mounted)
+- **Excel Fire Protection deal room** (Google Drive, primary EFP folder):
+  `~/Library/CloudStorage/GoogleDrive-justin.miller@predictivelines.com/My Drive/ETA/Excel Fire Protection`
+  Contains: CIM, Signed LOI, Extend LOI, Purchase Agreement, SBA forms, Financial Reports, Tax Data, Lender Docs, Buyer Docs, Insurance & Bonding, HR, Lease, Pending Legal, Customer Data, Customer Work Orders, closing costs, Business Plan, Vendor Paperwork, Articles of Incorporation and Licenses, Compliance. This mount does NOT persist across sessions — request it by path at session start if the conversation touches deal docs, closing items, or EFP source materials.
+
 ## Behavioral Lessons
 - **Verify writes:** NEVER claim an API write succeeded without pulling data back via GET. If unverifiable, say so.
 - **Pull sheet bounds first:** ALWAYS check actual row/column layout before writing formulas. Never assume.
@@ -69,6 +74,50 @@
 - **Max shortfall after all fixes**: -$34K (Aug 2028) with $250K LOC. Recommended $300-325K. Justin to confirm.
 - **Row deletion lesson**: Always verify row contents immediately before deleting — 0-indexed math is error-prone when rows shift.
 
+## Platform Migration — Notion → Microsoft 365 (Apr 14, 2026)
+- **Direction:** Full migration from Notion to M365 stack. Notion retained temporarily during transition only.
+- **Task management:** Microsoft To Do, managed via custom Outlook MCP (`ai-team/excel-fire-ai/mcp-servers/outlook/`, `github-custom-mcp` connector in Cowork).
+- **Operational databases (job tracker, billing, COs, inspections, vendors):** Migrated to SharePoint Lists (Apr 14, 2026). All 5 lists created with full column schemas on dedicated EFP site.
+- **Living documents (policies, processes, KB):** SharePoint site + document library. Printable formatting is critical for field crew — Notion's print output was a dealbreaker.
+- **Document archival (contracts, calcs, plans, invoices):** Evaluating consolidation into SharePoint + retention policies (see below). Paperless-ngx MVP may become redundant if SharePoint handles full lifecycle.
+- **Meeting capture:** Evaluating **Granola** ($14/user/month) — macOS + iOS local audio capture for phone calls and in-person meetings. Testing started Apr 14, 2026. Only Justin (+ maybe Jaclyn) need licenses vs. Notion requiring per-seat for all viewers. iOS 18 native call recording covers phone calls for free; Granola adds in-person meeting capture + AI minutes.
+- **Document retention options:**
+  - **MS Purview:** Correct tool (auto-apply retention labels, disposition review), but requires Business Premium or E3 licensing — not included in Business Basic/Standard.
+  - **SharePoint library-level retention:** Basic information management policies available on all plans. Less sophisticated but workable for a small company with clear folder structure.
+  - **Paperless-ngx:** Still viable as free self-hosted option. Custom Claude classifier is unique value-add. Could be replicated via Power Automate + Claude API if consolidating to SharePoint.
+- **SharePoint storage:** 1TB base + 10GB/user. ~1.1TB at 10 users. Estimated 50-100GB/year for EFP docs — 10+ year runway. Not a concern.
+- **License economics (draft):** Notion 8 seats × $24 = $192/mo. M365 (already paid) + Granola 2 seats × $14 = $28/mo net new. Delta: ~$164/mo ($2K/yr savings).
+- **Claude as primary UI:** Goal is to manage To Do tasks, Lists data, and SharePoint docs through Cowork conversation rather than switching between app UIs.
+- **Custom MCP status (Apr 14, 2026):** All modules built and deployed via consolidated Caddy + ngrok bridge:
+  - Mail, Calendar, To Do, Contacts, Teams — original modules, working
+  - OneNote — 7 tools (notebooks/sections/pages CRUD), working
+  - SharePoint Lists — 8 tools (site discovery, list/item CRUD), working
+  - Drive/Files — 7 tools (drive discovery, file CRUD, search), working
+  - Connector UUID: `mcp__f8b788a1-6e53-4af3-bbb6-544f02c6fa19`
+  - Auth scopes: User.Read, Mail.Send, Mail.ReadWrite, Calendars.ReadWrite, Tasks.ReadWrite, Contacts.ReadWrite, Chat.ReadWrite, ChatMessage.Send, ChannelMessage.Send, Notes.ReadWrite, Sites.ReadWrite.All, Sites.Manage.All
+- **Granola MCP connector:** Connected Apr 14, 2026. UUID: `mcp__46f98651-5ea3-4b3c-bf18-e7a9f06f8331`. Read access to meetings, summaries, transcripts. Test meeting captured successfully.
+- **Document classifier plan:** Cowork scheduled task replaces Paperless-ngx classifier. Reads new unclassified docs from SharePoint library via drive MCP tools, classifies using Claude (no separate API call), writes metadata back via lists MCP tools. Eliminates custom FastAPI container + separate Anthropic API billing.
+- **Granola → OneNote pipeline (planned):** Pull meeting notes from Granola MCP, push to OneNote via onenote MCP. Consolidates searchable notes in one place.
+- **Rehydration prompt for job tracking migration:** `ai-team/agent-workspace/rehydration-sharepoint-job-tracking.md` — full schemas for all 4 Notion databases, column type mappings, migration plan, and open questions for Justin.
+
+## SharePoint Lists — EFP Job Tracking (Created Apr 14, 2026)
+- **Site:** Excel Fire Protection — `predictivelines.sharepoint.com/sites/ExcelFireProtection`
+- **Site ID:** `predictivelines.sharepoint.com,bd30c4c0-309c-4b98-95ce-451ac7a512f9,4ed57ca4-1a8f-432d-9c7b-34e4002454fb`
+- **Lists:**
+  - **Installation Jobs** — ID: `e99a4f2a-efd7-4f6d-b00d-8f3fa8ec659b` — 64 custom columns (15 text, 9 URL-as-text, 15 number, 17 date, 7 choice + 1 multi-select-as-choice, Title)
+  - **Inspection Jobs** — ID: `f8806888-1214-4100-8e93-bbc77dfdba38` — 31 custom columns (12 text, 4 URL-as-text, 4 number, 3 date, 2 boolean, 6 choice)
+  - **Billing Log** — ID: `34326b35-5dc1-4c76-a3cc-a1a0014c480a` — 15 custom columns (5 text, 1 URL-as-text, 4 number, 2 date, 1 boolean, 2 choice)
+  - **Change Orders** — ID: `4bf08c6b-f2ff-4f96-819e-c9c6cf85a7e1` — 19 custom columns (5 text, 3 URL-as-text, 6 number, 3 date, 1 boolean, 1 choice)
+  - **Vendors** — ID: `f29f0ae0-1d78-4696-84ce-4e897abea69e` — 12 custom columns (6 text, 1 date, 3 boolean, 2 choice)
+- **Column naming:** CamelCase internal names (e.g., `JobNumber`, `SiteAddress`, `BillingStatus`). Title field = built-in SharePoint Title column.
+- **Notion title → SharePoint Title mapping:** Job Name, Inspection Name, Invoice Description, CO Description, Vendor Name → all use `Title` field.
+- **URL columns:** Created as text (not hyperlink) — Graph API `hyperlinkOrPicture` column type not tested. Can be changed to hyperlink in SP UI later.
+- **Multi-select:** SystemType created as single-select choice for now. SharePoint choice columns support multi-select via UI toggle but Graph API `allowMultipleValues` flag not tested at creation time.
+- **Lookup columns (cross-list):** Not yet created. Billing Log and Change Orders have `InstallationJob` as text field placeholder. Lookup columns can be added via Graph API `POST /columns` with `lookup` type definition pointing to Installation Jobs list.
+- **Notion source databases (schema only, no data):** Installation Jobs (`collection://1520bbc9-8b95-4f65-ae79-dd9af8b0149c`), Inspection Jobs (`collection://ec4151a2-461f-43da-b6c4-6d08c04ea3ae`), Billing Log (`collection://fff66844-83ec-4a79-82e5-18f29f95aaa1`), Change Orders (`collection://8dd7cd0a-0f47-45e5-a02d-d42b612bd235`), Vendors (`collection://bc0a6838-c250-4e35-8f71-493dac676ce9`).
+- **Permission lesson:** `Sites.ReadWrite.All` allows item CRUD but NOT list/column creation. Need `Sites.Manage.All` for structural changes (creating lists, adding columns). Added to MCP auth scopes Apr 14, 2026.
+- **Deferred to v1.1:** Calculated columns (% Complete Default, Net Due, Days Since Submitted), gate logic, status transition rules, lookup columns for cross-list relations.
+
 ## Decisions & Preferences
 - Default to New Construction when web search inconclusive for revenue classification
 - RoughCountry.com = SDE=0, Calder Capital = Adj=1 (not SDE)
@@ -86,6 +135,7 @@
 
 ## Communication Preferences
 - **Always thread replies on Slack.** Use `[[reply_to_current]]` or `threadId`.
+- **Content delivery default:** Show content in-app first (Cowork chat). After revisions are finalized, write to Notion (primary) or occasionally .docx. Don't default to generating .docx files upfront.
 - **Reset context after closing a thread.** Don't carry stale context forward.
 
 ## Household Cash Flow Map (Tiller Sheet5)
@@ -151,6 +201,13 @@
 - **Seller Note schedules**: Both SN and SN2 now have IF(balance<=0, 0, formula) guards past row 64 (60-month payoff). No more #NUM! or negative balances.
 - **Budget debt rows now at 169-176** (SBA 7a + Seller Note principal FY2030-2033, freq=12/annual)
 
+## HR Compliance & Functions Guide (Apr 8, 2026)
+- **Published to Notion:** Human Readable Reports > "HR Compliance & Functions Guide" (page id: 33c7e702-d98c-817a-bc7f-c1587f46cad5)
+- **Scope:** Federal, Michigan state, and local (Marquette) HR regulatory requirements + practical HR functions for a small union construction business.
+- **Key findings:** Local 669 CBA offloads wages/benefits/pensions/training to union; employer retains payroll tax, MIOSHA safety, workers' comp, I-9, ESTA, and full HR for non-union staff. Marquette has no city income tax. Title VII/ADA likely apply (15+ threshold). FMLA/ACA do not (under 50). Sister company must maintain strict separation to avoid NLRB single-employer risk.
+- **Data Retention Policy updated:** Added I-9 (IRCA) and ESTA sick time rows to Section 4.3 of the Notion Data Retention Policy (page id: 3047e702-d98c-81df-9af9-c85fee600394).
+- **Also generated:** `ai-team/hr-compliance-guide-excel-fire.docx` (superseded by Notion version).
+
 ## Sister Company — Fire Extinguisher Inspection & Service (Apr 8, 2026)
 - **Concept:** Separate LLC (non-union) for portable fire extinguisher inspection, recharge, and hydrostatic testing. Shared back office with Excel Fire. Potential to bundle fire alarm inspections.
 - **Market opportunity:** Zero providers in Marquette area. Previous provider (Lammi) was acquired by Summit Fire Protection (PE roll-up) and stopped offering local extinguisher service. Excel Fire gets ~1 call/day asking for the service with no one to refer to.
@@ -171,18 +228,58 @@
 
 ### Site Infrastructure Standard — EFP Location Kit
 - **Published to Notion:** Human Readable Reports > "Site Infrastructure Standard — EFP Location Kit" (page id: 33c7e702-d98c-81c4-a9bb-f67e91334093)
-- **BOM:** ~$2,030/site. Ubiquiti Cloud Gateway Ultra (networking/WiFi/PoE/WireGuard VPN), UniFi camera, Schlage Encode Plus smart lock, LiftMaster 87504 + ratgdo garage door, Beelink SER7 Docker host, Aqara Zigbee sensors (SONOFF dongle), Emporia Vue power monitor, Ecowitt weather station, UPS.
+- **BOM:** ~$2,130/site. Ubiquiti Cloud Gateway Ultra (networking/WiFi/PoE/WireGuard VPN), UniFi G5 Turret camera + UniFi G4 Doorbell, Yale Assure Lock 2 (Zigbee) + NFC tag stickers, LiftMaster 87504 + ratgdo garage door, Beelink SER7 Docker host, Aqara Zigbee sensors (SONOFF dongle), Emporia Vue power monitor, Ecowitt weather station, UPS.
+- **Lock swap (Apr 10 2026):** Schlage Encode Plus → Yale Assure Lock 2 (Zigbee). Schlage was cloud-dependent for HA and didn't provide per-PIN-slot attribution. Yale via ZHA gives fully local operation + code-slot logging. NFC phone-tap unlock via NTAG215 stickers + HA Companion App automations on company phones.
+- **Doorbell camera added (Apr 10 2026):** UniFi G4 Doorbell ($199). Records to same Protect instance as security camera. Two-way audio for visitor intercom.
 - **Docker stack:** Paperless-ngx, Vaultwarden, Home Assistant, PostgreSQL. WireGuard VPN native on Ubiquiti router (no Tailscale needed). Config repo: `efp-site-config/` with docker-compose.yml + per-site .env files.
 - **Expansion path:** Frigate NVR with Google Coral TPU for AI camera detection.
 
-### Job Lifecycle & Database Design Proposal (v3)
-- **Published to Notion:** Human Readable Reports > "Job Lifecycle & Database Design Proposal" (page id: 33c7e702-d98c-81f3-8b0c-c9c72d5c3715)
+### IT Policies (EFP-ITP-004)
+- **Published to Notion:** Human Readable Reports > "IT Policies — Excel Fire Protection" (page id: 33e7e702-d98c-81de-b1f3-f9df5c3f1a3b)
+- **Scope:** 6 parts — Acceptable Use, Information Security, Access Control & User Management, Incident Response, Policy Administration, Physical Access.
+- **Key resolved decisions (Apr 10 2026):**
+  - Email: M365 (already in place)
+  - Field crew devices: Company phones for journeymen (CBA requirement for work functions). Apprentices on personal devices. Revisit at 6mo.
+  - IT backup: Jaclyn (day-to-day) + MSP friends network (break-fix)
+  - Cyber insurance: Being quoted by Gauthier Insurance
+  - Smart lock: Yale Zigbee + NFC tags (see SIS-003 note above)
+  - Doorbell: UniFi G4 Doorbell
+- **Additional resolved decisions (Apr 10 2026, batch 2):**
+  - VLANs: Approved 5-VLAN layout (Management/Corporate/IoT/Guest-BYOD/Camera)
+  - Bitwarden: Mandatory for all employees with system access
+  - Camera audio: Enable on ALL cameras (turret + doorbell). Remote warehouse monitoring. Post signage.
+  - LUKS encryption: Yes, with TPM auto-unlock required (unmanned warehouse must survive unattended reboot). Fallback: FIDO2 key in chassis, or skip LUKS if neither works.
+- **Open decisions (5 remaining):** Endpoint protection (pending Gauthier cyber insurance terms), security training formality, foreman Paperless access level, WiFi auth model, sister company IT scope.
+- **Physical access model:** 4-layer — NFC tag tap (company phone + HA), keypad PIN (Yale/Keymaster), temporary PIN (visitors), physical key (GM only). All events logged to HA, exported monthly to Paperless-ngx.
+
+### Job Lifecycle & Database Design — v1 LIVE (Apr 11, 2026)
+- **Proposal page:** "Job Lifecycle & Database Design Proposal" (page id: 33c7e702-d98c-81f3-8b0c-c9c72d5c3715)
 - **Local file:** `ai-team/job-lifecycle-proposal.md` (790 lines, comprehensive)
-- **4 new databases proposed:**
-  1. **Installation Jobs** — 21-status physical work flow (Lead→Complete) + parallel 7-value Billing Status. 3 hard gates (contract+design before materials, permit before mobilization, signed CO before CO work). Risk flags for out-of-sequence work. % Complete framework (Default from status formula, Override manual, Effective picks best). Design subcontractor tracking. Service/Repair support with Service Priority field. Daily reporting via Raken → Paperless-ngx. 15 views including Pipeline, Gate Violations, Missing Daily Reports, % Complete Dashboard.
-  2. **Inspection Jobs** — 9 statuses (Scheduled→Closed + Deficiency Follow-Up). Inspect Point integration field. Deficiency tracking with severity and repair job link.
-  3. **Billing Log** — Per-invoice tracking (Progress, Final, Retainage, CO, Stored Materials). Lien release document links per draw. Retainage partial release tracking.
-  4. **Change Orders** — CO lifecycle (Identified→Billed). Strictest hard gate: signed CO required before ANY cost-incurring work. Days Since Submitted aging. Revenue Impact view.
-- **Migration plan:** 4 phases (create DBs → migrate active jobs → retire old DB → calibrate % Complete defaults after 10-15 jobs)
-- **Pending review:** 14 questions for Justin, Jaclyn, Keith & Kevin covering % complete calibration, gate design, billing practices, and business structure.
-- **Delivered:** Workflow diagram (PNG) + Word document write-up: `ai-team/job-lifecycle-workflow.docx` — cover page, embedded diagram, full write-up of all 4 databases, gates, % complete, daily reporting, migration plan, and 14 review questions.
+- **Hub page:** "EFP Job Tracking" (page id: 33f7e702-d98c-814b-937c-e7f1e24c11a6) under ai-space
+- **4 databases LIVE:**
+  1. **Installation Jobs** — DB: `4c26094652b8490d9ec366197d9315bc`, DS: `1520bbc9-8b95-4f65-ae79-dd9af8b0149c`. 21-status flow + 7-value Billing Status. ~60 properties (core info, classification, design sub, billing/financial, 12 milestone dates, 11 document link URLs, Raken/Paperless integration). Views: Pipeline (board), Active Jobs, Revenue Tracker, Design Tracker, Service/Repair.
+  2. **Inspection Jobs** — DB: `fff4c91514c64b3e8748bf94435f67e7`, DS: `ec4151a2-461f-43da-b6c4-6d08c04ea3ae`. 9-status flow. Deficiency tracking with severity, repair job link. Inspect Point integration. Views: Pipeline (board), This Month (calendar), Deficiencies Open.
+  3. **Billing Log** — DB: `d7fd5f94ac39487daef51873b07c2cd1`, DS: `fff66844-83ec-4a79-82e5-18f29f95aaa1`. Per-invoice tracking (Progress, Final, Retainage, CO, Stored Materials). Lien release per draw. Views: Unpaid Invoices, By Job.
+  4. **Change Orders** — DB: `76ead8e2ca2f42619c400f3004227f77`, DS: `8dd7cd0a-0f47-45e5-a02d-d42b612bd235`. 11-status CO lifecycle. Signed CO Link = strictest hard gate. Views: Open COs, Awaiting Signature, By Job, Revenue Impact.
+- **Cross-database relations:** Installation Jobs ↔ Customers (dual), Inspection Jobs ↔ Customers (dual), Billing Log → Installation Jobs (dual "Billing Log"), Change Orders → Installation Jobs (dual "Change Orders").
+- **Deferred to v1.1:** Formula fields (% Complete Default, % Complete Effective, Job Closed, Risk Flag, Gate Blocked, Net Due on Billing Log, Days Since Submitted on COs). These require Notion formula syntax testing.
+- **Migration plan:** 4 phases (create DBs ✅ → migrate active jobs → retire old DB → calibrate % Complete defaults after 10-15 jobs)
+- **Still pending:** 14 review questions for Justin, Jaclyn, Keith & Kevin.
+- **Delivered earlier:** Workflow diagram (PNG) + Word document: `ai-team/job-lifecycle-workflow.docx`.
+
+## Paperless-ngx MVP Bootstrap (Apr 9, 2026)
+- **Trigger:** Justin + Krissy starting to scan all EFP active jobs + estimates. Needs document management stand-up *now*, not after full site kit deploys.
+- **MVP hardware:** Broken-screen laptop at Justin's house as Docker host (headless, Ubuntu Server 24.04, `HandleLidSwitch=ignore`). Existing in-office ScanSnap covers scanning (working well). External USB SSD for local backup. Full Beelink SER7 + Cloud Gateway + cameras/locks/sensors deferred — all orthogonal to doc-mgmt MVP.
+- **Software stack (6 containers):** paperless-ngx, postgres:16, redis, gotenberg (office→PDF), tika (metadata), claude-classifier (custom FastAPI, suggest-not-apply). Consume folder exposed via Samba as `\\paperless\consume` with subfolders per scan profile (active/estimates/archive/daily-reports) → paperless workflows auto-tag by source path.
+- **Locked taxonomy decisions:**
+  - **Job naming (updated Apr 12 2026):** Address-based slugs — canonical slug is `<street-number>-<street-name>-<street-suffix>` in lowercase kebab-case (e.g., `job:1234-fraternity-row`). Rationale: field crew already defaults to addresses on paperwork and daily reports; addresses appear verbatim on permits/invoices/correspondence making classifier matching more reliable; eliminates the translation layer between field and office naming. Office nicknames (e.g., "omega house") are now aliases, not the canonical identifier. Conflict resolution: append `-2` serial suffix only when a duplicate address actually occurs. Edge cases: shop work uses descriptive slugs (`efp-shop`), multi-building uses building suffix (`500-washington-st-bldg-b`). Old convention was short human-readable slugs — migrated.
+  - **Unsorted bucket:** `job:unsorted` tag for ambiguous docs at scan time; Krissy triages during downtime.
+  - **15 document types:** Estimate, Proposal, Contract, Drawing/Submittal, Hydraulic Calculations, Permit, Change Order, Invoice, Receipt, Lien Waiver, Daily Report, Inspection Report, Correspondence, Business Card, Other.
+  - **Storage path:** `{job}/{document_type}` (human-browsable even if paperless is later retired).
+  - **Retention:** Tags only for MVP (`retain-1yr`, `retain-7yr`, `retain-10yr`, `retain-life`). S3 lifecycle enforcement comes after model is proven.
+  - **Barcode batch splitting:** Enabled from day 1. Separator sheets printed from a PDF in the repo.
+  - **Email ingestion:** Deferred.
+  - **AI classification:** Claude API, suggest-not-apply mode. Routes OCR text only (not PDFs). Classifier proposes document type + correspondent + job + title; Krissy approves. Key lives at `ai-team/.config/anthropic/api_key`, provisioned under predictivelines account until EFP has its own.
+  - **Backups:** Nightly `pg_dump` + `rsync` media to external USB SSD. Weekly automated restore test to scratch container. Configured *from day 1* — document retention is a legal compliance requirement, untested backups don't count.
+- **Repo:** `predictive-lines/efp-site-config` (new, Option A — front-loads the future site-config structure). `paperless-bootstrap/` is the first subdirectory inside it.
+- **Gap flagged in EFP-SIS-003:** Site Infrastructure Standard BOM does not include a scanner. Needs update to list ScanSnap iX1600 (office-grade) and a simple Brother/Canon MFP (satellite-site grade) as acceptable options, plus cross-ref to paperless-bootstrap.
