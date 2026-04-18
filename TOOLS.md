@@ -1,5 +1,26 @@
 # TOOLS.md - Local Notes
 
+## ⚠️ Two Different MCP Hosts — Don't Mix Them Up
+
+Justin runs MCP connectors in **two separate environments**. A connector installed in one is NOT available in the other. Always check which environment you're in before telling Justin to go connect something.
+
+### Claude Desktop (Cowork)
+- **What it is:** The Claude Desktop app on Justin's Mac, using [Cowork](https://cowork.ai) as the MCP connector hub.
+- **How you know you're there:** Tool names typically namespaced by the Cowork connector (e.g., Granola, Quo tools come through Cowork).
+- **How Justin adds a connector:** Cowork UI → Connectors → sign in → authorize.
+- **Currently connected via Cowork:** Granola, Quo, Notion (historically).
+
+### OpenClaw (this environment)
+- **What it is:** The OpenClaw agent running on the `open-claw` Linux host. You (the agent reading this) are here.
+- **How MCP servers are configured:** `~/.openclaw/openclaw.json` under the `mcp.servers` key, managed via `openclaw mcp set|unset|list|show`.
+- **Currently connected:** `outlook-write` (custom Microsoft 365 MCP from `~/repos/excel-fire-ai/mcp-servers/outlook/`).
+- **Adding a new MCP server here requires:**
+  1. The MCP server binary/package installed locally (pip, npm, etc.) OR a remote URL the server exposes.
+  2. `openclaw mcp set <name> '<json-config>'` with `command`, `args`, optional `env`, optional `cwd` — or a remote-style config for SSE/HTTP transports.
+  3. `openclaw gateway restart` so the agent picks up the new tools.
+  4. Any secrets (API keys, OAuth tokens) stored as env vars or files the MCP server can read — never hardcoded.
+- **⚠️ Granola and Quo are NOT currently wired into OpenClaw.** If Justin asks you to use them here, the connector has to be added on this side — Cowork's connection doesn't carry over. Both would require finding/building an MCP server package for each service, registering under `mcp.servers`, and handling their auth locally (likely OAuth flows with tokens written to `~/.config/<service>/`).
+
 ### Browser Control (OpenClaw → Chromium existing-session)
 
 - **Working profile:** `chromium-user` (existing-session / chrome-mcp). This is the browser path that actually works for interactive control on this host.
@@ -28,23 +49,27 @@
 
 ### Quo (Phone / SMS / Call Transcripts)
 
-- **Connector:** Quo MCP (Cowork connector)
+- **Where it lives:** **Claude Desktop (Cowork)** — NOT wired into OpenClaw yet.
 - **Inbox numbers:**
   - `+17348214271` — Justin personal / Predictive Lines
   - `+19069363100` — Excel Fire Protection (Marquette)
-- **Tools:** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact
+- **Tools (Claude Desktop only):** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact
 - **Note:** Use both inboxes when compiling weekly status reports. Auth is via Cowork connector — if calls fail with "API key required," re-authenticate the Quo connector in Cowork settings.
+- **If you (OpenClaw agent) need Quo data:** it's not available here yet. Either ask Justin to paste what you need from Claude Desktop, or add a Quo MCP server to `~/.openclaw/openclaw.json` (see "Two Different MCP Hosts" above).
 
 ### Granola (Meeting Notes & Transcripts)
 
-- **Connector:** Granola MCP (Cowork connector)
-- **Tools:** list_meetings, get_meetings, get_meeting_transcript, query_granola_meetings, list_meeting_folders
+- **Where it lives:** **Claude Desktop (Cowork)** — NOT wired into OpenClaw yet.
+- **Tools (Claude Desktop only):** list_meetings, get_meetings, get_meeting_transcript, query_granola_meetings, list_meeting_folders
 - **Use:** Pull meeting summaries and transcripts for weekly status reports and action item tracking.
+- **If you (OpenClaw agent) need Granola data:** same story as Quo — not available here yet. Either Justin pastes, or we add a Granola MCP server locally.
 
 ### Microsoft 365 — Custom Outlook MCP
 
-- **Connector:** Custom MCP (`ai-team/excel-fire-ai/mcp-servers/outlook/`), connected via `github-custom-mcp` Cowork connector
-- **Current scope:** Microsoft To Do (tasks), SharePoint Lists
+- **Where it lives:** **Both environments.**
+  - OpenClaw: registered as `outlook-write` under `mcp.servers` in `~/.openclaw/openclaw.json`, runs from `~/repos/excel-fire-ai/mcp-servers/outlook/.venv/`. Tool names prefixed `outlook-write__*`.
+  - Claude Desktop: also available via `github-custom-mcp` Cowork connector pulling the same source repo.
+- **Current scope:** Microsoft To Do (tasks), SharePoint Lists, SharePoint Drive, Outlook mail/calendar/contacts, Teams, OneNote.
 - **Tools (To Do):** todo_list_lists, todo_list_tasks, todo_create_task, todo_update_task, todo_complete_task, todo_delete_task, todo_create_list
 - **Tools (SharePoint Lists):** lists_get_site, lists_list_lists, lists_get_list, lists_get_items, lists_create_item, lists_update_item, lists_delete_item, lists_create_list
 - **Tools (SharePoint Drive):** drive_list_drives, drive_list_items, drive_search, drive_get_file_content, drive_get_file_metadata, drive_upload_file, drive_create_folder
