@@ -137,23 +137,40 @@ Close with a one-line reminder that nothing was sent.
 ## Tailored interview question sets (optional)
 
 If the user asks for an interview question set for a specific HireScore candidate (or for the
-whole cycle), read `references/interview-questions.md` and pick 6–10 questions tailored to
-that candidate's Screen dialog data. Heuristics:
+whole cycle), read `references/interview-questions.md` and pick questions tailored to that
+candidate's Screen dialog data plus the *interview stage* the user is prepping for.
+
+**By stage** (see the "Proposed 4-stage interview process" section of the reference file):
+
+- **Stage 1 — 30-min phone screen (Justin solo):** 8–10 questions. Weight: Kevin's work-
+  history block (§1) + 2–3 `[Recruit]` STAR questions + `[Kevin]` "why UP" + 1–2 from §4
+  Company Cam. Skip §6 Trade questions at this stage unless the candidate claims deep
+  expertise you want to probe.
+- **Stage 2 — 45-min Zoom (Justin + Kevin + Keith):** 10–12 questions. Weight: 5–7 from
+  §6 `[Trade]` (matched to the candidate's `expertise_raw` self-ratings), 2–3 `[Recruit]`
+  teamwork/decision-making, 1–2 role-specific scenarios from the technical screen section.
+- **Stage 3 — working day:** no scripted questions; use the crew debrief form at end of day.
+- **Stage 4 — references:** use the reference call script at the end of the reference file.
+
+**Heuristics for tailoring picks:**
 
 - Pull at least one question from each of the 5 signal categories (work ethic, honesty, UP
   growth mindset, openness to tech / Company Cam, willingness to relocate).
-- Use the candidate's `expertise_raw` self-ratings to pick role-specific questions: any
-  skill they rated ≤3/5 is worth probing, any skill they rated 5/5 is worth pressure-testing.
+- Use the candidate's `expertise_raw` self-ratings to pick `[Trade]` and `[Role]` questions:
+  any skill they rated ≤3/5 is worth probing, any skill they rated 5/5 is worth
+  pressure-testing. E.g. self-rated 5/5 on dry systems → ask the trip-test walkthrough
+  and the air-supply / nitrogen generator question.
 - Use `experience_raw` to pick one experience-specific hook (e.g. if they were a foreman,
-  lean into the crew-leadership / training questions).
-- If the candidate's city/state is outside Michigan, include the relocate-block questions.
-  If they're already in the UP or Michigan, drop the "have you been to the UP" opener and
+  lean into crew-leadership / training questions from §7).
+- If the candidate's city/state is outside Michigan, include the relocate block. If
+  they're already in the UP or Michigan, drop the "have you been to the UP" opener and
   instead ask about long-tenure intent.
 - NEVER pick from the red-flag list. If a caller suggests a red-flag-style question,
   redirect to the safe alternative listed in the same file.
 
 After generating the set, post it back to the user grouped by signal category so they can
-scan during the call.
+scan during the call, and tag each question with its source tag (`[Kevin]`, `[EEOC]`,
+`[Role]`, `[Trade]`, `[Recruit]`) so the user knows where it came from.
 
 ## Files
 
@@ -162,9 +179,14 @@ scan during the call.
 - `references/hirescore-dom-notes.md` — DOM anchors + `dialog.description` parsing hints,
   captured from cycle 7239. Read when selectors misbehave or HireScore ships a UI change.
 - `references/interview-questions.md` — HR-safe behavioral question bank for the JM Sprinkler
-  Fitter role, organized by the 5 signals Justin wants to read, plus a protected-category
-  red-flag list with EEOC-safe alternatives. Source tags on every question: `[Kevin]` for
-  seller-coach suggestions, `[EEOC]` for EEOC/SHRM-derived, `[Role]` for role-specific.
+  Fitter role, organized by the 5 signals Justin wants to read, plus a trade-knowledge
+  screen, a general trades-recruiting behavioral block, a proposed 4-stage interview
+  process (phone screen → Zoom → paid working day → references + offer), and a
+  protected-category red-flag list with EEOC-safe alternatives. Source tags on every
+  question: `[Kevin]` for Kevin Masich's suggestions (with Quo call-id citations),
+  `[EEOC]` for EEOC/SHRM-derived, `[Role]` for role-scenario-specific, `[Trade]` for
+  sprinkler-industry craft questions, `[Recruit]` for general trades-recruiting behavioral
+  STAR questions.
 - `scripts/parse_screen_dialog.py` — turn the Screen dialog's flattened text into a structured
   `{name, email, phone, city, state, education[], experience[], expertise{}, submitted_on,
   position}` dict. Importable as `parse(text)` or runnable as a CLI that reads stdin.
