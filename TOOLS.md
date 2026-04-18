@@ -49,13 +49,16 @@ Justin runs MCP connectors in **two separate environments**. A connector install
 
 ### Quo (Phone / SMS / Call Transcripts)
 
-- **Where it lives:** **Claude Desktop (Cowork)** — NOT wired into OpenClaw yet.
+- **Where it lives:** **Both environments.**
+  - OpenClaw: registered as `quo` under `mcp.servers`, server at `~/repos/armavita-quo-mcp/` (Node, stdio, AGPLv3). Auth via `QUO_API_KEY` loaded from `~/.config/quo/api_key` by `launch-openclaw.sh`.
+  - Claude Desktop: also available via Cowork connector.
 - **Inbox numbers:**
   - `+17348214271` — Justin personal / Predictive Lines
   - `+19069363100` — Excel Fire Protection (Marquette)
-- **Tools (Claude Desktop only):** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact
-- **Note:** Use both inboxes when compiling weekly status reports. Auth is via Cowork connector — if calls fail with "API key required," re-authenticate the Quo connector in Cowork settings.
-- **If you (OpenClaw agent) need Quo data:** it's not available here yet. Either ask Justin to paste what you need from Claude Desktop, or add a Quo MCP server to `~/.openclaw/openclaw.json` (see "Two Different MCP Hosts" above).
+- **Tools (OpenClaw `quo__*`):** Messages (`send_text`, `list_messages`, `get_message`), Conversations (`list_conversations`), Contacts (`create_contact`, `list_contacts`, `get_contact`, `update_contact`, `delete_contact`, `get_contact_custom_fields`), Calls (`list_calls`, `get_call`, `get_call_recordings`, `get_call_summary`, `get_call_transcription`, `get_voicemail`), Phone numbers, Users, Webhooks.
+- **Tools (Claude Desktop via Cowork):** fetch-messages, fetch-call-transcripts, send-message, create-contact, update-contact.
+- **Note:** Use both inboxes when compiling weekly status reports. API key is a single Quo workspace key covering both numbers.
+- **Auth rotation:** edit `~/.config/quo/api_key` (mode 0600), then `openclaw gateway restart`. No code change needed.
 
 ### Granola (Meeting Notes & Transcripts)
 
