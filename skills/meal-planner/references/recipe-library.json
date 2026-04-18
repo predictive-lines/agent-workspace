@@ -988,7 +988,6 @@
         "1 red bell pepper, julienned",
         "4 cloves garlic, minced",
         "1 tbsp fresh ginger, grated",
-
         "2 tbsp avocado oil",
         "Pad Thai sauce (see components)",
         "Crushed almonds or cashews (for topping)",
@@ -1031,7 +1030,7 @@
         "1 lb ground beef (or Italian sausage)",
         "1 bag (12 oz) frozen cauliflower gnocchi (Trader Joe's) or 1 lb regular gnocchi",
         "1 jar (24 oz) marinara sauce (Rao's Sensitive — no onion in first 3 ingredients)",
-        "2 cups fresh spinach",
+        "1 bag (5 oz) baby spinach",
         "1/2 cup dairy-free creamer (Nutpods Original) or cashew cream or heavy cream if tolerated",
         "1 tbsp olive oil",
         "Salt & black pepper",
@@ -1039,14 +1038,409 @@
         "Optional: nutritional yeast or grated Parmesan for topping"
       ],
       "instructions": [
+        "THAW the gnocchi before cooking — move from freezer to fridge the night before, or microwave on defrost for 2-3 min. Thawed gnocchi crisps up better and cooks more evenly.",
         "Brown ground beef in a large nonstick skillet over medium-high heat. Season with salt and pepper. Remove with slotted spoon and set aside.",
-        "In the same skillet, heat olive oil over medium heat. Add frozen gnocchi in a single layer. Cover and cook 3-4 min without stirring. Flip and cook another 3-4 min until golden.",
+        "In the same skillet, heat olive oil over medium heat. Add thawed gnocchi in a single layer. Cook 3-4 min without stirring. Flip and cook another 3-4 min until golden.",
         "Return beef to pan. Add marinara sauce. Stir to combine.",
         "Add spinach and stir until wilted, 1-2 min.",
         "Stir in creamer (or cashew cream). Simmer gently until slightly thickened.",
         "Tear in fresh basil. Season to taste. Top with nutritional yeast or Parmesan if using."
       ],
-      "notes": "Family favorite per 'Favorites From the Chef'. Classic bolognese typically uses onion — omitted entirely; Rao's Sensitive marinara has no onion. Cauliflower gnocchi from Trader Joe's keeps it paleo/grain-free. Can use regular potato gnocchi for non-paleo nights. 5-ingredient pantry meal. Eve and Cora will love it (pasta + meat sauce)."
+      "notes": "Family favorite per 'Favorites From the Chef'. Classic bolognese typically uses onion — omitted entirely; Rao's Sensitive marinara has no onion. Cauliflower gnocchi from Trader Joe's keeps it paleo/grain-free. Can use regular potato gnocchi for non-paleo nights. 5-ingredient pantry meal. Eve and Cora will love it (pasta + meat sauce). IMPORTANT: Thaw gnocchi before cooking — thawed gnocchi crisps better and cooks more evenly. Use the whole 5 oz bag of baby spinach rather than measuring cups — easier for the kids and the right amount for 4 servings."
+    },
+    {
+      "id": "marry-me-mushrooms",
+      "name": "Marry Me Mushrooms",
+      "category": "dinner",
+      "tags": ["mushroom", "pasta", "one-pot", "vegetarian", "creamy", "sun-dried-tomato", "spinach", "comfort-food"],
+      "added": "2026-04-11",
+      "source": "cookbook",
+      "source_note": "From Justin's 'One Pot' cookbook — a vegetarian twist on Marry Me Salmon. Recipe includes shallots by default (OK when Justin is traveling). When Justin is home, omit shallots and bump garlic to 10 cloves. Method adapted from the classic Marry Me Salmon technique: sear the protein (here, portobellos), build a creamy sun-dried tomato sauce, cook pasta directly in the liquid.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "medium",
+      "prep_time_min": 15,
+      "cook_time_min": 30,
+      "cook_day_fit": ["sunday"],
+      "appeal": ["justin", "jaclyn", "cora"],
+      "nutrition_per_serving": {
+        "serving_size_g": 450,
+        "calories": 480,
+        "protein_g": 16,
+        "carbs_g": 48,
+        "fat_g": 24,
+        "fiber_g": 6,
+        "notes": "estimated — protein is modest since vegetarian; bump with a side if needed. Varies by cream and pasta brand."
+      },
+      "ingredients": [
+        "2 large portobello mushrooms, halved lengthwise",
+        "8 oz (250g) baby bella / chestnut mushrooms, halved",
+        "3.5 oz (100g) king oyster mushrooms, sliced into 1/2-inch rounds",
+        "3.5 oz (100g) sun-dried tomatoes (oil-packed), roughly chopped, plus 1 tbsp of the oil",
+        "1 tbsp tomato paste",
+        "3/4 cup (200ml) heavy cream",
+        "1 2/3 cups (400ml) vegetable broth",
+        "7 oz (200g) ditalini or small shell pasta (or margheritine if available)",
+        "2 shallots, peeled and finely diced (SEE NOTES: omit if Justin is home)",
+        "6 cloves garlic, minced or grated (bump to 10 cloves if Justin is home and shallots are omitted)",
+        "3 large handfuls baby spinach, washed",
+        "2 tbsp butter",
+        "Red pepper flakes — to taste at the table (omit from cooking; kids found 1/2 tsp too spicy)",
+        "Salt, pepper, and olive oil"
+      ],
+      "instructions": [
+        "SEASON the portobello halves with salt, pepper, and a drizzle of olive oil on both sides.",
+        "HEAT 1 tbsp olive oil and 1 tbsp butter in a large deep skillet or Dutch oven over medium-high heat. SEAR the portobellos cut-side down for 3-4 min until golden, flip, cook another 2-3 min. REMOVE and set aside.",
+        "In the same pan, ADD the remaining 1 tbsp butter. COOK the diced shallots (or extra garlic if Justin is home) with a pinch of salt over medium heat for 3-4 min until softened.",
+        "ADD the baby bella mushrooms and king oyster rounds. COOK 5-6 min, stirring occasionally, until mushrooms are golden and have released their liquid.",
+        "ADD the garlic. COOK 1 min until fragrant. (Skip red pepper flakes here — serve them at the table so adults can add heat without making it too spicy for the kids.)",
+        "STIR in the tomato paste and chopped sun-dried tomatoes (plus the 1 tbsp reserved oil). COOK 1 min to toast the paste.",
+        "POUR in the vegetable broth, scraping up any browned bits. BRING to a simmer. ADD the pasta, stir, and COVER. COOK per pasta package time (usually 8-10 min), stirring halfway, until pasta is al dente and most liquid is absorbed.",
+        "STIR in the heavy cream and baby spinach. Let the spinach wilt down, about 1-2 min. SEASON with salt and pepper to taste.",
+        "NESTLE the seared portobello halves back on top of the pasta. COVER and let sit 2 min so everything melds together.",
+        "SERVE directly from the pan — one portobello half per person with a generous scoop of the creamy pasta underneath."
+      ],
+      "notes": "Vegetarian Marry Me Salmon riff — three types of mushrooms give this serious depth without any meat. ONION RULE: recipe keeps the original shallots for weeks Justin is traveling. When Justin is home, drop the shallots entirely and bump garlic from 6 to 10 cloves — no fennel needed. Margheritine is the original pasta shape but it's hard to find at Kroger — ditalini or small shells work perfectly and hold the sauce well. The one-pot method means the pasta absorbs all that creamy sun-dried tomato flavor. Eve may be lukewarm on the mushrooms but the creamy pasta might win her over — worth trying. Could add a fried egg on top for extra protein if desired."
+    },
+    {
+      "id": "nonnas-polpette-in-tocio",
+      "name": "Nonna's Polpette in Tocio (Milk-Braised Meatballs)",
+      "category": "dinner",
+      "tags": ["meatballs", "italian", "braised", "milk-braised", "beef", "pork", "veal", "sunday-project", "comfort-food", "nonna"],
+      "added": "2026-04-17",
+      "source": "family-recipe",
+      "source_note": "Traditional Italian recipe. Tocio = the golden milk-and-wine reduction sauce with cheese curds (fregoe). Original uses onions in the soffritto — adapted with fennel bulb + celery for Justin's no-onion rule. When Justin is traveling, use the original 2 diced onions instead.",
+      "in_rotation": false,
+      "servings": 6,
+      "difficulty": "sunday-project",
+      "prep_time_min": 30,
+      "cook_time_min": 60,
+      "cook_day_fit": ["sunday"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 350,
+        "calories": 580,
+        "protein_g": 38,
+        "carbs_g": 18,
+        "fat_g": 38,
+        "fiber_g": 1,
+        "notes": "estimated — varies by meat fat content and cream absorption. Excludes any pasta/bread side."
+      },
+      "components": {
+        "meatballs": {
+          "ingredients": [
+            "1 lb ground beef",
+            "1 lb ground pork",
+            "1 lb ground veal",
+            "1 cup fresh breadcrumbs",
+            "1 cup cream",
+            "3 cloves garlic, minced",
+            "3 eggs, beaten",
+            "1/3 cup fresh parsley, chopped",
+            "1 cup Parmesan, finely grated (from block)",
+            "Salt & pepper generously",
+            "Flour to coat",
+            "Vegetable or grapeseed oil for frying"
+          ]
+        },
+        "tocio": {
+          "description": "The golden milk-and-wine braising sauce. The fregoe (little cheese curds that form as the milk reduces) are the best part.",
+          "ingredients": [
+            "1 medium fennel bulb, cored and finely diced (replaces 2 onions — SEE NOTES: use 2 diced onions if Justin is traveling)",
+            "2 stalks celery, finely diced (added to compensate for onion omission)",
+            "2 cloves garlic, minced",
+            "Olive oil & butter (enough to generously coat your pan)",
+            "1L 2% milk",
+            "1 1/3 cup white wine",
+            "Salt & pepper"
+          ]
+        }
+      },
+      "ingredients": [
+        "Meatball ingredients (see components)",
+        "Tocio ingredients (see components)"
+      ],
+      "instructions": [
+        "MIX breadcrumbs and cream in a large bowl until cream is fully absorbed. ADD garlic, eggs, parsley, Parmesan, and generous salt & pepper. ADD the three ground meats and MIX until just combined — don't overwork it!",
+        "ROLL into small meatballs (about 1.5 inch diameter). COAT each in flour, shaking off excess.",
+        "HEAT oil in a large skillet (oil should come halfway up the meatballs). FRY in batches until deeply golden brown on all sides — don't crowd the pan. REMOVE and set aside on a plate.",
+        "In a large deep pan or Dutch oven, HEAT olive oil and butter over medium heat. ADD diced fennel and celery (or onions if Justin is traveling) with a pinch of salt. SAUTÉ until soft and translucent, 6-8 min.",
+        "ADD garlic and let it bloom, about 1 min. This is your soffritto.",
+        "ADD meatballs to the soffritto and TURN to coat. SEASON with a pinch of salt and pepper.",
+        "POUR in milk until meatballs are almost fully submerged. SIMMER on medium-low for 30-60 minutes until milk has mostly reduced, turning the meatballs occasionally. The longer and slower, the more tender.",
+        "ADD white wine and REDUCE on medium-high until you have a golden sauce with little cheese curds — Nonna calls them fregoe, and they're the best part."
+      ],
+      "notes": "Sunday project — plan for 90 min total. The three-meat blend (beef/pork/veal) is traditional and gives the best texture. Cream-soaked breadcrumbs keep the meatballs incredibly tender. ONION RULE: fennel bulb + celery replaces the traditional 2 diced onions. When Justin is traveling, use the original onions for the authentic soffritto. The fregoe (cheese curds in the reduced milk) are Nonna's signature — don't rush the reduction. Pairs well with crusty bread, polenta, or egg noodles. The tocio is liquid gold — serve it spooned generously over the meatballs."
+    },
+    {
+      "id": "viral-one-pan-dumplings-bake",
+      "name": "Viral One-Pan Dumplings Bake",
+      "category": "dinner",
+      "tags": ["dumplings", "asian-inspired", "one-pan", "curry", "coconut", "easy", "entertaining", "weeknight"],
+      "added": "2026-04-17",
+      "source": "viral-social",
+      "source_note": "Viral TikTok/Instagram recipe, originally uses Trader Joe's ingredients. Adapted to use Kroger/Costco-available substitutes and to remove onion from the sauce (Soyaki contains onion). Green onion garnish and chili crisp topping both contain onion — skip on Justin's portion.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 5,
+      "cook_time_min": 30,
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 400,
+        "calories": 480,
+        "protein_g": 16,
+        "carbs_g": 42,
+        "fat_g": 28,
+        "fiber_g": 3,
+        "notes": "estimated — includes jasmine rice. Varies by dumpling brand and coconut milk fat content."
+      },
+      "ingredients": [
+        "1 can (13.5 oz) full-fat coconut milk, shaken very well before opening",
+        "2-3 tbsp Thai Kitchen Red Curry Paste",
+        "1/4 cup soy sauce",
+        "1 tbsp mirin",
+        "1 tsp fresh ginger, grated",
+        "2 cloves garlic, minced (pantry staple)",
+        "1 lb frozen potstickers (Bibigo Chicken & Veg from Costco, or any Kroger brand)",
+        "2 tbsp chili crisp for topping (Fly By Jing or similar — ⚠️ contains shallots, skip on Justin's portion)",
+        "2 green onions, thinly sliced for topping (⚠️ onion family — skip on Justin's portion)",
+        "Jasmine rice for serving"
+      ],
+      "instructions": [
+        "PREHEAT oven to 400°F.",
+        "WHISK coconut milk, red curry paste, soy sauce, mirin, grated ginger, and minced garlic together in a large baking dish until smooth.",
+        "ADD frozen dumplings to the dish. TOSS to coat well. ARRANGE in a single layer — don't overlap.",
+        "BAKE 25-30 min. For slightly crunchy edges on the dumplings, go the full 30 min.",
+        "TOP with chili crisp and sliced green onions. SERVE over jasmine rice."
+      ],
+      "notes": "Dead simple entertaining meal — 5 min prep, looks impressive, feeds a crowd. ONION ADAPTATION: Original recipe uses TJ's Soyaki sauce (contains onion). Replaced with soy sauce + mirin + fresh ginger for the same sweet-savory profile without onion. The red curry paste + coconut milk combo does most of the heavy lifting. Chili crisp and green onions are toppings Justin can skip. Scales easily — use a bigger dish and add more dumplings/sauce for more people. First made Apr 17, 2026 for friends dinner."
+    },
+    {
+      "id": "viral-cucumber-salad",
+      "name": "Viral Sesame Cucumber Salad",
+      "category": "side",
+      "tags": ["salad", "cucumber", "asian-inspired", "cold", "quick", "side", "no-cook"],
+      "added": "2026-04-17",
+      "source": "viral-social",
+      "source_note": "Viral TikTok/Instagram cucumber salad. No modifications needed — naturally onion-free.",
+      "in_rotation": false,
+      "servings": 2,
+      "difficulty": "easy",
+      "prep_time_min": 5,
+      "cook_time_min": 0,
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 150,
+        "calories": 95,
+        "protein_g": 2,
+        "carbs_g": 5,
+        "fat_g": 8,
+        "fiber_g": 1,
+        "notes": "estimated — mostly from sesame oil and seeds"
+      },
+      "ingredients": [
+        "1 cucumber, thinly sliced",
+        "1 tbsp sesame oil",
+        "2 tbsp rice vinegar",
+        "2 tbsp soy sauce",
+        "1/4 tsp salt",
+        "1/4 tsp sugar",
+        "1 tbsp sesame seeds",
+        "1/4 tsp chili flakes"
+      ],
+      "instructions": [
+        "THINLY SLICE the cucumber (mandoline or sharp knife).",
+        "ADD sesame oil, rice vinegar, soy sauce, salt, sugar, and chili flakes. TOSS to combine.",
+        "SPRINKLE with sesame seeds. SERVE immediately — gets watery if it sits."
+      ],
+      "notes": "Zero-effort side that pairs perfectly with any Asian-inspired meal. Must be served immediately — cucumber releases water quickly. Double the recipe for 4 people. No onion concerns. Great alongside the dumplings bake, beef & broccoli, or any rice bowl."
+    },
+    {
+      "id": "pickle-chicken-crunch-dip",
+      "name": "Pickle Chicken Crunch Dip",
+      "category": "dinner",
+      "tags": ["dip", "chicken", "pickle", "cheesy", "easy", "weeknight", "comfort-food", "rotisserie", "crowd-pleaser"],
+      "added": "2026-04-17",
+      "source": "reconstructed",
+      "source_note": "Reverse-engineered from Justin's ingredient list. Mashup of viral pickle dip + crack chicken dip + crunchy chip topping. No single source recipe found — built from scratch.",
+      "in_rotation": false,
+      "servings": 6,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 25,
+      "cook_day_fit": ["tuesday", "thursday"],
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 200,
+        "calories": 380,
+        "protein_g": 18,
+        "carbs_g": 22,
+        "fat_g": 24,
+        "fiber_g": 1,
+        "notes": "estimated — varies by chip/cracker quantities and cream cheese fat content. Excludes dipping chips."
+      },
+      "ingredients": [
+        "8 oz cream cheese, softened",
+        "1 cup shredded cheddar (from block)",
+        "1.5-2 cups shredded rotisserie chicken",
+        "1/2 cup dill pickles, finely diced",
+        "2 tbsp pickle juice (from the jar)",
+        "2 tbsp fresh dill, chopped (plus more for topping)",
+        "1 cup crushed Cheez-Its (for topping — baked on)",
+        "1 cup crushed salt & vinegar chips (for topping — added after baking)",
+        "Salt & pepper to taste"
+      ],
+      "instructions": [
+        "PREHEAT oven to 350°F.",
+        "MIX softened cream cheese, shredded cheddar, rotisserie chicken, diced pickles, pickle juice, and fresh dill in a large bowl until well combined. SEASON with salt and pepper.",
+        "SPREAD mixture into a baking dish (8x8 or similar).",
+        "TOP evenly with crushed Cheez-Its.",
+        "BAKE 20-25 min until bubbly around the edges and Cheez-Its are golden.",
+        "PULL from oven. SCATTER crushed salt & vinegar chips on top (after baking so they stay crunchy). FINISH with more fresh dill.",
+        "SERVE with extra Cheez-Its and chips for scooping."
+      ],
+      "notes": "Dead simple Tuesday/Thursday meal — kids can assemble everything, just needs an adult for the oven. Rotisserie chicken means zero cooking protein. The key is adding the salt & vinegar chips AFTER baking so they keep their crunch. Cheez-Its go on before baking so they get golden and slightly melted into the cheese. Pairs well with raw veggies or a simple salad to round it out. No onion concerns anywhere in this recipe."
+    },
+    {
+      "id": "lemon-ricotta-rolls",
+      "name": "Lemon Ricotta Rolls (High Protein, No Powder)",
+      "category": "sweet",
+      "tags": ["sweet", "baking", "high-protein", "lemon", "ricotta", "rolls", "brunch", "sunday-project", "splurge", "make-ahead"],
+      "added": "2026-04-17",
+      "source": "mika-kinney",
+      "source_note": "Recipe by Mika Kinney (Feb 2026). High-protein lemon ricotta rolls — 18g protein per roll with no protein powder. Ricotta in both the dough and frosting. Adapted from her cottage cheese cinnamon rolls (springtime lemon version).",
+      "in_rotation": false,
+      "servings": 9,
+      "difficulty": "sunday-project",
+      "prep_time_min": 15,
+      "cook_time_min": 30,
+      "total_time_note": "~3 hours including two rises. Can be shaped the night before and refrigerated — pull out 1 hour before baking for a fresh Sunday morning treat.",
+      "cook_day_fit": ["sunday"],
+      "treat_type": "splurge",
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": null,
+        "calories": 517,
+        "protein_g": 18,
+        "carbs_g": 87,
+        "fat_g": 11,
+        "fiber_g": 3,
+        "notes": "Per roll (1 of 9). 36g sugar. High protein for a pastry — ricotta does the heavy lifting. Source: Mika Kinney."
+      },
+      "components": {
+        "dough": {
+          "ingredients": [
+            "2.25 tsp (8g) active dry yeast",
+            "1/3 cup (80g) hot water (~110°F — hottest tap water is usually right)",
+            "3 tbsp (44g) white sugar",
+            "1 cup (227g) egg whites (carton works great)",
+            "1 cup (272g) low-fat ricotta",
+            "4.33 cups (580g) bread flour (start with 4.25 cups, add rest as needed)",
+            "2 tsp (14g) salt",
+            "1 tbsp (11g) chia seeds (optional — adds fiber, disappears into dough)",
+            "Zest from 1 lemon",
+            "Neutral oil for bowl",
+            "1/2 cup (113g) milk — NOT protein milk, it curdles (pour into pan before baking)"
+          ]
+        },
+        "filling": {
+          "ingredients": [
+            "3.5 tbsp (48g) salted butter, softened (not melted)",
+            "1/3 cup (86g) white sugar (sugar-free alternative OK)",
+            "Zest from 1 medium lemon (~1 tbsp)"
+          ],
+          "instructions": "Rub lemon zest and sugar together between your fingers until fragrant — this releases the natural lemon oils. Spread softened butter over rolled dough leaving a 1/2 inch border, then sprinkle the lemon sugar evenly over the butter."
+        },
+        "frosting": {
+          "ingredients": [
+            "4 oz (114g) whipped cream cheese, light (regular OK — must be fully softened, blend out lumps)",
+            "1.5 cups (115g) powdered sugar (sugar-free alternative OK)",
+            "1/2 cup (136g) low-fat ricotta, blended smooth",
+            "1/2 tbsp (12g) vanilla bean paste (or 1/2 tsp vanilla extract)",
+            "1 pinch salt",
+            "Zest from 2 lemons (~2 tbsp)",
+            "Optional: juice from half a lemon (increase sugar if adding)"
+          ],
+          "instructions": "Blend ricotta until smooth. Combine with cream cheese, powdered sugar, vanilla, salt, and lemon zest. Beat until smooth. Chill in freezer 10-15 min or fridge until rolls are done baking. Frost warm rolls."
+        }
+      },
+      "ingredients": [
+        "Dough ingredients (see components)",
+        "Filling ingredients (see components)",
+        "Frosting ingredients (see components)"
+      ],
+      "instructions": [
+        "ACTIVATE YEAST: In a large stand mixer bowl, stir together hot water and sugar with a wooden spoon. Sprinkle in yeast and gently stir. Let bloom 5 min until bubbly. If tap water isn't warm enough, microwave 40 seconds — don't let it get too hot or it kills the yeast.",
+        "BLEND ricotta, egg whites, and salt together until completely smooth — no lumps. This is the trick to a smooth dough.",
+        "COMBINE: Pour egg-ricotta mixture into the yeast bowl. Stir. Add bread flour, chia seeds (if using), and lemon zest. Mix with a wooden spoon until a shaggy dough forms. REST 5 minutes to let flour fully hydrate.",
+        "KNEAD: Attach dough hook and knead 3-4 min (or 8-10 min by hand on floured surface). Dough is ready when it pulls away from the sides of the bowl and feels elastic — may still stick to the bottom and that's OK.",
+        "FIRST RISE: Lightly oil a clean bowl, place dough inside, turn to coat. Cover with plastic wrap or tea towel. Rise in a warm place for 2 hours until doubled. (Oven with light on is ideal. For overnight: refrigerate up to 12 hours.)",
+        "SHAPE: Punch dough down. Roll on floured surface into an 18x14 inch rectangle, about 1/2 inch thick.",
+        "FILL: Spread softened butter over dough leaving a 1/2 inch border. Sprinkle lemon sugar (zest rubbed into sugar) evenly over butter. Use your hand to spread it out.",
+        "ROLL & CUT: Starting from the short end, roll dough up tightly, seam down. Trim uneven ends with serrated knife. Score and cut into 9 even rolls (~1 inch thick). Place in a greased ceramic or glass baking dish.",
+        "SECOND RISE: Preheat oven to 350°F. Cover rolls and let rise 25 min on top of stove while oven preheats (turn on microwave light above if available). Rolls should be puffed and touching. (MAKE-AHEAD: skip this step, cover tightly and refrigerate overnight. Leave on counter 1 hour before baking.)",
+        "BAKE: Pour 1/2 cup milk evenly around the rolls (keeps them ultra moist). Bake 25-30 min, checking at 25. PULL when just barely blonde — UNDERBAKE is the goal. They keep cooking in the pan.",
+        "FROST: Let rolls cool 5-10 min. Spread chilled frosting over warm rolls. Serve immediately."
+      ],
+      "storage": {
+        "fridge": "Airtight container, up to 4 days",
+        "freezer": "Baked and unfrosted, up to 2 months. Thaw overnight and reheat before frosting.",
+        "reheat": "Microwave 15-30 seconds or 300°F oven for 10 minutes. Frost after reheating."
+      },
+      "notes": "SUNDAY BAKING PROJECT — not a kid-led sweet (yeast dough + two rises + rolling). Plan for ~3 hours total, but only ~15 min active prep. The make-ahead option is clutch: shape Saturday evening, refrigerate overnight, bake Sunday morning for warm fresh rolls with zero morning effort. 18g protein per roll with NO protein powder — all from ricotta + egg whites + bread flour. Treat-type: splurge (36g sugar per roll with frosting). Use as the weekly sweet when you want something special — Easter, Mother's Day, or just a good Sunday. Key tip from the recipe author: MORE lemon zest is always better — the flavor mellows as it bakes, so what seems like a lot raw is perfect once done. The milk poured around the rolls before baking is non-negotiable — it's what keeps them pillowy."
+    },
+    {
+      "id": "orecchiette-sausage-broccoli-rabe",
+      "name": "Orecchiette with Sausage and Broccoli Rabe",
+      "category": "dinner",
+      "tags": ["pasta", "sausage", "italian", "broccoli-rabe", "broccolini", "olive-oil", "puglia", "garlic"],
+      "added": "2026-04-11",
+      "source": "justin-bio",
+      "source_note": "From Justin's bio — a Puglian classic with Italian-American touches (lemon, Parm, anchovy). Traditional version is just orecchiette, cime di rapa, garlic, chili, salt, pepper, and olive oil. This version adds optional anchovy for depth, lemon zest/juice for brightness, and Parmigiano for richness.",
+      "in_rotation": false,
+      "servings": 5,
+      "difficulty": "medium",
+      "prep_time_min": 15,
+      "cook_time_min": 25,
+      "cook_day_fit": ["sunday"],
+      "appeal": ["justin", "jaclyn", "cora"],
+      "nutrition_per_serving": {
+        "serving_size_g": 380,
+        "calories": 530,
+        "protein_g": 25,
+        "carbs_g": 52,
+        "fat_g": 24,
+        "fiber_g": 4,
+        "notes": "estimated — varies by sausage fat content, olive oil amount, and whether Parm is included"
+      },
+      "ingredients": [
+        "1 lb (16 oz) orecchiette",
+        "1 lb Italian sausage (mild), casings removed",
+        "1 large bunch broccolini, tough stems trimmed and roughly chopped (or broccoli rabe for traditional — see notes)",
+        "1-2 anchovy fillets or 1-2 tsp anchovy paste (optional — adds umami depth)",
+        "4-5 cloves garlic, thinly sliced",
+        "Red pepper flakes — to taste at the table (do NOT cook into the dish; kids are spice-sensitive)",
+        "1/2 cup dry white wine (optional; not traditional)",
+        "1 cup freshly microplaned Parmigiano Reggiano (optional; not traditional — from block per cheese rule)",
+        "4 tbsp good olive oil, divided",
+        "Zest from 1/2 lemon (optional; not traditional)",
+        "1-2 tsp fresh lemon juice (optional; add to taste)",
+        "Salt and freshly cracked black pepper"
+      ],
+      "instructions": [
+        "BRING a large pot of generously salted water to a boil. This pot does double duty — greens first, then pasta.",
+        "BLANCH the broccolini (or broccoli rabe) in the boiling water for 60-90 seconds until bright green and just tender. SCOOP OUT with a spider strainer or slotted spoon into a bowl of ice water. Keep the pot of water boiling — you'll use it for the pasta. DRAIN the greens and pat dry on a towel.",
+        "DROP the orecchiette into the same boiling water. COOK according to package time (usually 9-11 min). RESERVE 1 cup of starchy pasta water before draining.",
+        "While pasta cooks, HEAT 2 tbsp olive oil in a large deep skillet over medium-high heat. ADD the crumbled sausage and COOK 5-6 min, breaking into small pieces, until browned and cooked through. REMOVE sausage with a slotted spoon and set aside.",
+        "REDUCE heat to medium. ADD remaining 2 tbsp olive oil to the same skillet. ADD the sliced garlic and anchovy (if using). COOK 30-60 seconds, stirring constantly, until garlic is just golden and anchovy has melted into the oil. Do NOT let the garlic burn.",
+        "ADD the blanched broccolini to the skillet. TOSS to coat in the garlic oil. COOK 2-3 min until warmed through and lightly wilted.",
+        "DEGLAZE with white wine if using — let it cook off for about 1 min, scraping up any browned bits.",
+        "RETURN the sausage to the skillet. ADD the drained orecchiette directly into the pan. TOSS everything together over medium heat for 2-3 min, adding splashes of reserved pasta water to create a glossy, emulsified sauce that coats the pasta.",
+        "REMOVE from heat. ADD the Parmigiano Reggiano (if using) and toss until melted into the sauce. FINISH with lemon zest and a squeeze of lemon juice if desired. SEASON with salt and pepper to taste.",
+        "SERVE with extra Parm and red pepper flakes at the table for those who want heat."
+      ],
+      "notes": "Puglian classic with Justin's Italian-American touches. BROCCOLINI is the recommended default for the family — less bitter than traditional broccoli rabe, kids are more likely to eat it. Swap in broccoli rabe for the authentic experience when the adults want it. SPICE: red pepper flakes are served at the table only — do NOT cook them into the dish (learned from Marry Me Mushrooms feedback: Eve found 1/2 tsp too spicy, Cora noticed the heat). ANCHOVY: invisible once melted into oil, adds deep savory/umami flavor without any fishiness — worth including even for Eve. TECHNIQUE: the key move is finishing the pasta in the skillet with splashes of starchy pasta water — this builds the glossy emulsified sauce. No cream needed. Eve's wild card — she likes pasta and sausage but bitter greens are a stretch. Broccolini helps. Mild sausage recommended over hot for the kids."
     }
   ]
 }

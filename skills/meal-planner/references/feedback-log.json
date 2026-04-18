@@ -64,6 +64,32 @@
       "would_make_again": true,
       "tags": ["broccoli", "roasted", "side", "vegetable"],
       "notes": "Kids didn't like it. Justin and Jaclyn each ate about one head worth. Still worth including as an adult side — size down to 1 head when kids won't eat it. For this week's plan, included 2 heads since it pairs well with puff pastry pockets — may want to adjust."
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Marry Me Mushrooms",
+      "ratings": {
+        "justin": {"score": 0, "notes": "not present — no rating"},
+        "jaclyn": {"score": 1, "notes": "loved it; said it wasn't hard for her to make but too complex for the girls on a weeknight"},
+        "cora": {"score": 1, "notes": "good but thought it was a little spicy"},
+        "eve": {"score": -1, "notes": "too spicy"}
+      },
+      "would_make_again": true,
+      "tags": ["mushroom", "pasta", "one-pot", "vegetarian", "creamy", "sun-dried-tomato"],
+      "notes": "Jaclyn made it. Spice was too high for the kids — reduce or omit red pepper flakes next time. Cora was OK but noticed the heat; Eve rejected it as too spicy. Confirms medium/sunday difficulty — not a Tuesday/Thursday candidate. Consider halving chilli flakes to 1/4 tsp or making them optional with a 'add at the table' approach."
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Bolognese Gnocchi",
+      "ratings": {
+        "justin": {"score": 0, "notes": "not present — no rating"},
+        "jaclyn": {"score": 1, "notes": "liked it"},
+        "cora": {"score": 1, "notes": "liked it"},
+        "eve": {"score": 1, "notes": "liked it"}
+      },
+      "would_make_again": true,
+      "tags": ["pasta", "gnocchi", "beef", "bolognese"],
+      "notes": "Hit with Cora, Eve, and Jaclyn (Justin traveling). Two recipe tweaks: (1) gnocchi should be thawed before cooking — frozen gnocchi didn't crisp as well; (2) use the whole 5 oz bag of baby spinach instead of measuring 2 cups — easier for the kids to just dump the container and it's the right amount."
     }
   ],
   "preference_updates": [
