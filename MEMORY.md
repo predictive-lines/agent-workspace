@@ -75,6 +75,15 @@
 - **Max shortfall after all fixes**: -$34K (Aug 2028) with $250K LOC. Recommended $300-325K. Justin to confirm.
 - **Row deletion lesson**: Always verify row contents immediately before deleting — 0-indexed math is error-prone when rows shift.
 
+## Field Crew Communication Architecture — Path C Decision (Apr 18, 2026)
+- **Architecture chosen:** Notion (canonical backend) + Quo (field crew comms bridge) + OpenClaw (glue). Rejected Path A (full SharePoint migration) and Path B (Notion backend + custom web UIs).
+- **Core loop:** morning job-assignment text from Notion→Quo→crew; daytime MMS photos optional; evening voice call→Quo transcript→OpenClaw parses→structured Notion update.
+- **Why:** field crews confirmed not tech-forward. Native SMS/phone calls only. Zero per-seat licensing for field. Notion heavy-user seats only (~4 × $24/mo).
+- **Phase plan:** Phase 1 = morning outbound pilot with one crew member + one job type (candidate: Keith). Phase 2 = evening voice inbound w/ TaskFlow parsing. Phase 3 = scale or retreat. Full spec in Notion: ai-space > Human Readable Reports > "Field Crew Communication Architecture — Phase Plan" (page id: `3477e702-d98c-8121-acbf-dd81a1848f35`).
+- **SharePoint migration PAUSED:** don't delete existing SP Lists (Jobs, Customers, Vendors, etc.) but don't build more. Retire after Phase 1–2 validate. SharePoint retains long-term role only for document libraries with printable reports.
+- **Company Cam deferred:** Phase 3+ decision, not Phase 1. Try Quo MMS first.
+- **OpenClaw is the developer** for this build — ongoing maintenance obligation acknowledged.
+
 ## Notion Meeting Notes Access (Apr 18, 2026)
 - **Notion AI Meetings captures are accessible via the existing `open-claw` Notion integration** — no MCP server, no Otter, no Granola tunnel needed.
 - **Data source:** `Meeting Notes` (id: `2847e702-d98c-80df-a583-000b5473f3d7`, database_id: `2847e702-d98c-80b5-aea2-d31066fd0432`).
