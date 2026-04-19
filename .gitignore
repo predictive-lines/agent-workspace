@@ -29,3 +29,6 @@ venv/
 claude-code-prompt-drive-tools.md
 claude-code-prompt-mcp-upgrade.md
 rehydration-sharepoint-job-tracking.md
+
+# Agent-internal dream state (do not commit)
+memory/.dreams/

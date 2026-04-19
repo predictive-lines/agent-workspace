@@ -75,6 +75,20 @@
 - **Max shortfall after all fixes**: -$34K (Aug 2028) with $250K LOC. Recommended $300-325K. Justin to confirm.
 - **Row deletion lesson**: Always verify row contents immediately before deleting — 0-indexed math is error-prone when rows shift.
 
+## Notion Meeting Notes Access (Apr 18, 2026)
+- **Notion AI Meetings captures are accessible via the existing `open-claw` Notion integration** — no MCP server, no Otter, no Granola tunnel needed.
+- **Data source:** `Meeting Notes` (id: `2847e702-d98c-80df-a583-000b5473f3d7`, database_id: `2847e702-d98c-80b5-aea2-d31066fd0432`).
+- **Columns:** Meeting name (title), Date, Attendees (rich_text), Summary (rich_text), Created by.
+- **Page body structure:** Notion stores AI Meetings content as a special `transcription` block containing three named child blocks:
+  - `summary_block_id` → AI-generated action items (heading_3 + to_do blocks with speaker-attributed tasks)
+  - `notes_block_id` → Agenda + manual notes sections
+  - `transcript_block_id` → Full verbatim transcript as paragraph blocks
+- **Access pattern:** `GET /v1/blocks/{page_id}/children` returns the transcription block with `children: {summary_block_id, notes_block_id, transcript_block_id}` pointers. Follow each pointer with `GET /v1/blocks/{block_id}/children` to extract content.
+- **Pricing:** Notion Business @ $24/user/mo bundles AI Meetings. Only Justin needs a seat for meeting capture (Jaclyn optional). Otter would have been $30/mo for meetings only with an unofficial MCP and a password-sharing auth model — worse on every dimension.
+- **Cancelled/rolled back Apr 18:** Otter trial account, `otter-mcp` repo clone, `~/.config/otter/credentials`, and OpenClaw `otter` MCP registration all torn down after discovering Notion already solved this.
+- **Security note:** Justin pasted an Otter password in Slack thread during the trial setup. Password file was shredded; Justin advised to rotate/disable the Otter local password since the MS SSO account is the primary auth path.
+- **Open question:** Meeting Notes DB may contain personal meetings (e.g., OBGYN scheduling, family calls) alongside business. Justin to decide whether to segregate private meetings into a separate DB or accept full-scope access for the integration.
+
 ## Platform Migration — Notion → Microsoft 365 (Apr 14, 2026)
 - **Direction:** Full migration from Notion to M365 stack. Notion retained temporarily during transition only.
 - **Task management:** Microsoft To Do, managed via custom Outlook MCP (`ai-team/excel-fire-ai/mcp-servers/outlook/`, `github-custom-mcp` connector in Cowork).
