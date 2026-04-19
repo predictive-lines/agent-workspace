@@ -66,7 +66,8 @@ Justin runs MCP connectors in **two separate environments**. A connector install
 - **Where it lives:** **Claude Desktop (Cowork)** — NOT wired into OpenClaw yet.
 - **Tools (Claude Desktop only):** list_meetings, get_meetings, get_meeting_transcript, query_granola_meetings, list_meeting_folders
 - **Use:** Pull meeting summaries and transcripts for weekly status reports and action item tracking.
-- **If you (OpenClaw agent) need Granola data:** same story as Quo — not available here yet. Either Justin pastes, or we add a Granola MCP server locally.
+- **Important:** Granola *was* connected on Apr 14, 2026, but in the Cowork / Claude Desktop environment, not this OpenClaw host. Do not assume prior Granola access here just because memory says it was connected.
+- **If you (OpenClaw agent) need Granola data:** either Justin pastes/exports it, or we add a Granola MCP server locally to OpenClaw.
 
 ### Microsoft 365 — Custom Outlook MCP
 
@@ -104,6 +105,10 @@ Justin runs MCP connectors in **two separate environments**. A connector install
     - Props: Name (title), Category (select: Personal/Work/Fitness/Family/Planning/Finance/Security/AI/etc.)
   - **Tasks** (`2847e702-d98c-8170-9008-000bc7d6d318`) — Personal task list / reminders
     - Props: Task name (title), Status (status: Paused/Not Started/Follow Up Tomorrow/In Progress PM/In Progress AM/Done/Archived), Priority (select: Low/Medium/High), Due (date), Assignee (people), Tags (multi_select), Required By (select), Sub-tasks/Parent-task/Blocks/Blocked By (relations), Completed on (date)
+  - **Meeting Notes** (`2847e702-d98c-80df-a583-000b5473f3d7`) — AI meeting capture / notes / transcript database
+    - database_id: `2847e702-d98c-80b5-aea2-d31066fd0432`
+    - Use `data_source_id` for queries and `database_id` when creating pages
+    - Important: this is the main Notion meeting capture database Justin uses for in-person and virtual meetings
 
 ### Google Calendar
 
