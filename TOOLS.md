@@ -120,19 +120,54 @@ Justin runs MCP connectors in **two separate environments**. A connector install
 - **API:** Google Calendar v3 (`calendar-json.googleapis.com`)
 - **Behavior:** Always confirm before creating/modifying/deleting events
 
-### Google Drive & Sheets
+### Google Workspace — Two Credential Stores (by design)
 
-- **Auth:** OAuth2 (Web app flow)
-- **Account 1 — `justin.miller@predictivelines.com`:**
-  - Tokens: `~/.config/google/tokens.json`
-  - Credentials: `~/.config/google/oauth_credentials.json`
-  - Scopes: `drive.readonly`, `spreadsheets`, `gmail.readonly`, `gmail.send`, `calendar`
-- **Account 2 — `millerjl@oneoaks.net`:**
-  - Tokens: `~/.config/google/tokens-oneoaks.json`
-  - Credentials: `~/.config/google/oauth_credentials-oneoaks.json`
-  - Scopes: `drive.readonly`, `spreadsheets`
-- **Refresh token:** stored in each tokens file — access token auto-refreshable via `POST https://oauth2.googleapis.com/token` with `grant_type=refresh_token`
-- **Important:** Access token expires hourly; refresh before use
+There are **two parallel Google OAuth setups** on this host. They do NOT share credentials and are used by different code paths. Do not consolidate without migrating callers.
+
+#### Store 1 — `google-workspace-mcp` MCP server (multi-account)
+
+- **Binary:** `/home/open-claw/repos/google-workspace-mcp-live/dist/cli.js` (v2.3.6)
+- **Registered under MCP name:** `google-workspace` in `~/.openclaw/openclaw.json`
+- **Config root:** `~/.google-mcp/`
+- **Accounts registry:** `~/.google-mcp/accounts.json` (per-account `credentialsPath` + `tokenPath`)
+- **Tokens dir:** `~/.google-mcp/tokens/<accountName>.json` (format: `{type:'authorized_user', client_id, client_secret, refresh_token}`)
+- **Global fallback credentials:** `~/.google-mcp/credentials.json` (work OAuth client, used when an account has no per-account credentialsPath)
+- **CLI:**
+  - `node .../cli.js accounts list`
+  - `node .../cli.js accounts add <name> -c <path> [--no-open]`
+  - `node .../cli.js accounts test-permissions [name]`
+  - `node .../cli.js accounts remove <name>`
+
+**Account: `predictivelines`** (work, `justin.miller@predictivelines.com`)
+- GCP project: `open-claw-integration-488119` (Internal / predictivelines.com org)
+- OAuth client: `734807837733-769npl2q9iej7isqrvqo6c07jacjscoj.apps.googleusercontent.com` (Desktop)
+- Uses global `~/.google-mcp/credentials.json` (no per-account override)
+- Token: `~/.google-mcp/tokens/predictivelines.json`
+- Enabled APIs: Gmail, Calendar, People, Drive, Sheets (Docs/Slides/Forms disabled)
+
+**Account: `oneoaks-personal`** (personal, `millerjl@oneoaks.net`)
+- GCP project: `open-claw-personal-493814` (External / Testing on oneoaks.net org, test user = millerjl@oneoaks.net)
+- OAuth client: `126015338489-fvlh5pba2faa99rrh1g7va2cetap8gma.apps.googleusercontent.com` (Desktop, "OpenClaw Personal (Desktop)")
+- Per-account credentials: `~/.config/google-personal/oauth_credentials.json` (mode 600, dir 700)
+- Token: `~/.google-mcp/tokens/oneoaks-personal.json`
+- Enabled APIs: Gmail, Calendar, People, Drive, Sheets (Docs/Slides/Forms disabled)
+
+**Scopes requested by the server (both accounts, hardcoded in MCP):** `drive`, `documents`, `spreadsheets`, `presentations`, `forms.body`, `forms.responses.readonly`, `gmail.modify`, `gmail.settings.basic`, `calendar`, `contacts`, `contacts.other.readonly`, `directory.readonly`. APIs not enabled in GCP return 403 at runtime but don't block the OAuth flow.
+
+**Known bug (v2.3.6, non-fatal):** `accounts add --credentials <path>` writes the token file with the *global* client_id/secret instead of the per-account one, because it saves the token before updating `accounts.json`. Auth still works at runtime (the OAuth2Client is rebuilt with the correct per-account credentials on every load; `client_id`/`client_secret` in the token file are dead fields after initial issuance). Can fix cosmetically by rewriting `~/.google-mcp/tokens/<name>.json` to carry the correct client_id/secret.
+
+**OAuth flow with a headless agent:** Use `--no-open`, capture the auth URL from stdout, `browser.navigate` into the Chromium `chromium-user` tab that's already signed into the target Google account, click Allow. The `browser` tool reports "browser navigation blocked by policy" on the `http://localhost:3000/?code=...` callback, but the HTTP request DID reach the MCP's callback server — verify by polling the background process for `Account "<name>" added successfully!`.
+
+#### Store 2 — standalone Python scripts (single-account)
+
+- **Credentials dir:** `~/.config/google/`
+- Used by: `cash-bridge-builder`, `model-summary-report`, `fix_distance_formulas*.py`, `build_bmi_sheets.py`, `build_proforma.py`, `build_budget.py`, Tiller helpers, etc.
+- Different OAuth clients than Store 1; scripts refresh access tokens by POSTing to `https://oauth2.googleapis.com/token` with the refresh_token.
+- **Account 1 (work):** `~/.config/google/oauth_credentials.json` + `~/.config/google/tokens.json` — client `734807837733-o9mh46lb0de2b3eefb3h5ub59oe64imh` — scopes `drive.readonly`, `spreadsheets`, `gmail.readonly`, `gmail.send`, `calendar`
+- **Account 2 (oneoaks):** `~/.config/google/oauth_credentials-oneoaks.json` + `~/.config/google/tokens-oneoaks.json` — client `729004136322-eqh0o220vpk18cq7bmsr3md2ibfhbbnt` — scopes `drive.readonly`, `spreadsheets`
+- **Refresh token:** stored in each tokens file — access token auto-refreshable; expires hourly
+
+**Rule:** Leave Store 2 alone unless explicitly migrating a caller. Grep `~/repos/` for `~/.config/google/` before touching anything in there.
 
 ### QuickBooks Desktop (MCP)
 

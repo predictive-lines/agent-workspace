@@ -307,3 +307,12 @@
   - **Backups:** Nightly `pg_dump` + `rsync` media to external USB SSD. Weekly automated restore test to scratch container. Configured *from day 1* — document retention is a legal compliance requirement, untested backups don't count.
 - **Repo:** `predictive-lines/efp-site-config` (new, Option A — front-loads the future site-config structure). `paperless-bootstrap/` is the first subdirectory inside it.
 - **Gap flagged in EFP-SIS-003:** Site Infrastructure Standard BOM does not include a scanner. Needs update to list ScanSnap iX1600 (office-grade) and a simple Brother/Canon MFP (satellite-site grade) as acceptable options, plus cross-ref to paperless-bootstrap.
+
+## Google Workspace MCP — Two Accounts (Apr 19, 2026)
+- MCP server: `google-workspace` at `~/repos/google-workspace-mcp-live/` (v2.3.6, multi-account support).
+- Config store: `~/.google-mcp/accounts.json`, tokens at `~/.google-mcp/tokens/<name>.json`.
+- **Account `predictivelines`** (work, `justin.miller@predictivelines.com`) — GCP `open-claw-integration-488119`. Uses global `~/.google-mcp/credentials.json`.
+- **Account `oneoaks-personal`** (personal, `millerjl@oneoaks.net`) — GCP `open-claw-personal-493814` (External/Testing, external app because oneoaks wanted cross-domain). Per-account creds at `~/.config/google-personal/oauth_credentials.json`.
+- Both accounts: Gmail/Calendar/People/Drive/Sheets enabled. Docs/Slides/Forms deliberately off until needed (minimal-scope principle).
+- **Do NOT touch `~/.config/google/`** — separate credentials used by standalone Python scripts (cash-bridge-builder, Tiller helpers, etc.); different OAuth clients entirely.
+- Known bug in v2.3.6: `accounts add -c` writes token file with global client_id/secret instead of per-account; harmless at runtime but fix cosmetically with `node -e "..."` rewrite. Full detail in TOOLS.md under "Google Workspace".
