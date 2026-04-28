@@ -18,8 +18,6 @@ import sys
 import time
 import base64
 import urllib.parse
-import http.server
-import threading
 from pathlib import Path
 
 import requests
@@ -28,6 +26,7 @@ CREDS_PATH = Path.home() / ".config" / "kroger" / "credentials.json"
 TOKENS_PATH = Path.home() / ".config" / "kroger" / "tokens.json"
 API_BASE = "https://api.kroger.com/v1"
 BRIGHTON_LOCATION_ID = "01800638"
+DEFAULT_REDIRECT_URI = "https://oauthdebugger.com/debug"
 
 
 def load_creds():
@@ -104,7 +103,7 @@ def get_user_token(creds=None):
     return None
 
 
-def get_auth_url(creds=None, redirect_uri="http://localhost:8888/callback"):
+def get_auth_url(creds=None, redirect_uri=DEFAULT_REDIRECT_URI):
     """Generate the OAuth2 authorization URL for user login."""
     if creds is None:
         creds = load_creds()
@@ -117,7 +116,7 @@ def get_auth_url(creds=None, redirect_uri="http://localhost:8888/callback"):
     return f"{API_BASE}/connect/oauth2/authorize?{urllib.parse.urlencode(params)}"
 
 
-def exchange_code(code, redirect_uri="http://localhost:8888/callback", creds=None):
+def exchange_code(code, redirect_uri=DEFAULT_REDIRECT_URI, creds=None):
     """Exchange authorization code for user tokens."""
     if creds is None:
         creds = load_creds()
@@ -210,39 +209,15 @@ def add_to_cart(items, user_token=None):
 
 
 def start_auth_flow():
-    """Start the OAuth2 authorization flow with a local callback server."""
-    redirect_uri = "http://localhost:8888/callback"
-    auth_url = get_auth_url(redirect_uri=redirect_uri)
-    
+    """Start the OAuth2 authorization flow using Kroger's registered redirect URI."""
+    auth_url = get_auth_url(redirect_uri=DEFAULT_REDIRECT_URI)
+
     print(f"\n🔑 Open this URL in your browser to authorize:\n\n{auth_url}\n")
-    print("Waiting for callback...")
-    
-    code_holder = {"code": None}
-    
-    class Handler(http.server.BaseHTTPRequestHandler):
-        def do_GET(self):
-            query = urllib.parse.urlparse(self.path).query
-            params = urllib.parse.parse_qs(query)
-            if "code" in params:
-                code_holder["code"] = params["code"][0]
-                self.send_response(200)
-                self.send_header("Content-Type", "text/html")
-                self.end_headers()
-                self.wfile.write(b"<h1>Authorized! You can close this tab.</h1>")
-            else:
-                self.send_response(400)
-                self.end_headers()
-                self.wfile.write(b"No code received")
-            
-        def log_message(self, *args):
-            pass  # Suppress logs
-    
-    server = http.server.HTTPServer(("localhost", 8888), Handler)
-    server.timeout = 120
-    server.handle_request()
-    
-    if code_holder["code"]:
-        token = exchange_code(code_holder["code"], redirect_uri)
+    print("After Kroger redirects to oauthdebugger.com, copy the `code` value from the URL and paste it here:")
+    code = input("Authorization code: ").strip()
+
+    if code:
+        token = exchange_code(code, DEFAULT_REDIRECT_URI)
         print(f"✅ Authorized! Token saved to {TOKENS_PATH}")
         return token
     else:
