@@ -1,0 +1,17 @@
+{
+  "student_name": "DCDS kids",
+  "base_url": "https://your-school.instructure.com",
+  "username_env": "CANVAS_HOMEWORK_USERNAME",
+  "password_env": "CANVAS_HOMEWORK_PASSWORD",
+  "timezone": "America/New_York",
+  "headless": true,
+  "browser_executable": "/snap/bin/chromium",
+  "storage_state_path": "~/.local/share/openclaw/canvas-homework-monitor/storage-state.json",
+  "notification_state_path": "~/.local/share/openclaw/canvas-homework-monitor/actionable-state.json",
+  "suppression_state_path": "~/.local/share/openclaw/canvas-homework-monitor/suppressed-items.json",
+  "actionable_log_path": "~/.local/share/openclaw/canvas-homework-monitor/last-actionable-report.json",
+  "lookahead_days": 2,
+  "recent_past_days": 14,
+  "course_name_allowlist": [],
+  "course_name_blocklist": []
+}
