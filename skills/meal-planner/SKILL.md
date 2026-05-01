@@ -123,6 +123,9 @@ Add a "🖨️ Printable Pages" section at the bottom of the main page with link
 - Simplified, fridge-friendly cooking instructions for each meal, side, and sweet
 - Written for a 12-14 year old to follow independently
 - Include: ingredient list (plain language, no "(pantry staple)" tags), numbered steps in ALL CAPS action-verb format ("COOK THE MEAT", "SLICE THE STEAK")
+- After the ingredient list, add a short `WHAT EACH INGREDIENT DOES` explanation whenever the role of ingredients is not obvious from the title alone (especially binders, finishing sauces, optional thickeners, or ingredients that are used in different stages)
+- Every meaningful ingredient on the card must appear in either the numbered steps or the `WHAT EACH INGREDIENT DOES` note. Do not leave ingredients hanging with no procedural explanation
+- Be explicit about stage separation when needed: e.g. tell Justin whether soy sauce goes in the meatball mix vs. whether teriyaki sauce is a post-bake glaze
 - Include practical tips inline (e.g., "do NOT put it all in at once or it will steam instead of sear")
 - Include reheat instructions for Night 2 of each meal
 

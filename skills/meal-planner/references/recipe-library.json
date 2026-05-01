@@ -56,6 +56,55 @@
       "notes": "Adapted for Justin's onion restriction: fennel bulb replaces leeks (similar subtle sweetness, great with sausage). Extra garlic compensates for lost allium depth. Chives omitted (onion family + garnish policy). Protein pasta per Justin's request — any shape works but penne/rotini hold the sauce well. One-pot method: pasta cooks directly in the broth, building a starchy silky sauce. The lemon + Dijon + peas brighten the whole dish."
     },
     {
+      "id": "greek-turkey-naan-flatbreads",
+      "name": "Greek Turkey Naan Flatbreads",
+      "category": "dinner",
+      "tags": ["greek", "turkey", "naan", "flatbread", "pizza", "taco-adjacent", "weeknight", "broiler"],
+      "added": "2026-04-27",
+      "source": "jaclyn-family-recipe",
+      "source_note": "Jaclyn's turkey + feta mini naan recipe. Original topping included chopped red onion; adapted here to be Justin-compliant by omitting onion and leaning on cucumber, tomato, lemon, and optional raw fennel/celery for crunch.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 8,
+      "appeal": ["justin", "jaclyn", "cora", "eve"],
+      "nutrition_per_serving": {
+        "serving_size_g": 420,
+        "calories": 610,
+        "protein_g": 36,
+        "carbs_g": 46,
+        "fat_g": 30,
+        "fiber_g": 4,
+        "notes": "estimated — assumes 2 mini naan flatbreads plus tzatziki and vegetable topping"
+      },
+      "ingredients": [
+        "8 mini naan or mini pita breads",
+        "1 lb ground turkey",
+        "1 cup feta crumbles, divided",
+        "2-3 tsp Cavender's Greek seasoning (check label for onion; use an onion-free Greek seasoning blend if needed)",
+        "1-2 tbsp olive oil, divided",
+        "1 medium cucumber, finely chopped",
+        "2 medium tomatoes, finely chopped",
+        "1/2 bell pepper, finely chopped (optional, serve on the side if Eve is eating)",
+        "1/4 small fennel bulb or 1-2 celery stalks, finely chopped (optional onion-free crunch substitute)",
+        "1 lemon",
+        "1 cup tzatziki"
+      ],
+      "instructions": [
+        "Preheat the broiler to low and move an oven rack to the upper third of the oven. Line a large sheet pan with parchment if desired for easier cleanup.",
+        "Lay the mini naan on the sheet pan in a single layer.",
+        "In a large bowl, mix ground turkey with about 3/4 cup of the feta, Greek seasoning, and 1 tbsp olive oil until just combined.",
+        "Divide the turkey mixture evenly across the naan and press it into a thin, even layer all the way to the edges.",
+        "Top with the remaining feta and drizzle lightly with a little more olive oil.",
+        "Broil on low for 7-8 minutes, watching closely, until the turkey is cooked through and the edges of the naan are browned but not burned.",
+        "While the flatbreads cook, make the topping: combine cucumber, tomatoes, bell pepper if using, and fennel or celery if using. Squeeze over lemon juice and toss.",
+        "Remove the hot flatbreads from the oven, give them another squeeze of lemon, then top with the chopped vegetable mixture and spoon on tzatziki.",
+        "Serve immediately. For kids who prefer simpler flavors, keep the chopped topping and tzatziki on the side so they can build their own."
+      ],
+      "notes": "Working title for now. This eats like a cross between Greek flatbread pizza and pita tacos. Important: the original version included chopped red onion, which is not Justin-safe. This library version omits onion and uses optional fennel or celery for crunch. Also check Cavender's Greek seasoning labels before using, since some seasoning blends include onion powder. Bell pepper should stay optional or on the side because Eve dislikes cooked bell peppers and may also prefer less raw pepper. Strong candidate for future meal-plan rotation because it is fast, customizable, and hits Jaclyn's Greek/fresh-flavor lane while still being kid-friendly."
+    },
+    {
       "id": "garlic-butter-melting-cabbage",
       "name": "Garlic Butter Melting Cabbage",
       "category": "side",

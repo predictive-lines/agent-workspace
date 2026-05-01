@@ -90,6 +90,19 @@
       "would_make_again": true,
       "tags": ["pasta", "gnocchi", "beef", "bolognese"],
       "notes": "Hit with Cora, Eve, and Jaclyn (Justin traveling). Two recipe tweaks: (1) gnocchi should be thawed before cooking — frozen gnocchi didn't crisp as well; (2) use the whole 5 oz bag of baby spinach instead of measuring 2 cups — easier for the kids to just dump the container and it's the right amount."
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Bang Bang Shrimp",
+      "ratings": {
+        "justin": {"score": 0, "notes": "Too complex for a Thursday-night kid-friendly cook as written. Would work much better if the recipe used already breaded shrimp instead of breading and frying from scratch."},
+        "jaclyn": {"score": 0, "notes": "no rating reported"},
+        "cora": {"score": 0, "notes": "no rating reported"},
+        "eve": {"score": 0, "notes": "no rating reported"}
+      },
+      "would_make_again": true,
+      "tags": ["shrimp", "bang-bang", "asian-inspired", "weeknight", "kid-friendly"],
+      "notes": "Keep the flavor profile in rotation, but prefer a shortcut version using store-bought breaded shrimp to avoid breading/frying on a school-night. Treat scratch-breaded/fried versions as too complex for Thursday execution."
     }
   ],
   "preference_updates": [
