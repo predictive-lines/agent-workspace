@@ -142,5 +142,84 @@ English
 
 - `scripts/check_canvas_homework.py` — headless Canvas login + API-based homework detection
 - `scripts/suppress_canvas_assignment.py` — helper to list/search/suppress specific actionable assignments
+- `scripts/check_membean_homework.py` — Membean weekly-progress checker (Mon-Sun window, ≥15 min × 3 days)
+- `scripts/_bitwarden.py` — credential helper for the self-hosted Bitwarden vault (`bw` CLI)
 - `references/config-template.json` — private-config starting point
 - `references/setup.md` — smoke test + cron wiring notes
+
+## Membean integration
+
+Membean assignments often appear in Canvas ("Membean Check — Week of …")
+but Canvas does not see Membean's actual session log. The completion rule per
+Justin is:
+
+- ≥ 15 cumulative minutes of training
+- on at least 3 distinct days
+- within the Monday→Sunday weekly window
+
+`scripts/check_membean_homework.py` checks one student per run. It pulls
+Google SSO credentials from the Bitwarden vault (`DCDS - Cora`, `DCDS - Eve`),
+reuses a Playwright storage state across runs, and computes a weekly
+status that downstream code can use to suppress matching Canvas Membean
+items for the week.
+
+First run requires an interactive sign-in (Google + school SSO + MFA can all
+appear), so use `--init`:
+
+```bash
+python3 ~/.openclaw/workspace/skills/canvas-homework-monitor/scripts/check_membean_homework.py \
+  --config ~/.config/canvas-homework-monitor/membean-cora.json --init
+```
+
+This opens a headed Chromium window. The user signs in, the script polls
+until it sees the dashboard URL, saves the storage state, dumps the
+dashboard HTML for further DOM iteration, and exits.
+
+Subsequent runs are headless:
+
+```bash
+python3 ~/.openclaw/workspace/skills/canvas-homework-monitor/scripts/check_membean_homework.py \
+  --config ~/.config/canvas-homework-monitor/membean-cora.json --summary
+```
+
+Weekly status values:
+
+- `complete` — already hit ≥3 days at ≥15 min
+- `on_track` — needs 1 more day, plenty of days remain
+- `warning` — needs ≥2 more days, plenty of days remain
+- `at_risk` — needs N days and exactly N days are left in the week
+- `impossible` — not enough days remain to reach the threshold
+
+## Daily homework digest (Canvas + Membean merged)
+
+`scripts/run_homework_digest.py` is the production entrypoint. It runs the
+Canvas checker plus one Membean checker per student and merges the result
+into a single digest:
+
+- Canvas items whose title (or course) contains "membean" (case-insensitive)
+  are matched against the per-student Membean payload.
+- If that student's Membean weekly status is `complete`, the matching
+  Canvas Membean items are *dropped* from the actionable list.
+- Otherwise, the Canvas Membean items stay visible and the Membean
+  weekly status block (with the end-of-week warning) is appended below
+  the Canvas list.
+
+Manual invocation pattern:
+
+```bash
+set -a && source ~/.config/canvas-homework-monitor/env.sh && set +a && \
+python3 ~/.openclaw/workspace/skills/canvas-homework-monitor/scripts/run_homework_digest.py \
+  --canvas-config ~/.config/canvas-homework-monitor/dcds-parent.json \
+  --membean-config ~/.config/canvas-homework-monitor/membean-cora.json \
+  --membean-config ~/.config/canvas-homework-monitor/membean-eve.json \
+  --summary --new-only
+```
+
+The scheduled OpenClaw cron job (`DCDS Canvas homework check`) now
+delegates to this wrapper. To inspect or re-tune it:
+
+```bash
+openclaw cron list
+openclaw cron show <id> --json
+openclaw cron edit <id> --message "..."
+```
