@@ -1,7 +1,7 @@
 ---
 name: meal-planner
 description: >
-  Generate weekly household meal plans (2 dinners/week) with recipes, shopping lists, and nutritional info.
+  Generate weekly household meal plans (3 dinners/week) with recipes, shopping lists, and nutritional info.
   Use when: (1) planning meals for the week, (2) generating a shopping list, (3) logging meal feedback,
   (4) updating family food preferences, (5) browsing or searching past meal plans.
   Triggers on phrases like "meal plan", "what should we eat", "dinner ideas", "shopping list",
@@ -10,7 +10,7 @@ description: >
 
 # Meal Planner
 
-Plan 2 dinners per week for a family of 4 with specific preferences and dietary restrictions.
+Plan 3 dinners per week for a family of 4 with specific preferences and dietary restrictions.
 
 ## Planning Day
 
@@ -25,7 +25,7 @@ Load `references/family-preferences.json` for current preferences. Key constrain
 - **Cora (14):** Asian-inspired, bang bang shrimp/chicken, tacos, sausage, pot pie
 - **Eve (12):** Pasta, smash burgers, steak, ham, fried foods, pot pie; generally won't eat fish
 
-**Hard rule:** Each of the 2 weekly meals must be something at least 3 of 4 family members will enjoy. Over the 2 meals combined, every person must have at least 1 meal they're happy with.
+**Hard rule:** Each weekly meal should be something at least 3 of 4 core family members will enjoy. Across the 3 meals combined, every person must have at least 1 meal they're happy with.
 
 **No-onion compliance:** Replace onions/shallots/scallions/leeks with: extra garlic, fennel bulb, celery, or omit. Never include onion powder or onion-containing premade sauces without flagging it.
 
@@ -69,16 +69,23 @@ Add a specific recipe to `references/meal-queue.json` for an upcoming week's pla
 2. Read `references/feedback-log.json` for recent feedback (avoid recently disliked meals, favor hits)
 3. Read `references/favorites.json` for the favorites index — aim to include a favorite every 2-3 weeks to keep proven hits in rotation
 4. Read `references/meal-queue.json` — any queued meals for this week are locked in; plan around them
-5. Select 2 dinner entrees + 3-4 shared sides for the week, ensuring:
+5. Select 3 dinner entrees + 3-4 shared sides for the week, ensuring:
    - The overlap constraint is met (everyone has ≥1 appealing meal)
    - No hard restrictions are violated (onions, avocado)
    - Variety from recent weeks (check feedback log for last 4 weeks)
-   - Mix of protein types across the 2 meals
+   - Mix of protein types across the 3 meals
    - Sides rules are met (see Sides Strategy below)
-4. For each meal, produce:
-   - **Recipe** with ingredients, steps, prep/cook time, difficulty tag
+6. Assign the meals to the standard slots unless Justin says otherwise:
+   - **Sunday:** the most difficult / longest recipe
+   - **Tuesday:** something easy enough for the girls to make
+   - **Thursday:** a one-pot pasta + meat style dish that Beth can make
+7. For each meal, produce:
+   - **Recipe** with a full measured ingredient list (specific amounts, units, and any scaling needed for the week)
+   - **Step-by-step instructions** that are complete enough to cook from without guessing; do not use shorthand like "make the sauce" or "cook until done" when a more explicit instruction is possible
+   - **Prep/cook time** and difficulty tag
    - **Nutritional info** per serving: serving size (grams), calories, protein (g), carbs (g), fat (g), fiber (g)
    - **Appeal tags** showing which family members this targets
+   - **Notes / tips** for substitutions, onion-compliance, and any role-based context (for example: good Tuesday girls' meal vs Thursday Beth meal)
 5. Produce a **combined shopping list** grouped by store section (produce, protein, dairy, pantry, frozen, etc.)
    - Mark pantry staples with `(pantry staple)` — include them but flag them so Justin can skip what he has
    - Quantities sized for 4 servings per meal (adjust if sides vary)
@@ -103,11 +110,13 @@ Structure each weekly plan as a Notion page:
 Meal Planning/
   └── Week of [Mon date] - [Sun date]/
         ├── Meal 1: [Name] — [appeal tags]
-        │     Recipe + nutrition
+        │     Full measured recipe + step-by-step instructions + nutrition
         ├── Meal 2: [Name] — [appeal tags]
-        │     Recipe + nutrition
+        │     Full measured recipe + step-by-step instructions + nutrition
+        ├── Meal 3: [Name] — [appeal tags]
+        │     Full measured recipe + step-by-step instructions + nutrition
         ├── Sides (3-4 for the week)
-        │     Salad + 2-3 other sides with recipes/nutrition
+        │     Salad + 2-3 other sides with measured recipes/nutrition
         └── Shopping List
 ```
 
@@ -122,7 +131,8 @@ Add a "🖨️ Printable Pages" section at the bottom of the main page with link
 **Child Page 1: 🖨️ Recipe Cards**
 - Simplified, fridge-friendly cooking instructions for each meal, side, and sweet
 - Written for a 12-14 year old to follow independently
-- Include: ingredient list (plain language, no "(pantry staple)" tags), numbered steps in ALL CAPS action-verb format ("COOK THE MEAT", "SLICE THE STEAK")
+- Include: a measured ingredient list (plain language, no "(pantry staple)" tags), numbered steps in ALL CAPS action-verb format ("COOK THE MEAT", "SLICE THE STEAK")
+- Measurements are required on the printable cards too. Do not compress ingredient lists into vague summaries like "veggies" or "seasonings" when the cook needs the exact amount.
 - After the ingredient list, add a short `WHAT EACH INGREDIENT DOES` explanation whenever the role of ingredients is not obvious from the title alone (especially binders, finishing sauces, optional thickeners, or ingredients that are used in different stages)
 - Every meaningful ingredient on the card must appear in either the numbered steps or the `WHAT EACH INGREDIENT DOES` note. Do not leave ingredients hanging with no procedural explanation
 - Be explicit about stage separation when needed: e.g. tell Justin whether soy sauce goes in the meatball mix vs. whether teriyaki sauce is a post-bake glaze
@@ -133,6 +143,7 @@ Add a "🖨️ Printable Pages" section at the bottom of the main page with link
 - How to assemble/plate each meal (the build, combine, and serve steps)
 - Which side pairs with which meal
 - Reheat instructions for Night 2 of each meal
+- When a meal is build-your-own or has components added at different stages, explicitly say what goes on first, what stays on the side, and what gets added after reheating
 - Do NOT include: dinner schedules (people decide what night), prep-ahead tips
 
 ### Notion Auth

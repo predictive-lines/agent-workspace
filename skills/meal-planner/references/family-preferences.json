@@ -93,8 +93,8 @@
     }
   },
   "household_rules": {
-    "meals_per_week": 2,
-    "meal_structure": "2 entrees + 3-4 shared sides + 1 weekly sweet per week (at least 1 salad)",
+    "meals_per_week": 3,
+    "meal_structure": "3 entrees + 3-4 shared sides + 1 weekly sweet per week (at least 1 salad)",
     "portion_sizing": "Each entree should yield 4-6 servings depending on who's home that week (see attendance_scaling). Let recipes dictate natural protein quantities — do NOT override with fixed minimums. Target enough for the planned number of diners with comfortable seconds, not excessive leftovers.",
     "attendance_scaling": {
       "everyone_home": {
