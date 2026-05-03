@@ -178,6 +178,26 @@ There are **two parallel Google OAuth setups** on this host. They do NOT share c
 - **Helper script:** `python3 ~/repos/qb-query.py <tool_name> '<json_args>'`
 - **Tools:** test_connection, get_gl_detail, get_customer_list, get_customer_detail, get_customer_transactions, get_vendor_transactions, get_journal_entries, get_deposits, get_job_addresses
 - **Note:** SSE connection must stay open during calls; helper script handles this
+- **Network gotcha (Apr 21, 2026):** QuickBooks is running inside a Hyper-V VM on a Windows laptop. The QB bridge can be healthy on localhost while still being unreachable from the LAN if the Hyper-V guest networking is misconfigured. We observed contradictory behavior where host and guest both reported `192.168.0.103`, which strongly suggests the VM was not independently addressable. Before blaming the MCP bridge, verify the VM has its own distinct IP and that `curl http://<vm-ip>:3000/health` works from another machine.
+
+### Paperless-ngx / Site Server
+
+- **Current reachable IP:** `10.10.10.32`
+- **Important:** this is on DHCP and may change.
+- **Discovery note:** if Paperless stops responding at the saved IP, scan the `10.10.10.0/24` range to rediscover it before assuming the service is down.
+- **Status:** Architecture and operating model documented in Notion. Concrete access detail now includes the current site-server IP, but the stable hostname / long-term URL is still worth documenting later.
+- **Canonical docs in Notion:**
+  - `Site Infrastructure Standard — EFP Location Kit`
+  - `Digital Records Management Policy`
+  - `Data Retention Policy`
+- **Role in the stack:** Paperless-ngx is the employee-facing document management interface and the "front door" for searchable company records.
+- **Storage model:** local-first site server, with Paperless-ngx in front of S3-backed document storage/replication. Employees interact with Paperless; storage tiering and retention happen behind the scenes.
+- **Scanner ingest pattern:** site scanners save PDFs to a Samba consume share like `\\<host>\paperless\<profile>`. Paperless polls the share every 30 seconds and ingests documents.
+- **Scan profiles:** expected subfolders/profiles include `active`, `estimates`, `archive`, and `daily-reports`.
+- **OCR rule:** disable scanner-side OCR; Paperless handles OCR itself.
+- **Tagging scheme:** documents should carry document-type tags, retention-tier tags, classification tags, and optional organizational tags like customer name and `job:<slug>`.
+- **Job tracking integration:** Notion job records are intended to point to Paperless-ngx permalinks, and jobs should be tagged consistently in Paperless for retrieval.
+- **Need to add later:** stable hostname / base URL, login/access path, and any browser/session notes once confirmed.
 
 ### Kroger API
 
