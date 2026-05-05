@@ -96,13 +96,13 @@ openclaw cron add \
   --cron "30 16 * * 1-5" \
   --tz "America/New_York" \
   --session isolated \
-  --message "Use the canvas-homework-monitor skill. Run the DCDS parent-account Canvas homework check and notify Justin only when there are new missing, late, overdue, or due-today incomplete assignments. Group the message by student, then by course, and include assignment name, due time, status, and direct Canvas link." \
+  --message "Use the canvas-homework-monitor skill. Run the DCDS parent-account Canvas homework check and notify only when there are new missing, late, overdue, or due-today incomplete assignments. Group the message by student, then by course, and include assignment name, due time, status, and direct Canvas link." \
   --announce \
   --channel slack \
-  --to "user:JUSTIN_SLACK_USER_ID"
+  --to "channel:C0AUCS0TF6W"
 ```
 
-Adjust the cron expression to match the real check time.
+Adjust the cron expression to match the real check time. If you want direct messages instead, swap the `--to` target back to `user:JUSTIN_SLACK_USER_ID`. If you want failures to land in the same channel, set the job's failure-alert target to that same channel too.
 
 ## 5. Manual rerun / inspection
 
