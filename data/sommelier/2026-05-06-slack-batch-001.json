@@ -1,0 +1,81 @@
+{
+  "batch_id": "2026-05-06-slack-batch-001",
+  "created_at": "2026-05-06T10:17:53-04:00",
+  "source": "slack",
+  "thread": "1778072948.923509",
+  "image_count": 5,
+  "bottle_count": 3,
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_numbers": [1, 2, 3],
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/e8adf8b5-872d-4cc5-93f0-db3b70617286.jpg",
+        "/home/open-claw/.openclaw/media/inbound/fb1a5221-4474-44b9-b82f-872d35dc53b4.jpg",
+        "/home/open-claw/.openclaw/media/inbound/541630c7-1b2b-4222-ab2d-322ab803eafe.jpg"
+      ],
+      "producer": "Volatus Wine",
+      "wine_name": "PFM",
+      "vintage": "2024",
+      "varietal": "Grenache",
+      "region": "Paso Robles",
+      "country": "USA",
+      "abv": "14%",
+      "size": "750 mL",
+      "confidence": "high",
+      "notes": [
+        "Wraparound label set",
+        "Vision extraction via openai-codex/gpt-5.5",
+        "Confirmed correct by Justin in Slack thread"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "bottle_id": "bottle-002",
+      "image_numbers": [4],
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/55d87757-6f9c-48a3-b97b-f0ab8cecbeff.jpg"
+      ],
+      "producer": "Desparada Wines",
+      "wine_name": "Fortunata",
+      "vintage": "2024",
+      "varietal": "Falanghina",
+      "region": "Templeton Gap AVA",
+      "country": "USA",
+      "vineyard": "Whale Rock Vineyard",
+      "abv": "14.5%",
+      "size": "750 mL",
+      "confidence": "high",
+      "notes": [
+        "Single-image bottle",
+        "Vision extraction via openai-codex/gpt-5.5",
+        "Confirmed correct by Justin in Slack thread"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "bottle_id": "bottle-003",
+      "image_numbers": [5],
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/665796de-6404-4a8b-9309-6da3a92ce588.jpg"
+      ],
+      "producer": "Desparada Wines",
+      "wine_name": "Epione",
+      "vintage": "2025",
+      "varietal": "Sauvignon Blanc",
+      "region": "Edna Valley AVA",
+      "country": "USA",
+      "vineyard": "Moretti Canyon",
+      "abv": "12.5%",
+      "size": "750 mL",
+      "confidence": "high",
+      "notes": [
+        "Single-image bottle",
+        "Vision extraction via openai-codex/gpt-5.5",
+        "Confirmed correct by Justin in Slack thread"
+      ],
+      "status": "confirmed"
+    }
+  ],
+  "status": "confirmed"
+}
