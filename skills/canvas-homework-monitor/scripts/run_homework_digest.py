@@ -219,7 +219,7 @@ def main() -> int:
     parser.add_argument(
         "--new-only",
         action="store_true",
-        help="Print only newly-actionable items since the last Canvas run (Membean status still surfaces).",
+        help="Print newly-actionable items, while continuing to surface open pre-due reminders until they are due or suppressed (Membean status still surfaces).",
     )
     args = parser.parse_args()
 

@@ -497,6 +497,20 @@ def status_key(item: AssignmentStatus) -> str:
     )
 
 
+def should_carry_forward_in_new_only(item: AssignmentStatus, now_utc: datetime) -> bool:
+    """Keep unresolved actionable assignments visible in --new-only.
+
+    The daily digest should continue surfacing open work until it is either
+    completed (and drops out of the actionable list) or explicitly suppressed.
+    """
+    due_dt = parse_dt(item.due_at)
+    if due_dt is None:
+        return False
+    if due_dt >= now_utc and item.status in {"due within 2 days", "due today"}:
+        return True
+    return item.status in {"missing", "late", "overdue incomplete"}
+
+
 def load_notification_keys(path: Path) -> set[str]:
     if not path.exists():
         return set()
@@ -649,7 +663,11 @@ def run(config_path: Path) -> dict[str, Any]:
     suppressed_keys = load_suppressed_keys(suppression_state_path)
     actionable = [item for item in actionable if status_key(item) not in suppressed_keys]
     previous_notification_keys = load_notification_keys(notification_state_path)
-    new_actionable = [item for item in actionable if status_key(item) not in previous_notification_keys]
+    new_actionable = [
+        item
+        for item in actionable
+        if status_key(item) not in previous_notification_keys or should_carry_forward_in_new_only(item, now_utc)
+    ]
     save_notification_keys(notification_state_path, actionable, now_utc.isoformat())
     save_actionable_log(actionable_log_path, now_utc.isoformat(), actionable)
     course_grades = sorted(course_grades, key=lambda x: (x.student_name.lower(), x.course_name.lower()))
@@ -717,7 +735,11 @@ def main() -> int:
     parser.add_argument("--config", required=True, help="Path to the JSON config file")
     parser.add_argument("--json", action="store_true", help="Print full JSON payload (default)")
     parser.add_argument("--summary", action="store_true", help="Print only the summary text")
-    parser.add_argument("--new-only", action="store_true", help="Print only newly-actionable items since the last run")
+    parser.add_argument(
+        "--new-only",
+        action="store_true",
+        help="Print newly-actionable items, while continuing to surface unresolved actionable work until it is completed or suppressed",
+    )
     args = parser.parse_args()
 
     try:
