@@ -1,0 +1,44 @@
+{
+  "batch_id": "wine-batch-20260506-1833",
+  "created_at": "2026-05-06T18:36:00.460282-04:00",
+  "source": "slack",
+  "image_count": 4,
+  "bottle_count": 2,
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/b0de0d04-8e2d-4611-a121-b5e2e2e1af77.jpg",
+        "/home/open-claw/.openclaw/media/inbound/004f793e-9ec8-4039-8d27-9917421ed9b3.jpg",
+        "/home/open-claw/.openclaw/media/inbound/4cd8e479-0162-455a-8dbf-ce060d1ae998.jpg"
+      ],
+      "producer": null,
+      "wine_name": null,
+      "vintage": null,
+      "varietal": null,
+      "region": null,
+      "country": null,
+      "confidence": null,
+      "notes": [],
+      "status": "pending_extraction"
+    },
+    {
+      "bottle_id": "bottle-002",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/ca2bf4ad-1a11-4c67-87e8-ac7ad1e55af8.jpg"
+      ],
+      "producer": null,
+      "wine_name": null,
+      "vintage": null,
+      "varietal": null,
+      "region": null,
+      "country": null,
+      "confidence": null,
+      "notes": [],
+      "status": "pending_extraction"
+    }
+  ],
+  "status": "captured_waiting_for_tasting_feedback",
+  "thread": "1778104833.341669",
+  "captured_at": "2026-05-06T18:36:36.852341-04:00"
+}

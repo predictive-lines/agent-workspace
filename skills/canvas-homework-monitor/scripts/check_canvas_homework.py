@@ -173,7 +173,8 @@ def login_if_needed(page, config: dict[str, Any], base_url: str) -> None:
     if not username or not password:
         raise CanvasError("Missing Canvas credentials. Set username/password directly in config or provide username_env/password_env.")
 
-    page.goto(base_url, wait_until="domcontentloaded", timeout=60000)
+    login_url = urljoin(base_url.rstrip("/") + "/", "login/canvas")
+    page.goto(login_url, wait_until="domcontentloaded", timeout=60000)
     try:
         page.wait_for_load_state("networkidle", timeout=10000)
     except PlaywrightTimeoutError:

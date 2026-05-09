@@ -1,0 +1,64 @@
+{
+  "batch_id": "wine-batch-20260506-1833",
+  "captured_at": "2026-05-06T18:36:36.852341-04:00",
+  "source": "slack",
+  "thread": "1778104833.341669",
+  "status": "captured_waiting_for_tasting_feedback",
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/b0de0d04-8e2d-4611-a121-b5e2e2e1af77.jpg",
+        "/home/open-claw/.openclaw/media/inbound/004f793e-9ec8-4039-8d27-9917421ed9b3.jpg",
+        "/home/open-claw/.openclaw/media/inbound/4cd8e479-0162-455a-8dbf-ce060d1ae998.jpg"
+      ],
+      "producer": "Desparada Wines",
+      "wine_name": "Amphora Sauvignon Blanc",
+      "vintage": "2023",
+      "varietal": "Sauvignon Blanc",
+      "region": "Central Coast AVA, California",
+      "country": "USA",
+      "style": "white wine",
+      "subregion_notes": [
+        "51% Chelle Mountain",
+        "49% Moretti Canyon",
+        "Produced and bottled in Paso Robles, CA",
+        "Fermented and aged 4 months in amphorae"
+      ],
+      "abv": "13.2%",
+      "size": "unknown",
+      "confidence": "high",
+      "notes": [
+        "Label reads Desparada Amphora Sauvignon Blanc.",
+        "Amphorae produced by Tava, Manetti & Artenova.",
+        "No tasting preference logged yet."
+      ],
+      "status": "ok"
+    },
+    {
+      "bottle_id": "bottle-002",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/ca2bf4ad-1a11-4c67-87e8-ac7ad1e55af8.jpg"
+      ],
+      "producer": "Tolo",
+      "wine_name": "Aria",
+      "vintage": "2020",
+      "varietal": "unknown",
+      "region": "Paso Robles, California",
+      "country": "USA",
+      "style": "red wine",
+      "subregion_notes": [
+        "Paso Robles"
+      ],
+      "abv": "14.7%",
+      "size": "750ml",
+      "confidence": "high",
+      "notes": [
+        "Only front label shown in this batch.",
+        "Blend or varietal is not visible from the provided photo.",
+        "No tasting preference logged yet."
+      ],
+      "status": "needs_review"
+    }
+  ]
+}

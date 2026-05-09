@@ -1,0 +1,29 @@
+{
+  "tasters": [
+    {
+      "name": "Justin",
+      "likes": [],
+      "dislikes": [],
+      "favorite_regions": [],
+      "favorite_varietals": [],
+      "favorite_producers": [],
+      "notes": []
+    },
+    {
+      "name": "Jaclyn",
+      "likes": [],
+      "dislikes": [],
+      "favorite_regions": [],
+      "favorite_varietals": [],
+      "favorite_producers": [],
+      "notes": []
+    }
+  ],
+  "household_patterns": {
+    "liked_wines": [],
+    "disliked_wines": [],
+    "regions_to_explore": [],
+    "producer_watchlist": [],
+    "style_hypotheses": []
+  }
+}

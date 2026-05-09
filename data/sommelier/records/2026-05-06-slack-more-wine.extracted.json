@@ -1,0 +1,52 @@
+{
+  "batch_id": "wine-batch-20260506-180209",
+  "captured_at": "2026-05-06T18:02:09-04:00",
+  "source": "slack",
+  "status": "captured_waiting_for_tasting_feedback",
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/2d18da42-219a-4b97-9149-27cfef2353cd.jpg",
+        "/home/open-claw/.openclaw/media/inbound/b8e93a4c-0a2b-4c18-b17e-6afeefccb231.jpg",
+        "/home/open-claw/.openclaw/media/inbound/5e2198c8-d10b-4305-a1ff-87f9a367540c.jpg"
+      ],
+      "producer": "Desparada Wines",
+      "wine_name": "Amphora Sauvignon Blanc",
+      "vintage": "2023",
+      "varietal": "Sauvignon Blanc",
+      "region": "Central Coast AVA, California",
+      "country": "USA",
+      "subregion_notes": [
+        "51% Chelle Mountain",
+        "49% Moretti Canyon"
+      ],
+      "confidence": "high",
+      "notes": [
+        "Label says fermented and aged 4 months in amphorae produced by Tava, Manetti & Artenova.",
+        "Produced and bottled by Desparada Wines, Paso Robles, CA.",
+        "Tasting preference not yet logged."
+      ],
+      "status": "ok"
+    },
+    {
+      "bottle_id": "bottle-002",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/7b1fa498-763d-4c46-94ae-464da903dde6.jpg"
+      ],
+      "producer": "Tolo",
+      "wine_name": "Aria",
+      "vintage": "2020",
+      "varietal": "unknown",
+      "region": "Paso Robles, California",
+      "country": "USA",
+      "style": "Red wine",
+      "confidence": "medium",
+      "notes": [
+        "Only front label shown; varietal/blend not visible in this batch.",
+        "Tasting preference not yet logged."
+      ],
+      "status": "needs_review"
+    }
+  ]
+}
