@@ -94,7 +94,7 @@
   },
   "household_rules": {
     "meals_per_week": 3,
-    "meal_structure": "3 entrees + 3-4 shared sides + 1 weekly sweet per week (at least 1 salad)",
+    "meal_structure": "3 entrees + 3-4 shared sides per week (at least 1 salad when attendance calls for salad); no weekly sweet/treat unless explicitly requested",
     "portion_sizing": "Each entree should yield 4-6 servings depending on who's home that week (see attendance_scaling). Let recipes dictate natural protein quantities — do NOT override with fixed minimums. Target enough for the planned number of diners with comfortable seconds, not excessive leftovers.",
     "attendance_scaling": {
       "everyone_home": {
@@ -140,9 +140,10 @@
     "shopping_split": {
       "costco": "Bulk proteins, dairy (butter, sour cream, cheese blocks), tortillas, rice, pantry staples with long shelf life. Prefer Costco for anything that freezes or keeps.",
       "kroger": "Fresh produce (fruits, vegetables, herbs), spices, bread/baguettes, and anything perishable that can't be portioned and frozen."
-    }
+    },
+    "weekly_sweet_policy": "Do not include a weekly sweet/treat by default. The family goes off script for sweets, so omit sweet recipes and sweet ingredients from standard meal plans and shopping lists unless Justin explicitly asks."
   },
   "feedback_log_path": "skills/meal-planner/references/feedback-log.json",
-  "version": "1.2.0",
-  "last_updated": "2026-03-21"
+  "version": "1.3.0",
+  "last_updated": "2026-05-09"
 }

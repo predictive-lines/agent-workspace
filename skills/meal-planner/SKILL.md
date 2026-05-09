@@ -129,7 +129,7 @@ Every weekly plan must include two **child pages** (not inline sections) linked 
 Add a "🖨️ Printable Pages" section at the bottom of the main page with links to both child pages.
 
 **Child Page 1: 🖨️ Recipe Cards**
-- Simplified, fridge-friendly cooking instructions for each meal, side, and sweet
+- Simplified, fridge-friendly cooking instructions for each meal and side
 - Written for a 12-14 year old to follow independently
 - Include: a measured ingredient list (plain language, no "(pantry staple)" tags), numbered steps in ALL CAPS action-verb format ("COOK THE MEAT", "SLICE THE STEAK")
 - Measurements are required on the printable cards too. Do not compress ingredient lists into vague summaries like "veggies" or "seasonings" when the cook needs the exact amount.
@@ -362,23 +362,9 @@ When stuck, default to "build your own" format (taco bar, burger bar, rice bowl 
 
 ## Weekly Sweet / Treat
 
-Each week's plan includes **one sweet item**. The goal is a modest homemade treat — not a full dessert course every night.
+Do **not** include a weekly sweet/treat in meal plans by default. The family tends to go off script for sweets, so omitting this saves planning time, Notion space, and shopping-list cleanup. Only add a sweet if Justin explicitly asks for one that week.
 
-### Guidelines
-- **Default:** Low-sugar, high-protein, or fruit-forward options — no-bake protein balls, energy bites, yogurt bark, baked oat cups, fruit crisps with minimal added sugar.
-- **Monthly splurge (1x/month):** Cookies, brownies, banana bread, or similar. Tag these `treat-type: splurge` so the planner can track frequency and keep it to roughly once every 4 weeks.
-- **Complexity:** Should be easy enough for the kids to make (15-30 min active time, no advanced techniques).
-- **Batch size:** Enough for 4 people across 2-3 days (8-12 servings typical).
-- **No-onion still applies** (shouldn't be an issue, but don't let it sneak into savory-sweet combos).
-
-### Output
-Include the sweet item in the weekly plan page with:
-- Recipe (ingredients, steps, prep/cook time)
-- Nutritional info per serving (same format as meals)
-- `treat-type: healthy | splurge` tag
-- Appeal tags (which family members will like it)
-
-Add the sweet item's ingredients to the shopping list under a `## Baking / Sweet` section.
+If a sweet is explicitly requested, keep it separate from the default dinner workflow and clearly group its ingredients so they can be included or skipped intentionally.
 
 ## Sides Strategy
 
