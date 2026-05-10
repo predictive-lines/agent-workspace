@@ -1,5 +1,60 @@
 {
-  "queued_meals": [],
+  "queued_meals": [
+    {
+      "id": "2026-05-18-eggs-benedict-memorial-day-breakfast",
+      "name": "Eggs Benedict",
+      "meal_type": "breakfast",
+      "target_week": "2026-05-18",
+      "requested_for": "2026-05-23",
+      "occasion": "Memorial Day weekend breakfast",
+      "requested_by": "Justin",
+      "queue_note": "One-time extra meal for the meal plan generated on 2026-05-16 so ingredients are in-house by Memorial Day weekend. Add as an extra breakfast meal; do not replace one of the normal 3 dinners.",
+      "locked": true,
+      "difficulty": "medium",
+      "servings": 4,
+      "appeal_tags": ["Justin", "Jaclyn", "Cora", "Eve", "special breakfast"],
+      "freshness_notes": "Best cooked day-of. Buy English muffins, Canadian bacon/ham, eggs, butter, and lemons with the May 16 meal-plan grocery order. Use eggs within a week; lemons and butter keep fine. Canadian bacon/ham should be refrigerated and used by package date.",
+      "onion_compliance": "No onions, shallots, scallions, leeks, onion powder, or onion-containing sauces.",
+      "nutrition_estimate_per_serving": {
+        "serving_size": "2 Benedict halves / about 260 g",
+        "calories_kcal": 620,
+        "protein_g": 29,
+        "carbs_g": 31,
+        "fat_g": 43,
+        "fiber_g": 2,
+        "note": "Estimated; varies with muffin size, hollandaise amount, and ham/Canadian bacon brand."
+      },
+      "ingredients": [
+        {"item": "English muffins", "quantity": "4", "notes": "split in half"},
+        {"item": "large eggs", "quantity": "8", "notes": "for poaching"},
+        {"item": "Canadian bacon or thin ham slices", "quantity": "8 slices / about 12 oz", "notes": "check label for onion/onion powder"},
+        {"item": "unsalted butter", "quantity": "12 Tbsp / 1 1/2 sticks", "notes": "for hollandaise"},
+        {"item": "egg yolks", "quantity": "4", "notes": "for hollandaise; separate from additional eggs"},
+        {"item": "fresh lemon juice", "quantity": "2 Tbsp", "notes": "about 1 lemon"},
+        {"item": "Dijon mustard", "quantity": "1 tsp", "notes": "optional but helpful; verify onion-free"},
+        {"item": "cayenne pepper or paprika", "quantity": "pinch", "notes": "optional"},
+        {"item": "kosher salt", "quantity": "to taste", "notes": "pantry staple"},
+        {"item": "black pepper", "quantity": "to taste", "notes": "pantry staple"},
+        {"item": "white vinegar", "quantity": "1 Tbsp", "notes": "for poaching water; pantry staple"},
+        {"item": "chives or parsley", "quantity": "2 Tbsp chopped", "notes": "optional garnish; use parsley if avoiding anything onion-like"}
+      ],
+      "method": [
+        "Melt butter until hot but not browned.",
+        "Blend egg yolks, lemon juice, Dijon, salt, and cayenne for 10 seconds.",
+        "With blender running, slowly stream in hot butter until sauce thickens. Keep warm, not hot.",
+        "Toast split English muffins.",
+        "Brown Canadian bacon or ham in a skillet until warm and lightly crisped.",
+        "Bring a wide pot of water to a gentle simmer. Add vinegar. Crack eggs into small cups, then slide into water and poach 3-4 minutes until whites are set and yolks are still soft.",
+        "Build each serving with toasted muffin halves, ham/Canadian bacon, one poached egg per half, hollandaise, black pepper, and optional parsley/chives."
+      ],
+      "shopping_list_additions": {
+        "bakery": ["4 English muffins"],
+        "protein_dairy": ["12 oz Canadian bacon or thin ham slices", "1 dozen large eggs", "1 1/2 sticks unsalted butter"],
+        "produce": ["1 lemon", "parsley or chives, optional"],
+        "pantry": ["Dijon mustard, verify onion-free", "white vinegar", "kosher salt", "black pepper", "cayenne or paprika"]
+      }
+    }
+  ],
   "version": "1.0.0",
-  "last_updated": "2026-03-21"
+  "last_updated": "2026-05-10"
 }
