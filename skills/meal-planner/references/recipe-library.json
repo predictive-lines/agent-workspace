@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-10",
   "recipes": [
     {
       "id": "one-pot-sausage-fennel-pasta",
@@ -2194,6 +2194,204 @@
         "Serve slightly warm, room temperature, or chilled after the flavors mingle for 30-60 minutes."
       ],
       "notes": "Good make-ahead side for grilled chicken, fish, burgers, or Greek-style meals. The sardine should disappear into the dressing and add savory depth rather than obvious fishiness. Important household note: the written version is not Justin-safe because of the red onion. For family meal plans, omit the onion, swap in a little finely chopped celery or fennel for crunch, or keep onion on the side."
+    },
+    {
+      "id": "creamy-gochujang-beef-gnocchi",
+      "name": "Creamy Gochujang Beef Gnocchi",
+      "category": "dinner",
+      "tags": [
+        "gnocchi",
+        "beef",
+        "korean-inspired",
+        "gochujang",
+        "creamy",
+        "high-protein",
+        "weeknight"
+      ],
+      "added": "2026-05-10",
+      "source": "masonfit",
+      "source_url": "https://masonfit.com/creamy-gochujang-gnocchi",
+      "source_note": "Adapted from MasonFit creamy gochujang gnocchi shared by Justin in Slack. Scallion/green onion garnish omitted for Justin's onion restriction; sesame seeds and gochugaru keep the Korean-inspired finish.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 10,
+      "cook_time_min": 20,
+      "appeal": [
+        "justin",
+        "cora",
+        "eve",
+        "jaclyn"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 300,
+        "calories": 475,
+        "protein_g": 37,
+        "carbs_g": 58,
+        "fat_g": 10,
+        "fiber_g": null,
+        "notes": "from source recipe; fiber not provided. Assumes extra-lean beef, low-fat cottage cheese, and about 1 lb shelf-stable or refrigerated gnocchi."
+      },
+      "ingredients": [
+        "1 cup low-fat cottage cheese",
+        "2 tbsp gochujang, plus more to taste",
+        "1 tbsp white miso paste (or replace with more gochujang)",
+        "1/4 cup water, for blending sauce",
+        "1 lb extra-lean ground beef",
+        "2 tbsp coconut aminos",
+        "2 tbsp balsamic vinegar",
+        "2 tbsp water, for beef sauce",
+        "1 tbsp toasted sesame oil",
+        "1/2 tsp black pepper",
+        "4 cloves garlic, crushed or minced",
+        "2 tsp minced ginger",
+        "16 oz potato gnocchi",
+        "1 cup reserved gnocchi cooking water, use as needed",
+        "Toasted sesame seeds, for finishing",
+        "Gochugaru/Korean chili flakes, for finishing"
+      ],
+      "instructions": [
+        "Blend cottage cheese, gochujang, white miso paste, and 1/4 cup water until completely smooth. Set aside.",
+        "Brown the extra-lean ground beef in a large skillet over medium-high heat, breaking it into small crumbles, until fully cooked and no pink remains.",
+        "Add coconut aminos, balsamic vinegar, 2 tbsp water, toasted sesame oil, black pepper, garlic, and ginger to the beef. Stir and simmer 2-3 minutes until glossy and flavorful.",
+        "Bring a pot of salted water to a boil. Add gnocchi and cook a couple minutes, until they float. Reserve about 1 cup cooking water, then drain.",
+        "Add drained gnocchi, blended gochujang cottage cheese sauce, and about 3/4 of the beef to the skillet. Stir over low heat until smooth and creamy.",
+        "Add reserved gnocchi water a few tablespoons at a time until the sauce loosens and coats the gnocchi. Keep heat low so the cottage-cheese sauce stays creamy.",
+        "Serve topped with the remaining beef, toasted sesame seeds, and gochugaru. Do not top Justin's serving with scallions/green onion."
+      ],
+      "notes": "Strong future meal-plan candidate: pasta/gnocchi format for Eve, Asian-inspired gochujang flavor for Cora, beef + high protein for Justin, and gochujang specifically for Jaclyn, who is a big fan. Onion compliance: original garnish included sliced green onion/scallion; omit entirely or only offer separately for non-Justin plates if desired. Spice-flex note for meal prep: keep the base sauce at the written 2 tbsp gochujang so Eve has a milder creamy version, then let Jaclyn/Justin/Cora add more gochujang, gochugaru, chili crisp, or extra spicy beef at the table. If Eve is especially spice-sensitive that week, start with 1 tbsp gochujang in the blended sauce and reserve the second tablespoon as a stir-in for everyone else. Check gochujang label for onion/onion powder before buying. If miso is unavailable, use an extra tablespoon of gochujang and reduce added salt elsewhere."
+    },
+    {
+      "id": "sheet-pan-buffalo-chicken-sweet-potato-nachos",
+      "name": "Sheet Pan Buffalo Chicken Sweet Potato Nachos",
+      "category": "dinner",
+      "tags": [
+        "sheet-pan",
+        "buffalo-chicken",
+        "sweet-potato",
+        "nachos",
+        "high-protein",
+        "hidden-veg",
+        "weeknight"
+      ],
+      "added": "2026-05-10",
+      "source": "easy-eats-episode-16",
+      "source_note": "Recipe shared by Justin in Slack: sheet pan buffalo chicken sweet potato nachos with shredded zucchini hidden in the buffalo chicken. Adapted for household preferences: omit green onions/scallions and red onion for Justin, omit cilantro due household dislike, and verify onion-free ranch seasoning/buffalo sauce.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 35,
+      "appeal": [
+        "justin",
+        "jaclyn",
+        "cora"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 360,
+        "calories": 520,
+        "protein_g": 35,
+        "carbs_g": 38,
+        "fat_g": 25,
+        "fiber_g": 6,
+        "notes": "estimated; depends heavily on buffalo sauce, ranch drizzle, cheese amount, and sweet potato size. Zucchini adds volume/fiber with minimal calories."
+      },
+      "ingredients": [
+        "2 medium sweet potatoes, washed and sliced 1/4 inch thick",
+        "2 tbsp olive oil",
+        "2 tsp onion-free ranch seasoning for sweet potatoes, plus salt if the seasoning is unsalted",
+        "1 lb ground chicken",
+        "1/2 to 1 cup buffalo sauce, use less for milder/saucier control",
+        "2 tsp onion-free ranch seasoning for chicken",
+        "1 small zucchini, shredded",
+        "1 cup mozzarella, shredded from block if possible",
+        "1/4 cup blue cheese crumbles",
+        "Ranch dressing, for drizzling; verify onion-free or use homemade",
+        "Extra buffalo sauce, for drizzling",
+        "Optional topping: extra blue cheese crumbles or diced celery for crunch"
+      ],
+      "instructions": [
+        "Preheat oven to 400\u00b0F. Line a baking sheet with parchment paper.",
+        "Wash and dry sweet potatoes, then slice into 1/4-inch rounds.",
+        "Toss sweet potato slices with olive oil and 2 tsp onion-free ranch seasoning. Add a pinch of salt if the seasoning blend is unsalted.",
+        "Spread sweet potatoes in a single layer and bake for about 25 minutes, until browned at the edges and tender.",
+        "While the sweet potatoes roast, brown ground chicken in a skillet over medium-high heat, breaking it into small pieces, until fully cooked.",
+        "Stir in buffalo sauce, 2 tsp onion-free ranch seasoning, and shredded zucchini. Cook 2-3 minutes until the zucchini softens into the sauce and the mixture is well combined.",
+        "Top roasted sweet potato rounds with the buffalo chicken mixture. Sprinkle mozzarella over the top.",
+        "Bake 7-10 minutes more, until the cheese is melted.",
+        "Finish with ranch drizzle, extra buffalo sauce for spice-lovers, blue cheese crumbles, and optional diced celery. Do not garnish Justin's serving with green onions/scallions or red onion; skip cilantro for the household."
+      ],
+      "notes": "Good Jaclyn/Justin/Cora candidate: Jaclyn gets sweet potatoes and buffalo flavor, Justin gets high-protein nachos without onions, and Cora may like the buffalo/chicken/nacho format. Eve is a weaker fit because she dislikes chicken and spicy foods; if planning this for a week with Eve, keep buffalo sauce closer to 1/2 cup, use a mild buffalo sauce, and serve extra buffalo sauce on the side rather than baking all the heat into the pan. Hidden zucchini is the nutrition boost; shred finely so it melts into the chicken. Onion compliance is the main watchout: most ranch seasoning blends contain onion powder, and the original toppings included green onions/scallions and red onion. Use an onion-free ranch blend or homemade ranch seasoning; verify buffalo sauce and bottled ranch labels."
+    },
+    {
+      "id": "spring-orzo-asparagus-pasta-salad",
+      "name": "Spring Orzo Pasta Salad with Asparagus, Peas & Feta",
+      "category": "side",
+      "tags": [
+        "orzo",
+        "pasta-salad",
+        "spring",
+        "asparagus",
+        "peas",
+        "feta",
+        "make-ahead",
+        "vegetarian",
+        "side"
+      ],
+      "added": "2026-05-10",
+      "source": "mallory-the-dietitian",
+      "source_url": "https://mallorythedietitian.com/spring-orzo-pasta-salad/",
+      "source_note": "Spring orzo pasta salad shared by Justin in Slack. Original dressing included finely chopped shallot; adapted for Justin's onion restriction by omitting shallot and leaning on lemon, dill, mint, capers, olives, and Dijon for brightness.",
+      "in_rotation": false,
+      "servings": 4,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 12,
+      "appeal": [
+        "jaclyn",
+        "justin",
+        "cora"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 170,
+        "calories": 250,
+        "protein_g": 8,
+        "carbs_g": 31,
+        "fat_g": 11,
+        "fiber_g": 4,
+        "notes": "estimated as a side dish; varies with feta, olive oil, and pistachio amounts"
+      },
+      "ingredients": [
+        "4 oz dry orzo pasta, about 2/3 cup",
+        "8 asparagus stalks, cut into 1-inch pieces",
+        "1/2 cup green peas, frozen is fine",
+        "1 cup arugula, finely chopped",
+        "2 Tbsp fresh dill, chopped",
+        "2 Tbsp fresh mint, chopped",
+        "1 1/2 Tbsp kalamata olives, chopped",
+        "1/2 Tbsp capers, chopped",
+        "1 Tbsp pistachios, chopped",
+        "1/4 cup feta cheese",
+        "2 Tbsp lemon juice",
+        "1 tsp lemon zest",
+        "2 tsp white wine vinegar",
+        "2 tsp honey",
+        "1/2 tsp Dijon mustard, verify onion-free",
+        "2 Tbsp extra-virgin olive oil",
+        "1/4 tsp garlic powder",
+        "1/4 tsp kosher salt, plus more to taste",
+        "Pinch black pepper"
+      ],
+      "instructions": [
+        "Finely chop arugula, dill, mint, capers, olives, and pistachios. Cut asparagus into 1-inch pieces.",
+        "Make dressing in a small bowl or jar: lemon juice, lemon zest, white wine vinegar, honey, Dijon, olive oil, garlic powder, kosher salt, and black pepper. Whisk or shake until combined.",
+        "Prepare a bowl of ice water. Bring a pot of salted water to a boil. Add asparagus for about 2 minutes, then add peas for 30 seconds. Transfer vegetables to the ice water, then drain well.",
+        "Bring a fresh pot of salted water to a boil. Add orzo and simmer until al dente, about 7-10 minutes. Drain and rinse briefly.",
+        "While orzo is still warm, toss it with half the dressing so it absorbs flavor.",
+        "Add asparagus, peas, arugula, dill, mint, olives, capers, pistachios, and feta. Toss with remaining dressing just before serving.",
+        "If making ahead, hold back the remaining dressing and feta until serving so the salad stays fresh."
+      ],
+      "notes": "Best as a spring side, lunch prep, or lighter add-on next to grilled chicken, fish, burgers, or sandwiches. Jaclyn likely strong fit because it is fresh, herby, and salad-adjacent. Onion compliance: original includes 2 Tbsp finely chopped shallot; omit completely. Do not substitute green onion/scallion. If the salad needs more bite without shallot, add a little extra lemon zest, capers, Dijon, or dill. Cilantro is not included. Parsley from the original is optional and can be skipped unless already on hand; dill and mint are the important herbs. Storage: refrigerate up to 3-4 days; add final dressing and feta right before serving when possible."
     }
   ]
 }

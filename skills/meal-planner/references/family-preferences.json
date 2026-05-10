@@ -30,7 +30,8 @@
         "sourdough",
         "fish",
         "stewed beef",
-        "curried beef"
+        "curried beef",
+        "gochujang"
       ],
       "dislikes": [
         "reheated steak"
@@ -87,7 +88,8 @@
       "dislikes": [
         "fish (generally)",
         "chicken (not much)",
-        "cooked bell peppers"
+        "cooked bell peppers",
+        "spicy foods"
       ],
       "notes": "Prefers red meat and fried foods. Not big on fish or chicken. Does NOT like cooked bell peppers."
     }
@@ -144,6 +146,6 @@
     "weekly_sweet_policy": "Do not include a weekly sweet/treat by default. The family goes off script for sweets, so omit sweet recipes and sweet ingredients from standard meal plans and shopping lists unless Justin explicitly asks."
   },
   "feedback_log_path": "skills/meal-planner/references/feedback-log.json",
-  "version": "1.3.0",
-  "last_updated": "2026-05-09"
+  "version": "1.3.1",
+  "last_updated": "2026-05-10"
 }
