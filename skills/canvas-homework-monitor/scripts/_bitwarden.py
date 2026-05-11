@@ -190,6 +190,19 @@ def get_login(item_name: str, env_file: Path = DEFAULT_ENV_FILE) -> BwLogin:
         text=True,
         check=False,
     )
+    # The Bitwarden CLI can occasionally return exit 0 with an empty stdout when
+    # multiple short-lived checker processes unlock/sync around the same time.
+    # Treat that like a transient CLI miss: sync once and retry before surfacing
+    # a credential failure to the homework digest.
+    if proc.returncode == 0 and not (proc.stdout or "").strip():
+        subprocess.run([bw, "sync"], env=env, capture_output=True, text=True, check=False)
+        proc = subprocess.run(
+            [bw, "get", "item", item_name],
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
     if proc.returncode != 0:
         raise BitwardenError(
             f"`bw get item {item_name!r}` failed: "

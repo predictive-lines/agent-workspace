@@ -226,11 +226,28 @@ def main() -> int:
     canvas_path = Path(args.canvas_config).expanduser()
     membean_paths = [Path(p).expanduser() for p in args.membean_config]
 
+    canvas_error: str | None = None
     try:
         canvas_payload = canvas_mod.run(canvas_path)
     except Exception as exc:
-        print(json.dumps({"error": f"canvas check failed: {exc}"}, indent=2), file=sys.stderr)
-        return 1
+        canvas_error = str(exc)
+        try:
+            canvas_config = canvas_mod.load_config(canvas_path)
+        except Exception:
+            canvas_config = {}
+        canvas_payload = {
+            "student_name": canvas_config.get("student_name") or "Students",
+            "timezone": canvas_config.get("timezone") or "America/New_York",
+            "generated_at": None,
+            "count": 0,
+            "new_count": 0,
+            "items": [],
+            "new_items": [],
+            "grades": [],
+            "summary": f"Canvas check failed: {canvas_error}",
+            "new_summary": f"Canvas check failed: {canvas_error}",
+            "grades_summary": "",
+        }
 
     membean_payloads: list[dict[str, Any]] = []
     membean_errors: list[dict[str, Any]] = []
@@ -241,6 +258,13 @@ def main() -> int:
             membean_errors.append({"config": str(path), "error": str(exc)})
 
     merged = merge(canvas_payload=canvas_payload, membean_payloads=membean_payloads)
+    if canvas_error:
+        merged["canvas_error"] = canvas_error
+        canvas_line = f"Canvas check failed: {canvas_error}"
+        membean_block = _format_membean_block(membean_payloads)
+        partial_summary = "\n\n".join(part for part in [canvas_line, membean_block] if part).rstrip()
+        merged["summary"] = partial_summary
+        merged["new_summary"] = partial_summary
     if membean_errors:
         merged["membean_errors"] = membean_errors
 
@@ -253,6 +277,9 @@ def main() -> int:
                 print(f"  - {entry['config']}: {entry['error']}")
     else:
         print(json.dumps(merged, indent=2))
+    # Canvas login failures are included in the structured payload so the
+    # scheduled agent can still deliver a useful partial digest (especially
+    # Membean) instead of treating the whole job as an opaque shell failure.
     return 0
 
 
