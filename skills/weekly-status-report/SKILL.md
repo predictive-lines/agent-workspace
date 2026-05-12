@@ -2,8 +2,8 @@
 name: weekly-status-report
 description: >
   Compile a weekly status update report for Excel Fire Protection by pulling
-  from all connected data sources — Granola meetings, Quo call transcripts,
-  Slack, Google Calendar, Notion tasks, Microsoft To Do, SharePoint Lists,
+  from all connected data sources — Google Calendar, Quo call transcripts and
+  messages, Microsoft To Do, Gmail, Notion tasks and meeting notes, Slack,
   and GitHub activity. Use this skill whenever Justin asks for a "weekly
   report," "status update," "what did I do this week," "weekly recap," or
   anything about summarizing the past week's work. Also trigger when he says
@@ -48,7 +48,7 @@ calls and SMS), but add others here if they develop the same pattern.
       This surfaces a re-auth button directly in the chat.
    b. Tell Justin: "Quo needs re-authentication. I've surfaced the reconnect
       button above — please re-auth and let me know when it's done. I'll
-      pause Quo collection but continue pulling from the other 9 sources
+      pause Quo collection but continue pulling from the other 7 sources
       in the meantime so we don't waste time."
    c. **Continue collecting all non-Quo sources immediately** (do not block).
    d. After all other sources are collected, **check back with Justin.** If
@@ -81,20 +81,7 @@ context helps you interpret everything else.
 
 **Tool:** `list_events` with `startTime` / `endTime` for the reporting week.
 
-### 2. Granola (Meeting Notes & Transcripts)
-
-**What to pull:** All meetings from the reporting week. Start with
-`list_meetings` (time_range: custom, Mon–Fri), then `get_meetings` for
-summaries, and `get_meeting_transcript` for any meetings that look substantive.
-
-**Why:** Granola captures what was actually discussed and decided in meetings —
-action items, commitments, key decisions. This is often the richest source of
-"what changed."
-
-**What to extract:** Decisions made, action items assigned, commitments given,
-key discussion topics, names of external parties involved.
-
-### 3. Quo — Call Transcripts & Messages
+### 2. Quo — Call Transcripts & Messages
 
 **What to pull:** Call transcripts and SMS/text messages from **both** inbox
 numbers for the reporting week:
@@ -112,7 +99,7 @@ customer inquiries.
 **What to extract:** Who called/texted, topic summary, any commitments or
 follow-ups promised. Skip robocalls, spam, and OTP codes.
 
-### 4. Microsoft To Do (Tasks)
+### 3. Microsoft To Do (Tasks)
 
 **What to pull:** Tasks completed or modified during the reporting week. Also
 note any new tasks created.
@@ -124,20 +111,7 @@ note any new tasks created.
 **What to extract:** Completed tasks (with completion context if available), new
 tasks added, tasks whose status changed.
 
-### 5. SharePoint Lists
-
-**What to pull:** Items created or modified during the reporting week across
-active lists.
-
-**Tools:** `lists_get_site` → `lists_list_lists` → `lists_get_items` with date
-filters or `orderby` on `lastModifiedDateTime`.
-
-**Why:** Operational databases (job tracking, billing, etc.) that are migrating
-from Notion. Any movement here is reportable.
-
-**What to extract:** New items, status changes, notable updates.
-
-### 6. Gmail — justin.miller@predictivelines.com
+### 4. Gmail — justin.miller@predictivelines.com
 
 **What to pull:** Email threads from the last 7 days. Focus on threads where
 Justin sent or received substantive business correspondence — not newsletters,
@@ -161,7 +135,7 @@ marketing, automated alerts, and social media notifications.
 - Exclude common noise: `-from:noreply -from:notifications -category:promotions
   -category:social -category:updates newer_than:7d`
 
-### 7. Notion Tasks
+### 5. Notion Tasks
 
 **What to pull:** Tasks with status changes during the reporting week from the
 Tasks database (data_source_id: `2847e702-d98c-8170-9008-000bc7d6d318`).
@@ -169,12 +143,12 @@ Tasks database (data_source_id: `2847e702-d98c-8170-9008-000bc7d6d318`).
 **Tool:** Notion search or query with date filters on `last_edited_time`.
 
 **Why:** During the M365 migration, tasks may still live in Notion. Check both
-systems until migration is complete. Once Justin confirms Notion tasks are fully
-migrated, this source can be removed.
+Notion and Microsoft To Do until migration is complete. Once Justin confirms
+Notion tasks are fully migrated, this source can be removed.
 
 **What to extract:** Tasks completed, status changes, new tasks.
 
-### 8. Notion Meeting Notes
+### 6. Notion Meeting Notes
 
 **What to pull:** Meeting notes created or edited during the reporting week.
 
@@ -182,16 +156,13 @@ migrated, this source can be removed.
 the Mon–Fri reporting window. For meetings that look substantive, use
 `notion-fetch` to pull the full page content.
 
-**Why:** While evaluating migration options (Granola vs. Notion vs. other),
-meeting notes may still be captured in Notion. Check both Granola and Notion
-Meeting Notes until the migration path is settled. There will likely be overlap
-— deduplicate by matching on date + attendees + topic.
+**Why:** Notion meeting notes capture decisions, action items, and context from
+substantive meetings that may not be represented in task systems or email.
 
-**What to extract:** Decisions made, action items, key discussion points. Same
-extraction goals as Granola — the two sources are complementary during the
-transition.
+**What to extract:** Decisions made, action items, key discussion points, and
+external parties involved.
 
-### 9. Slack
+### 7. Slack
 
 **What to pull:** Messages from key channels during the reporting week. At
 minimum check #open-claw. Ask Justin if there are other channels to scan.
@@ -208,7 +179,7 @@ than reporting on bot noise.
 
 **What to extract:** Decisions, announcements, notable threads.
 
-### 10. GitHub Activity
+### 8. GitHub Activity
 
 **What to pull:** Commits, PRs, and issues from the reporting week across
 `predictive-lines` repos (primarily `ai-skills` and `agent-workspace`).
@@ -285,10 +256,9 @@ Prepared by: Justin Miller
   proceed with other sources.
 - **Source unavailable:** If any source is down or returns errors, note it
   briefly and continue. Don't let one broken source block the whole report.
-- **Duplicate events:** The same topic may appear in Calendar, Granola, and Quo
-  (e.g., a phone call shows up on calendar, Granola captured the meeting, and
-  Quo has the transcript). Deduplicate — report the event once with the richest
-  context available.
+- **Duplicate events:** The same topic may appear in Calendar, Quo, Notion
+  meeting notes, email, or Slack. Deduplicate — report the event once with the
+  richest context available.
 - **Sensitive content:** Omit OTP codes, passwords, spam calls, and personal
   family items that aren't business-related. If a personal call is borderline
   relevant (e.g., a family calendar event that blocked a business meeting), note
