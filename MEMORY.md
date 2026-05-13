@@ -54,6 +54,7 @@
 - **Sheet:** `1iVQLLvx5UC62zdcxlHM8s-UcMALCzLwr3EIcbPKuqvc` — Tiller Foundation Template 2026
 - **Skill:** `~/repos/excel-fire-ai/skills/household-finances/` — covers Budget columns, account_balances_per_period formula logic, auth pattern
 - **Key fix (Mar 15 2026):** account_balances_per_period formulas now gate on start date (`elapsed_start < 0 AND start > P$1` = suppress pre-load) and end date (`col_month >= end_month` = hard zero). Period formula also uses `elapsed < 0 AND start > P$1` for pre-start zero. End check uses `>=` and returns `0` not `prior`.
+- **Cash Burn Down tab (May 13 2026):** Added `Cash Burn Down` sheet to Tiller workbook. Uses current `Accounts` balances + `Budget` scheduled cash flows + `Transactions` actuals to model 5-year monthly household runway. Funding sequence: `Working Capital` + `Accrual Accounts` assets first, then brokerage `xxxx1788`, then `Currently Available Tax Free Inheritance`. At build time: spending pools ≈ $43.6K, brokerage ≈ $414.3K, inheritance ≈ $616.8K; runway did not hit $0 in 5-year view (Dec 2030 ≈ $330K remaining). Important column mapping: `Transactions` has a leading blank column, so Amount is E and Month is I. Follow-up improvement: automate “checking dangerously low vs next 14 days of expenses” trigger; current model switches pools when spending pool hits $0.
 
 ## Financial Model Fixes (Apr 3, 2026) — Depreciation Overhaul
 - **Bug 3 — Stepped-up basis:** BS F30 (Vehicles) = 73,248.39 (FMV), BS F31 (Accum Depr) = `MAX(-F30, 0-IS!F64)` = -30,000. Asset sale = no inherited depreciation history.
