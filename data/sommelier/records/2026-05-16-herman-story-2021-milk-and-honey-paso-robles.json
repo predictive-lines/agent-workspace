@@ -1,0 +1,33 @@
+{
+  "bottle_id": "2026-05-16-herman-story-2021-milk-and-honey-paso-robles",
+  "image_paths": [
+    "/home/open-claw/.openclaw/media/inbound/b6891fe3-e24f-4a52-a960-858e77c9a300.jpg"
+  ],
+  "source": "slack",
+  "producer": "Herman Story Wines",
+  "wine_name": "Milk & Honey",
+  "vintage": "2021",
+  "varietal": "72% Tempranillo, 19% Syrah, 7% Mourvedre, 2% Petit Verdot",
+  "region": "Paso Robles, California",
+  "country": "USA",
+  "abv": "15.9%",
+  "confidence": 0.96,
+  "notes": "Front label visible and legible. Produced and bottled by Herman Story Wines, Paso Robles, CA; Russell P. From, winemaker/proprietor.",
+  "status": "complete",
+  "style": "High-ABV Paso Robles red blend led by Tempranillo with Syrah, Mourvedre, and Petit Verdot.",
+  "tasted_on": "2026-05-16",
+  "tasters": [
+    "Justin"
+  ],
+  "ratings": {
+    "Justin": "just OK; does not love it and does not hate it"
+  },
+  "would_buy_again": {
+    "Justin": "maybe_not"
+  },
+  "recommendation_signals": [
+    "Neutral signal for Herman Story Milk & Honey 2021 specifically; acceptable but not exciting for Justin.",
+    "Second neutral-to-slightly-negative note today for a high-ABV Paso Robles red; treat as an emerging hypothesis, not a rule.",
+    "Do not count this bottle as evidence that Justin loves Herman Story or Paso red blends."
+  ]
+}

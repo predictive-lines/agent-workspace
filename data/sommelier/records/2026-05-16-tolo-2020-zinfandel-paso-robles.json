@@ -1,0 +1,37 @@
+{
+  "bottle_id": "2026-05-16-tolo-2020-zinfandel-paso-robles",
+  "image_paths": [
+    "/home/open-claw/.openclaw/media/inbound/1f5d787a-4dc3-4586-ad7e-1c57ab57c757.jpg",
+    "/home/open-claw/.openclaw/media/inbound/319b6354-b067-4c40-bdf7-66e8171d5627.jpg"
+  ],
+  "source": "slack",
+  "producer": "Tolo",
+  "wine_name": "Zinfandel",
+  "vintage": "2020",
+  "varietal": "Zinfandel",
+  "region": "Paso Robles, California",
+  "country": "USA",
+  "abv": "15.4%",
+  "confidence": 0.78,
+  "notes": "Front label only. Producer appears to read Tolo; no back label visible.",
+  "status": "complete",
+  "style": "Paso Robles Zinfandel; likely full-bodied/high-alcohol red.",
+  "tasted_on": "2026-05-16",
+  "tasters": [
+    "Justin"
+  ],
+  "ratings": {
+    "Justin": "just OK; does not love it but does not hate it"
+  },
+  "would_buy_again": {
+    "Justin": "maybe_not"
+  },
+  "recommendation_signals": [
+    "Do not treat Paso Robles Zinfandel / Tolo as a strong positive preference from this bottle.",
+    "Neutral-to-slightly-negative signal: acceptable but not exciting for Justin."
+  ],
+  "source_threads": [
+    "1778937830.490309"
+  ],
+  "closed_out_at": "2026-05-19T09:06:00-04:00"
+}

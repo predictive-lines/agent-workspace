@@ -1,0 +1,26 @@
+{
+  "batch_id": "wine-batch-20260516-092456",
+  "created_at": "2026-05-16T09:24:56.209755-04:00",
+  "source": "slack",
+  "image_count": 1,
+  "bottle_count": 1,
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/1f5d787a-4dc3-4586-ad7e-1c57ab57c757.jpg"
+      ],
+      "producer": null,
+      "wine_name": null,
+      "vintage": null,
+      "varietal": null,
+      "region": null,
+      "country": null,
+      "confidence": null,
+      "notes": [],
+      "status": "extracted"
+    }
+  ],
+  "status": "extracted",
+  "extracted_record": "data/sommelier/records/2026-05-16-tolo-2020-zinfandel-paso-robles.json"
+}

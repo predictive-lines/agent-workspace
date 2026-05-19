@@ -1,0 +1,36 @@
+{
+  "batch_id": "wine-batch-20260516-092531",
+  "created_at": "2026-05-16T09:25:31-04:00",
+  "source": "slack",
+  "slack": {
+    "channel": "#open-claw",
+    "message_id": "1778937929.495309",
+    "thread_id": "1778937830.490309",
+    "file_id": "F0B48R0NZQS",
+    "filename": "IMG_8869.jpg"
+  },
+  "image_count": 1,
+  "bottle_count": 1,
+  "bottles": [
+    {
+      "bottle_id": "bottle-001",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/b6891fe3-e24f-4a52-a960-858e77c9a300.jpg"
+      ],
+      "producer": "Herman Story Wines",
+      "wine_name": "Milk & Honey",
+      "vintage": "2021",
+      "varietal": "72% Tempranillo, 19% Syrah, 7% Mourvedre, 2% Petit Verdot",
+      "region": "Paso Robles, California",
+      "country": "USA",
+      "confidence": 0.96,
+      "notes": [
+        "Label image only; extraction confidence high for visible label text.",
+        "Justin: same as the Tolo — just OK; does not love it and does not hate it."
+      ],
+      "status": "extracted"
+    }
+  ],
+  "status": "extracted",
+  "extracted_record": "data/sommelier/records/2026-05-16-herman-story-2021-milk-and-honey-paso-robles.json"
+}

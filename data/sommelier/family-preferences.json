@@ -7,7 +7,10 @@
       "favorite_regions": [],
       "favorite_varietals": [],
       "favorite_producers": [],
-      "notes": []
+      "notes": [
+        "2026-05-16: Tolo 2020 Zinfandel, Paso Robles — just OK; Justin does not love it but does not hate it. Treat as neutral-to-slightly-negative, not a hard dislike.",
+        "2026-05-16: Herman Story Wines Milk & Honey 2021, Paso Robles — just OK; Justin does not love it and does not hate it. Treat as neutral-to-slightly-negative, not a hard dislike."
+      ]
     },
     {
       "name": "Jaclyn",
@@ -24,6 +27,21 @@
     "disliked_wines": [],
     "regions_to_explore": [],
     "producer_watchlist": [],
-    "style_hypotheses": []
+    "style_hypotheses": [
+      "Justin may not be especially excited by this high-ABV Paso Robles Zinfandel profile when it presents like Tolo 2020; keep exploring before generalizing to all Zinfandel.",
+      "Justin has two neutral-to-slightly-negative data points on 2026-05-16 for high-ABV Paso Robles reds (Tolo 2020 Zinfandel and Herman Story Milk & Honey 2021); avoid over-weighting this style in recommendations unless other evidence says otherwise."
+    ],
+    "neutral_wines": [
+      {
+        "wine": "Tolo 2020 Zinfandel",
+        "signal": "Justin: just OK / don’t love, don’t hate",
+        "record": "data/sommelier/records/2026-05-16-tolo-2020-zinfandel-paso-robles.json"
+      },
+      {
+        "wine": "Herman Story Wines Milk & Honey 2021",
+        "signal": "Justin: just OK / don’t love, don’t hate",
+        "record": "data/sommelier/records/2026-05-16-herman-story-2021-milk-and-honey-paso-robles.json"
+      }
+    ]
   }
 }

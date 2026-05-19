@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-06T18:36:36.852776-04:00",
+  "updated_at": "2026-05-19T09:06:00-04:00",
   "entries": [
     {
       "key": "Desparada Wines|Amphora Sauvignon Blanc|2023",
@@ -59,6 +59,24 @@
       ]
     },
     {
+      "key": "Herman Story Wines|Milk & Honey|2021",
+      "producer": "Herman Story Wines",
+      "wine_name": "Milk & Honey",
+      "vintage": "2021",
+      "varietal": "red blend",
+      "region": "Paso Robles, California",
+      "country": "USA",
+      "style": "high-ABV Paso Robles red blend",
+      "status": "neutral",
+      "source_batches": [
+        "wine-batch-20260516-092458"
+      ],
+      "notes": [
+        "Justin: just OK; does not love it but does not hate it.",
+        "Treat as neutral-to-slightly-negative, not a hard dislike."
+      ]
+    },
+    {
       "key": "Tolo|Aria|2020",
       "producer": "Tolo",
       "wine_name": "Aria",
@@ -75,6 +93,25 @@
         "Only front label shown in this batch.",
         "Blend or varietal is not visible from the provided photo.",
         "No tasting preference logged yet."
+      ]
+    },
+    {
+      "key": "Tolo|Zinfandel|2020",
+      "producer": "Tolo",
+      "wine_name": "Zinfandel",
+      "vintage": "2020",
+      "varietal": "Zinfandel",
+      "region": "Paso Robles, California",
+      "country": "USA",
+      "style": "Paso Robles Zinfandel; likely full-bodied/high-alcohol red",
+      "status": "neutral",
+      "source_batches": [
+        "wine-batch-20260516-092456"
+      ],
+      "notes": [
+        "Justin: just OK; does not love it but does not hate it.",
+        "Treat as neutral-to-slightly-negative, not a hard dislike.",
+        "2026-05-19 closeout confirmed duplicate/current Slack image and retained this as a preference signal."
       ]
     },
     {
