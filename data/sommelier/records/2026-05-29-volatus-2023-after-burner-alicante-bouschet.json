@@ -1,0 +1,38 @@
+{
+  "bottle_id": "2026-05-29-volatus-2023-after-burner-alicante-bouschet",
+  "image_paths": [
+    "/home/open-claw/.openclaw/media/inbound/2c2853a4-c1e5-492b-9e43-13865f002ca8.jpg"
+  ],
+  "source": "slack",
+  "producer": "Volatus Wine",
+  "wine_name": "After Burner",
+  "vintage": "2023",
+  "varietal": "Alicante Bouschet",
+  "region": "Paso Robles, California",
+  "country": "United States",
+  "abv": "14.4%",
+  "confidence": 0.86,
+  "notes": "Label reads Vólatus / After Burner / Alicante Bouschet 2023 / Paso Robles. Produced and bottled by Volatus Wine, Paso Robles, CA. Some descriptive back-label text was blurred.",
+  "status": "complete",
+  "style": "Paso Robles Alicante Bouschet; likely dark-fruited, deeply colored, fuller-bodied red.",
+  "tasted_on": "2026-05-29",
+  "tasters": [
+    "Justin",
+    "Jaclyn"
+  ],
+  "ratings": {
+    "Justin": "OK",
+    "Jaclyn": "OK"
+  },
+  "would_buy_again": {
+    "Justin": "maybe_not",
+    "Jaclyn": "maybe_not"
+  },
+  "recommendation_signals": [
+    "Neutral household signal for Paso Robles Alicante Bouschet / Volatus After Burner; acceptable but not exciting.",
+    "Do not over-weight this grape/style in future recommendations without additional positive evidence."
+  ],
+  "source_threads": [
+    "1780052134.956269"
+  ]
+}

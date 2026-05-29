@@ -1,0 +1,30 @@
+{
+  "batch_id": "2026-05-29-slack-thread-1780052134",
+  "source": "slack",
+  "thread": "1780052134.956269",
+  "created_on": "2026-05-29",
+  "groups": [
+    {
+      "group_id": "barbaresco-paolo-manzone-2018-san-giuliano",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/7d2be5a4-8930-4443-878f-8a2665992c2b.jpg"
+      ],
+      "user_note": "Justin loves Barbaresco; Jaclyn thinks Barbarescos are OK."
+    },
+    {
+      "group_id": "volatus-after-burner-2023-alicante-bouschet",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/2c2853a4-c1e5-492b-9e43-13865f002ca8.jpg"
+      ],
+      "user_note": "Justin and Jaclyn both thought this one was OK."
+    },
+    {
+      "group_id": "sculpterra-2022-primitivo",
+      "image_paths": [
+        "/home/open-claw/.openclaw/media/inbound/9127c154-1e7e-4118-828f-fcb119cbb57b.jpg",
+        "/home/open-claw/.openclaw/media/inbound/8f06537e-0ad9-4ac3-ad29-db84b3de2f4f.jpg"
+      ],
+      "user_note": "Justin and Jaclyn both thought this one was OK."
+    }
+  ]
+}

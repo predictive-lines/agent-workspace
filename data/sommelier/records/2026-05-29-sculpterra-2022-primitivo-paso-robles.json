@@ -1,0 +1,39 @@
+{
+  "bottle_id": "2026-05-29-sculpterra-2022-primitivo-paso-robles",
+  "image_paths": [
+    "/home/open-claw/.openclaw/media/inbound/9127c154-1e7e-4118-828f-fcb119cbb57b.jpg",
+    "/home/open-claw/.openclaw/media/inbound/8f06537e-0ad9-4ac3-ad29-db84b3de2f4f.jpg"
+  ],
+  "source": "slack",
+  "producer": "Sculpterra",
+  "wine_name": "Primitivo",
+  "vintage": "2022",
+  "varietal": "Primitivo",
+  "region": "Paso Robles, California",
+  "country": "USA",
+  "abv": "15.6%",
+  "confidence": 0.93,
+  "notes": "Front label reads Sculpterra 2022 Primitivo, 100% Primitivo. Back label: Paso Robles appellation; Frankel Family Estate & Tom Bordonaro vineyards; harvested in 3 lots; fermented in stainless tanks and new 500L oak barrels; aged 10 months in oak, apparently 42% new American; bottled August 2023; 765 cases produced.",
+  "status": "complete",
+  "style": "High-ABV Paso Robles Primitivo; likely ripe, full-bodied, oak-influenced red.",
+  "tasted_on": "2026-05-29",
+  "tasters": [
+    "Justin",
+    "Jaclyn"
+  ],
+  "ratings": {
+    "Justin": "OK",
+    "Jaclyn": "OK"
+  },
+  "would_buy_again": {
+    "Justin": "maybe_not",
+    "Jaclyn": "maybe_not"
+  },
+  "recommendation_signals": [
+    "Neutral household signal for high-ABV Paso Robles Primitivo / Sculpterra; acceptable but not a standout.",
+    "Adds another neutral data point for ripe Paso Robles reds, alongside earlier neutral Paso Robles Zinfandel-style notes."
+  ],
+  "source_threads": [
+    "1780052134.956269"
+  ]
+}

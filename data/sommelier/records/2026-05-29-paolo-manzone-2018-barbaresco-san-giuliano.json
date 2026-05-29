@@ -1,0 +1,39 @@
+{
+  "bottle_id": "2026-05-29-paolo-manzone-2018-barbaresco-san-giuliano",
+  "image_paths": [
+    "/home/open-claw/.openclaw/media/inbound/7d2be5a4-8930-4443-878f-8a2665992c2b.jpg"
+  ],
+  "source": "slack",
+  "producer": "Paolo Manzone",
+  "wine_name": "Barbaresco San Giuliano",
+  "vintage": "2018",
+  "varietal": "Nebbiolo",
+  "region": "Barbaresco DOCG, Piedmont",
+  "country": "Italy",
+  "abv": "14.5%",
+  "confidence": 0.92,
+  "notes": "Label reads Paolo Manzone Barbaresco San Giuliano 2018. Nebbiolo inferred from Barbaresco DOCG. Bottled by Manzone Gianpaolo, Serralunga d'Alba. Lot code visible: L.BR180121.",
+  "status": "complete",
+  "style": "Piedmont Nebbiolo; structured, high-acid, aromatic red with age-worthy Barbaresco profile.",
+  "tasted_on": "2026-05-29",
+  "tasters": [
+    "Justin",
+    "Jaclyn"
+  ],
+  "ratings": {
+    "Justin": "loves Barbaresco / strong positive category signal",
+    "Jaclyn": "Barbarescos are OK / neutral-to-mild-positive category signal"
+  },
+  "would_buy_again": {
+    "Justin": "yes",
+    "Jaclyn": "maybe"
+  },
+  "recommendation_signals": [
+    "Strong Justin preference for Barbaresco / Nebbiolo from Piedmont.",
+    "Jaclyn tolerates or mildly likes Barbaresco but does not appear enthusiastic; avoid assuming household consensus.",
+    "For shared bottles, compare Barbaresco against softer or more fruit-forward Nebbiolo-adjacent options to find overlap."
+  ],
+  "source_threads": [
+    "1780052134.956269"
+  ]
+}
