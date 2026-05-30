@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-05-10",
+  "last_updated": "2026-05-30",
   "recipes": [
     {
       "id": "one-pot-sausage-fennel-pasta",
@@ -2392,6 +2392,68 @@
         "If making ahead, hold back the remaining dressing and feta until serving so the salad stays fresh."
       ],
       "notes": "Best as a spring side, lunch prep, or lighter add-on next to grilled chicken, fish, burgers, or sandwiches. Jaclyn likely strong fit because it is fresh, herby, and salad-adjacent. Onion compliance: original includes 2 Tbsp finely chopped shallot; omit completely. Do not substitute green onion/scallion. If the salad needs more bite without shallot, add a little extra lemon zest, capers, Dijon, or dill. Cilantro is not included. Parsley from the original is optional and can be skipped unless already on hand; dill and mint are the important herbs. Storage: refrigerate up to 3-4 days; add final dressing and feta right before serving when possible."
+    },
+    {
+      "id": "one-pot-creamy-penne-italian-sausage",
+      "name": "One-Pot Creamy Penne with Italian Sausage",
+      "category": "dinner",
+      "tags": [
+        "pasta",
+        "penne",
+        "sausage",
+        "one-pot",
+        "creamy",
+        "kid-friendly",
+        "spring-break-hit"
+      ],
+      "added": "2026-05-30",
+      "source": "notion-backfill",
+      "source_note": "Backfilled from Spring Break supplemental meal plan Notion page 3337e702-d98c-8195-9468-ecd8fb51a734 (Mar 31-Apr 5). Cora later identified this as the requested early sausage/red-sauce/penne dish.",
+      "in_rotation": true,
+      "servings": 6,
+      "difficulty": "easy",
+      "prep_time_min": 5,
+      "cook_time_min": 25,
+      "appeal": [
+        "justin",
+        "jaclyn",
+        "cora",
+        "eve"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 400,
+        "calories": 520,
+        "protein_g": 28,
+        "carbs_g": 48,
+        "fat_g": 24,
+        "fiber_g": 3,
+        "notes": "estimated from original Notion plan"
+      },
+      "ingredients": [
+        "1 lb Italian sausage (mild), casings removed",
+        "4 cloves garlic, minced (or 1 tsp garlic powder)",
+        "1 can (14 oz) diced tomatoes",
+        "3 cups chicken broth",
+        "1 lb penne pasta (regular or protein pasta)",
+        "1/2 cup heavy cream",
+        "1 cup shredded mozzarella (block, shred at home)",
+        "1/2 cup grated Parmesan",
+        "1 tsp Italian seasoning",
+        "Salt & pepper",
+        "Fresh baby spinach, 2 big handfuls (~3 oz), optional but recommended"
+      ],
+      "method": [
+        "BROWN the sausage in a large pot or Dutch oven over medium heat, breaking it up with a wooden spoon, 5-6 minutes until no pink remains.",
+        "ADD garlic and Italian seasoning. Stir 30 seconds until fragrant.",
+        "POUR in diced tomatoes with their juice and chicken broth. Stir and bring to a boil.",
+        "ADD penne directly into the pot. Stir well so pasta does not stick together.",
+        "REDUCE heat to medium. Cover and cook 12-14 minutes, stirring every 3-4 minutes, until pasta is al dente and most liquid is absorbed.",
+        "REMOVE from heat. Stir in heavy cream, mozzarella, and Parmesan until melted and creamy.",
+        "STIR in spinach, if using; it wilts in about 1 minute from residual heat.",
+        "TASTE and adjust salt and pepper. Serve straight from the pot."
+      ],
+      "reheating": "Reheat gently in microwave or covered skillet with a splash of broth/milk/cream to loosen the sauce.",
+      "notes": "Unanimous hit in feedback log on 2026-04-01. This is the penne dish Cora requested, not the gnocchi. Onion-free as written. Use mild sausage; no red pepper flakes."
     }
   ]
 }

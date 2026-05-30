@@ -51,12 +51,12 @@
       "tags": ["pasta", "sausage", "one-pot", "creamy"],
       "appeal": ["justin", "jaclyn", "cora", "eve"],
       "recipe_summary": "Creamy one-pot penne with Italian sausage. Huge hit with all four family members.",
-      "last_planned": "2026-05-04",
-      "times_planned": 2,
+      "last_planned": "2026-06-01",
+      "times_planned": 3,
       "notes": "Auto-favorited after unanimous positive feedback."
     }
   ],
   "version": "1.0.0",
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-30",
   "notes": "Recipes marked as favorites via feedback or explicit request. Used to weight meal plan generation toward proven hits."
 }
