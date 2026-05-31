@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-05-31",
   "recipes": [
     {
       "id": "one-pot-sausage-fennel-pasta",
@@ -2454,6 +2454,131 @@
       ],
       "reheating": "Reheat gently in microwave or covered skillet with a splash of broth/milk/cream to loosen the sauce.",
       "notes": "Unanimous hit in feedback log on 2026-04-01. This is the penne dish Cora requested, not the gnocchi. Onion-free as written. Use mild sausage; no red pepper flakes."
+    },
+    {
+      "id": "spinach-feta-phyllo-bake",
+      "name": "Spinach & Feta Phyllo Bake",
+      "category": "dinner",
+      "tags": [
+        "vegetarian",
+        "greek-inspired",
+        "spinach",
+        "feta",
+        "phyllo",
+        "bake",
+        "savory-pastry",
+        "brunch-friendly"
+      ],
+      "added": "2026-05-31",
+      "source": "slack-recipe-share",
+      "source_note": "Shared by Justin in Slack. Onion-free spinach, feta, mozzarella, and phyllo bake with egg/milk custard; crisp top, soft savory center.",
+      "in_rotation": false,
+      "servings": 6,
+      "difficulty": "medium",
+      "prep_time_min": 20,
+      "cook_time_min": 40,
+      "appeal": [
+        "justin",
+        "jaclyn"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 175,
+        "calories": 390,
+        "protein_g": 15,
+        "carbs_g": 24,
+        "fat_g": 27,
+        "fiber_g": 2,
+        "notes": "estimated \u2014 assumes oil version, 6 servings, 8 oz phyllo, 7 oz feta, 1 cup shredded mozzarella, 3 eggs, 1 cup whole milk, 1/2 cup oil, breadcrumbs; heavy cream variation is similar calories but richer/higher saturated fat"
+      },
+      "ingredients": [
+        "A little oil for greasing the pan",
+        "2-3 tbsp breadcrumbs, plus extra for topping if desired",
+        "2 cups fresh spinach, loosely packed",
+        "1 tsp salt, divided or to taste",
+        "1/2 package phyllo dough (8 oz / 225 g), thawed if frozen",
+        "7 oz feta cheese (about 200 g), crumbled",
+        "1 cup shredded mozzarella (prefer block mozzarella, shredded at home)",
+        "3 large eggs",
+        "1 cup milk",
+        "1/2 cup neutral oil OR 1 cup heavy cream instead of oil",
+        "Optional: extra grated cheese or breadcrumbs for topping"
+      ],
+      "instructions": [
+        "Preheat oven to 400\u00b0F (200\u00b0C).",
+        "Lightly oil a 9x12-inch pan, or use a 9x9-inch pan for a taller bake.",
+        "Sprinkle 2-3 tbsp breadcrumbs evenly across the bottom of the pan to help absorb moisture and keep the bottom from getting soggy.",
+        "Cut the spinach into thin strips. Sprinkle lightly with some of the salt, let sit for a few minutes, then squeeze out as much liquid as possible using cheesecloth or a clean kitchen towel.",
+        "Cut the phyllo dough into thin strips. Keep unused phyllo loosely covered with a clean towel so it does not dry out too quickly.",
+        "Layer half of the phyllo strips across the prepared pan.",
+        "Scatter the squeezed spinach, crumbled feta, and shredded mozzarella evenly over the phyllo.",
+        "Cover with the remaining phyllo strips.",
+        "Whisk eggs, milk, oil or heavy cream, and remaining salt until smooth.",
+        "Pour the egg mixture evenly over the pan, making sure the top phyllo is moistened in most places but still loose and textured.",
+        "Optionally sprinkle a little extra grated cheese or breadcrumbs on top.",
+        "Bake 35-40 minutes, until golden brown on top and set in the center.",
+        "Rest 5-10 minutes before slicing. Serve warm with cucumbers, a simple salad, or soup."
+      ],
+      "notes": "Naturally onion-free and good for Jaclyn/Justin. This is probably a harder sell for the girls as a main dinner unless paired with a familiar protein or soup/salad bar, so plan it as a vegetarian Sunday/brunch-style bake, a side, or one of three weekly meals only when the other meals strongly cover Cora and Eve. Moisture control matters: salt and squeeze the spinach well, and use breadcrumbs on the bottom. If using heavy cream instead of oil, expect a richer custardy texture."
+    },
+    {
+      "id": "watermelon-berry-salad-lime-mint",
+      "name": "Watermelon Berry Salad with Lime-Mint Dressing",
+      "category": "side",
+      "tags": [
+        "fruit-salad",
+        "watermelon",
+        "berries",
+        "cherries",
+        "lime",
+        "mint",
+        "summer",
+        "memorial-day",
+        "no-cook",
+        "make-fresh"
+      ],
+      "added": "2026-05-31",
+      "source": "crowded-kitchen",
+      "source_url": "https://www.crowdedkitchen.com/watermelon-berry-salad-with-lime-mint-dressing/",
+      "source_note": "Justin shared the Memorial Day fruit salad version in Slack and asked to search Crowded Kitchen watermelon salad. Matches Crowded Kitchen's Watermelon Fruit Salad / Watermelon Berry Salad with lime-mint dressing.",
+      "in_rotation": false,
+      "servings": 6,
+      "difficulty": "easy",
+      "prep_time_min": 15,
+      "cook_time_min": 0,
+      "appeal": [
+        "justin",
+        "jaclyn",
+        "cora",
+        "eve"
+      ],
+      "nutrition_per_serving": {
+        "serving_size_g": 180,
+        "calories": 95,
+        "protein_g": 1,
+        "carbs_g": 24,
+        "fat_g": 0,
+        "fiber_g": 4,
+        "notes": "estimated \u2014 assumes honey version and 6 servings; fruit size/ripeness changes exact values"
+      },
+      "ingredients": [
+        "4 cups watermelon, cubed into 1-inch pieces",
+        "1 1/2 cups strawberries, sliced into rounds",
+        "1 1/2 cups raspberries",
+        "1 1/2 cups cherries, pitted and halved",
+        "2 tbsp freshly squeezed lime juice",
+        "1 1/2 tsp lime zest",
+        "2 tbsp honey or agave",
+        "1 tbsp fresh mint, finely chopped"
+      ],
+      "instructions": [
+        "Whisk together honey or agave, lime juice, and lime zest in a small bowl until smooth.",
+        "Prep watermelon, strawberries, raspberries, and cherries and place them in a large serving bowl.",
+        "Add chopped mint to the fruit.",
+        "Drizzle the lime dressing over the fruit and mint.",
+        "Lightly toss just until coated, being gentle so the raspberries do not break down.",
+        "Serve fresh and cold. If making ahead, prep the fruit and dressing separately, then toss with dressing and mint just before serving."
+      ],
+      "notes": "Best enjoyed fresh; watermelon and berries release juice quickly once dressed. Good summer side/treat for all four. For meal plans, use as a seasonal fruit side rather than a default weekly sweet. If prepping ahead, keep dressing separate and add mint right before serving so it stays bright. Naturally onion-free and avocado-free."
     }
   ]
 }
