@@ -4,7 +4,9 @@
       "name": "Justin",
       "role": "parent",
       "restrictions": {
-        "hard_no": ["onions (all types: white, red, yellow, green, shallots, scallions, leeks)"],
+        "hard_no": [
+          "onions (all types: white, red, yellow, green, shallots, scallions, leeks)"
+        ],
         "notes": "Garlic is OK. No other restrictions."
       },
       "likes": [],
@@ -15,7 +17,9 @@
       "name": "Jaclyn",
       "role": "parent",
       "restrictions": {
-        "hard_no": ["avocado"],
+        "hard_no": [
+          "avocado"
+        ],
         "notes": "No avocados."
       },
       "likes": [
@@ -37,6 +41,17 @@
         "reheated steak"
       ],
       "notes": "Would be happy with roasted sweet potatoes every week."
+    },
+    "beth": {
+      "name": "Beth",
+      "role": "regular household meal participant",
+      "restrictions": {
+        "hard_no": [],
+        "notes": "No hard restrictions recorded yet."
+      },
+      "likes": [],
+      "dislikes": [],
+      "notes": "Treat as a regular part of the meal plan for the next several months unless Justin specifies otherwise. Plan serving needs similarly to Cora/Eve. Thursday meal should remain Beth-friendly and practical for Beth to make when assigned."
     },
     "cora": {
       "name": "Cora",
@@ -97,38 +112,47 @@
   "household_rules": {
     "meals_per_week": 3,
     "meal_structure": "3 entrees + 3-4 shared sides per week (at least 1 salad when attendance calls for salad); no weekly sweet/treat unless explicitly requested",
-    "portion_sizing": "Each entree should yield 4-6 servings depending on who's home that week (see attendance_scaling). Let recipes dictate natural protein quantities — do NOT override with fixed minimums. Target enough for the planned number of diners with comfortable seconds, not excessive leftovers.",
+    "portion_sizing": "Default each entree to 8 servings during summer/full-house mode: Justin + Jaclyn + Beth + Cora + Eve eating dinners, with Cora/Eve/Beth potentially home for lunches. Non-summer or reduced-attendance plans may use 4-6 servings (see attendance_scaling). Let recipes dictate natural protein quantities \u2014 do NOT override with fixed minimums. Target enough for planned dinners plus realistic lunch leftovers, not excessive third-night leftovers.",
     "attendance_scaling": {
-      "everyone_home": {
-        "label": "Full house (Justin + Jaclyn + Cora + Eve)",
+      "summer_full_house": {
+        "label": "Summer full house (Justin + Jaclyn + Beth + Cora + Eve; girls/Beth around for lunches)",
+        "servings": 8,
+        "salad": "big batch (Justin eats most; size to last several days)",
+        "sweet_potatoes": "normal to generous",
+        "sides": "full portions, sized for dinner plus some lunch reuse"
+      },
+      "everyone_home_school_year": {
+        "label": "School-year full house (Justin + Jaclyn + Beth + Cora + Eve dinners only)",
         "servings": 6,
-        "salad": "big batch (Justin eats most of it — size to last several days)",
+        "salad": "big batch (Justin eats most)",
         "sweet_potatoes": "normal",
         "sides": "full portions"
       },
       "justin_traveling": {
-        "label": "Justin away (Jaclyn + Cora + Eve)",
-        "servings": 4,
-        "salad": "skip — nobody eats enough to justify it",
+        "label": "Justin away (Jaclyn + Beth + Cora + Eve)",
+        "servings": 6,
+        "salad": "skip or very small unless Jaclyn requests it",
         "sweet_potatoes": "normal",
-        "sides": "scaled down"
+        "sides": "moderate/full depending on lunch needs"
       },
       "jaclyn_traveling": {
-        "label": "Jaclyn away (Justin + Cora + Eve)",
-        "servings": 4,
+        "label": "Jaclyn away (Justin + Beth + Cora + Eve)",
+        "servings": 6,
         "salad": "big batch (Justin still wants it)",
-        "sweet_potatoes": "light or skip — she's the main consumer",
-        "sides": "scaled down"
+        "sweet_potatoes": "light or skip \u2014 Jaclyn is the main consumer",
+        "sides": "moderate/full depending on lunch needs"
       }
     },
-    "default_attendance": "everyone_home",
-    "planning_day": "Saturday — plan for the upcoming Mon-Sun week",
-    "overlap_constraint": "Every person must find at least 1 of the 2 weekly meals appealing",
+    "default_attendance": "summer_full_house",
+    "planning_day": "Saturday \u2014 plan for the upcoming Mon-Sun week",
+    "overlap_constraint": "Every person (Justin, Jaclyn, Beth, Cora, Eve) must find at least 1 of the 3 weekly meals appealing; each weekly meal should work for at least 3 of the 5 regular eaters.",
     "complexity": "Most meals should be executable by a 12-14 year old; occasional 90-min Sunday cook is OK",
     "pantry_handling": "Tag pantry staples in ingredient list (olive oil, butter, salt, pepper, common spices, rice, pasta, flour, sugar, etc.) but still include them",
-    "cheese_preference": "Always prefer block cheese over pre-shredded. Shred at home — better melting, no anti-caking agents. NEVER use American cheese singles. If a slice form factor is needed (e.g. burgers), use sliced cheddar. Otherwise use block cheddar.",
-    "produce_preference": "Always prefer whole/fresh fruits and vegetables over canned or jarred alternatives. When searching Kroger, filter for fresh produce — skip canned sweet potatoes, jarred jalapeños, canned tomatoes (unless the recipe specifically calls for canned, e.g. chipotle in adobo).",
-    "flavor_dislikes": ["cilantro"],
+    "cheese_preference": "Always prefer block cheese over pre-shredded. Shred at home \u2014 better melting, no anti-caking agents. NEVER use American cheese singles. If a slice form factor is needed (e.g. burgers), use sliced cheddar. Otherwise use block cheddar.",
+    "produce_preference": "Always prefer whole/fresh fruits and vegetables over canned or jarred alternatives. When searching Kroger, filter for fresh produce \u2014 skip canned sweet potatoes, jarred jalape\u00f1os, canned tomatoes (unless the recipe specifically calls for canned, e.g. chipotle in adobo).",
+    "flavor_dislikes": [
+      "cilantro"
+    ],
     "garnish_policy": "Skip decorative garnishes like parsley, cilantro sprigs, etc. Only include an ingredient if it meaningfully contributes to flavor.",
     "sides_rules": {
       "total_per_week": "3-4 shared across both entrees",
@@ -143,9 +167,10 @@
       "costco": "Bulk proteins, dairy (butter, sour cream, cheese blocks), tortillas, rice, pantry staples with long shelf life. Prefer Costco for anything that freezes or keeps.",
       "kroger": "Fresh produce (fruits, vegetables, herbs), spices, bread/baguettes, and anything perishable that can't be portioned and frozen."
     },
-    "weekly_sweet_policy": "Do not include a weekly sweet/treat by default. The family goes off script for sweets, so omit sweet recipes and sweet ingredients from standard meal plans and shopping lists unless Justin explicitly asks."
+    "weekly_sweet_policy": "Do not include a weekly sweet/treat by default. The family goes off script for sweets, so omit sweet recipes and sweet ingredients from standard meal plans and shopping lists unless Justin explicitly asks.",
+    "travel_week_shortcut_policy": "When Justin is traveling/not home to help with prep, lean toward quick canned/jarred/shortcut ingredients for Beth/Jaclyn execution (e.g., canned diced tomatoes instead of fresh tomatoes that need dicing, canned beans/corn, jarred/simple sauces after label checks). This is an exception for low-support weeks only; when Justin is home and can help prep, the default remains whole/fresh ingredients over packaged shortcuts."
   },
   "feedback_log_path": "skills/meal-planner/references/feedback-log.json",
-  "version": "1.3.1",
-  "last_updated": "2026-05-10"
+  "version": "1.4.1",
+  "last_updated": "2026-06-06"
 }

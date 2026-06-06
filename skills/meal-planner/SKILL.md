@@ -10,7 +10,7 @@ description: >
 
 # Meal Planner
 
-Plan 3 dinners per week for a family of 4 with specific preferences and dietary restrictions.
+Plan 3 dinners per week for the household with specific preferences and dietary restrictions. Beth is a regular meal-planning participant for the next several months; assume she is included unless Justin says otherwise.
 
 ## Planning Day
 
@@ -22,10 +22,11 @@ Load `references/family-preferences.json` for current preferences. Key constrain
 
 - **Justin:** No onions of any kind (garlic OK)
 - **Jaclyn:** No avocado; loves soups, salads, curries, sweet potatoes, fish
+- **Beth:** Regular in the rotation; treat her serving needs similarly to Cora/Eve unless Justin specifies otherwise
 - **Cora (14):** Asian-inspired, bang bang shrimp/chicken, tacos, sausage, pot pie
 - **Eve (12):** Pasta, smash burgers, steak, ham, fried foods, pot pie; generally won't eat fish
 
-**Hard rule:** Each weekly meal should be something at least 3 of 4 core family members will enjoy. Across the 3 meals combined, every person must have at least 1 meal they're happy with.
+**Hard rule:** Each weekly meal should be something at least 3 of the 5 regular eaters will enjoy. Across the 3 meals combined, every person must have at least 1 meal they're happy with.
 
 **No-onion compliance:** Replace onions/shallots/scallions/leeks with: extra garlic, fennel bulb, celery, or omit. Never include onion powder or onion-containing premade sauces without flagging it.
 
@@ -37,15 +38,18 @@ Load `references/family-preferences.json` for current preferences. Key constrain
 
 ## Portion Sizing
 
-Size each entree for **4-6 servings** depending on who's home that week. Let the recipe dictate natural protein quantities — do NOT override with fixed minimums.
+Default summer/full-house sizing is **8 servings per entree**: Justin + Jaclyn + Beth + Cora + Eve for dinner, with Cora/Eve/Beth around enough for lunch leftovers. This is intentionally not a full 2x increase from the old 6-serving full-house target; aim for dinner plus realistic next-day lunch coverage, not excessive third-night leftovers.
+
+Outside summer/full-house mode, size each entree for **4-6 servings** depending on who's home that week. Let the recipe dictate natural protein quantities — do NOT override with fixed minimums.
 
 **Attendance scaling (check with Justin each week or use default):**
 
 | Scenario | Who's Home | Servings | Salad | Sweet Potatoes | Sides |
 |---|---|---|---|---|---|
-| **Everyone home** (default) | Justin + Jaclyn + Cora + Eve | 6 | Big batch (Justin eats most) | Normal | Full |
-| **Justin traveling** | Jaclyn + Cora + Eve | 4 | Skip entirely | Normal | Scaled down |
-| **Jaclyn traveling** | Justin + Cora + Eve | 4 | Big batch (Justin still wants it) | Light or skip | Scaled down |
+| **Summer full house** (default) | Justin + Jaclyn + Beth + Cora + Eve, with Cora/Eve/Beth around for lunches | 8 | Big batch (Justin eats most) | Normal to generous | Full, sized for some lunch reuse |
+| **School-year / dinner-only full house** | Justin + Jaclyn + Beth + Cora + Eve | 6 | Big batch (Justin eats most) | Normal | Full |
+| **Justin traveling** | Jaclyn + Beth + Cora + Eve | 6 | Skip or very small unless requested | Normal | Moderate/full depending on lunch needs |
+| **Jaclyn traveling** | Justin + Beth + Cora + Eve | 6 | Big batch (Justin still wants it) | Light or skip | Moderate/full depending on lunch needs |
 
 - **Sides:** Scale to last across both entree nights where practical.
 - **When in doubt, target the midpoint** — enough for comfortable seconds but not a third night of the same dish.
